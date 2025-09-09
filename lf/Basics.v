@@ -128,6 +128,68 @@ Inductive day : Type :=
   | saturday
   | sunday.
 
+Inductive month : Type :=
+  | january
+  | february
+  | march
+  | april
+  | may
+  | june
+  | july
+  | august
+  | september
+  | october
+  | november
+  | december.
+
+(*Inductive date : Type :=
+  | ymd (year : nat) (month : month) (day : nat).
+*)
+Definition date : Type := prod (prod nat month) nat.
+
+Definition month_days (y: nat) (m: month) : nat :=
+  match m with 
+  | january => 31
+  | february => 28
+  | march => 31
+  | april => 30
+  | may => 31
+  | june => 30
+  | july => 31
+  | august => 31
+  | september => 30
+  | october => 31
+  | november => 30
+  | december => 31
+  end.
+
+Goal month_days 2025 february = 28.
+simpl.
+reflexivity.
+Qed.
+
+(*Goal forall (y : nat) (m: month),
+  month_days y m >= 28.
+  intros y m.
+  destruct m.
+  - simpl. admit.
+  - simpl. destruct (leap_day y).
+    -- admit.
+    -- admit.
+Abort.*)
+(*
+Definition day_succ (d : date) : date :=
+  match d with 
+  | (year, december), 31 => (S year, january), 1
+  | (year, january), 31 => (year, february), 1
+  | (year, february), 28 => (year, march), 1
+  | (year, march), 31 => (year, april), 1
+  | (year, april), 30 => (year, may), 1
+  | (year, may), 31 => (year, june), 1
+  end.
+*)
+
+
 (** The new type is called [day], and its members are [monday],
     [tuesday], etc.
 
