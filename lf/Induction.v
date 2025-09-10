@@ -563,16 +563,70 @@ Definition manual_grade_for_eqb_refl_informal : option (nat*string) := None.
 Theorem add_shuffle3 : forall n m p : nat,
   n + (m + p) = m + (n + p).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p.
+  assert (H: n + m = m + n).
+  { rewrite add_comm. reflexivity. }
+  rewrite add_assoc. 
+  rewrite H. 
+  rewrite <- add_assoc.
+  reflexivity.
+Qed.
 
 (** Now prove commutativity of multiplication.  You will probably want
     to look for (or define and prove) a "helper" theorem to be used in
     the proof of this one. Hint: what is [n * (1 + k)]? *)
+(*
+Theorem mul_distributes : forall n m : nat,
+  n * (1 + m) = n + n * m.
+Proof.
+  intros n m.
+  induction m as [| m' IHm'].
+  - simpl. rewrite mul_0_r. assert (H: n * 1 = n).
+    { induction n as [| n' IHn']. 
+      - simpl. reflexivity.
+      - simpl. rewrite IHn'. reflexivity. }
+    rewrite H.
+    rewrite add_0_r.
+    reflexivity.
+  - simpl. .
+*)
+Theorem mul_distributes : forall n m : nat,
+  n * (1 + m) = n + n * m.
+Proof.
+  intros n m.
+  induction n as [| n' IHn'].
+  - simpl. reflexivity.
+  - induction m as [| m' IHm'].
+    -- simpl. rewrite <- IHn'. simpl. reflexivity.
+    -- simpl. assert (H: S (S m') = (1 + S m')).
+      { rewrite <- plus_n_Sm. simpl. reflexivity. }
+      rewrite H. 
+      rewrite IHn'. 
+      rewrite add_shuffle3. 
+      rewrite plus_n_Sm. 
+      reflexivity.
+Qed.
+
 
 Theorem mul_comm : forall m n : nat,
   m * n = n * m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros m n.
+  induction n as [| n' IHn'].
+  - simpl. rewrite mul_0_r. reflexivity.
+  - rewrite mul_distributes. rewrite IHn'.
+    induction m as [| m' IHm'].
+    -- simpl. reflexivity.
+    -- rewrite <- IHn'. 
+      rewrite add_comm. 
+      rewrite mul_distributes. 
+      assert (H1: S m' * n' = n' + n' * m').
+        { rewrite -> IHn'. rewrite mul_distributes. reflexivity. }
+      rewrite H1.
+      assert (H2: n' * m' = m' * n').
+        { induction n' as [| n'' IHn''].
+          --- simpl. rewrite mul_0_r. reflexivity.
+          ---  }  
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, optional (more_exercises)
