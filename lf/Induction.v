@@ -590,7 +590,7 @@ Proof.
     reflexivity.
   - simpl. .
 *)
-Theorem mul_distributes : forall n m : nat,
+(*Theorem mul_distributes : forall n m : nat,
   n * (1 + m) = n + n * m.
 Proof.
   intros n m.
@@ -605,6 +605,20 @@ Proof.
       rewrite add_shuffle3. 
       rewrite plus_n_Sm. 
       reflexivity.
+Qed.*)
+
+Theorem n_k_plus_one : forall n k : nat,
+  n * (1 + k) = n * k + n.
+Proof.
+  intros n k.
+  induction n as [| n' IHn'].
+  - simpl. reflexivity.
+  - simpl.
+    rewrite <- plus_n_Sm.
+    rewrite <- add_assoc.
+    rewrite <- IHn'.
+    simpl.
+    reflexivity.
 Qed.
 
 
@@ -614,7 +628,9 @@ Proof.
   intros m n.
   induction n as [| n' IHn'].
   - simpl. rewrite mul_0_r. reflexivity.
-  - rewrite mul_distributes. rewrite IHn'.
+  - simpl. rewrite n_k_plus_one. rewrite IHn'. rewrite add_comm. reflexivity.
+Qed.
+    (*rewrite mul_distributes. rewrite IHn'.
     induction m as [| m' IHm'].
     -- simpl. reflexivity.
     -- rewrite <- IHn'. 
@@ -626,7 +642,7 @@ Proof.
       assert (H2: n' * m' = m' * n').
         { induction n' as [| n'' IHn''].
           --- simpl. rewrite mul_0_r. reflexivity.
-          ---  }  
+          ---  Abort.   *)
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, optional (more_exercises)
@@ -638,31 +654,66 @@ Proof.
     down your prediction.  Then fill in the proof.  (There is no need
     to turn in your piece of paper; this is just to encourage you to
     reflect before you hack!) *)
-
+(*
+b #wrong c
+*)
 Theorem leb_refl : forall n:nat,
   (n <=? n) = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  induction n as [| n' IHn'].
+  - simpl. reflexivity.
+  - simpl. rewrite IHn'. reflexivity.
+Qed.
 
+(*
+b #wrong a
+*)
 Theorem zero_neqb_S : forall n:nat,
   0 =? (S n) = false.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  simpl.
+  reflexivity.
+Qed.
 
+(*
+b
+*)
 Theorem andb_false_r : forall b : bool,
   andb b false = false.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b.
+  destruct b as [| b'].
+  - simpl. reflexivity.
+  - reflexivity.
+Qed.
 
+(*
+a
+*)
 Theorem S_neqb_0 : forall n:nat,
   (S n) =? 0 = false.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  simpl.
+  reflexivity.
+Qed.
 
+(*
+c #wrong a
+*)
 Theorem mult_1_l : forall n:nat, 1 * n = n.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  simpl.
+  rewrite add_0_r.
+  reflexivity.
+Qed.
 
+(*
+b
+*)
 Theorem all3_spec : forall b c : bool,
   orb
     (andb b c)
@@ -670,17 +721,55 @@ Theorem all3_spec : forall b c : bool,
          (negb c))
   = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b c.
+  destruct b as [| b'].
+  - destruct c as [| c'].
+    -- simpl. reflexivity.
+    -- simpl. reflexivity.
+  - destruct c as [| c'].
+    -- simpl. reflexivity. 
+    -- simpl. reflexivity.
+Qed.
 
+(*
+c
+*)
 Theorem mult_plus_distr_r : forall n m p : nat,
   (n + m) * p = (n * p) + (m * p).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p.
+  induction n as [| n' IHn'].
+  - simpl. reflexivity.
+  - simpl. rewrite IHn'. rewrite add_assoc. reflexivity.
+Qed.
 
+(*
+Theorem mult_plus_distr_r : forall n m p : nat,
+  (n + m) * p = (n * p) + (m * p).
+Proof.
+  intros n m p.
+  induction p as [| p' IHp'].
+  - rewrite mul_0_r. rewrite mul_0_r. rewrite mul_0_r. simpl. reflexivity.
+  - simpl. 
+    rewrite n_k_plus_one.
+    rewrite IHp'.
+    rewrite n_k_plus_one.
+    rewrite n_k_plus_one.
+    rewrite add_comm.
+    rewrite add_assoc.
+*)
+
+(*
+c
+*)
 Theorem mult_assoc : forall n m p : nat,
   n * (m * p) = (n * m) * p.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p.
+  induction n as [| n' IHn'].
+  - simpl. reflexivity.
+  - simpl. rewrite IHn'. rewrite <- mult_plus_distr_r. reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, optional (add_shuffle3')
@@ -697,7 +786,18 @@ Proof.
 Theorem add_shuffle3' : forall n m p : nat,
   n + (m + p) = m + (n + p).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p.
+  rewrite add_assoc.
+  replace (n + (m + p)) with (n + m + p).
+  replace (m + (n + p)) with (m + n + p).
+  replace (n + m) with (m + n).
+  reflexivity.
+  - rewrite add_comm. reflexivity.
+  - rewrite add_assoc. reflexivity.
+  - rewrite add_assoc. reflexivity.
+Qed.
+
+
 (** [] *)
 
 (* ################################################################# *)
@@ -710,16 +810,59 @@ Inductive bin : Type :=
   | B0 (n : bin)
   | B1 (n : bin)
 .
+
+Inductive nzbin : Type :=
+  | NZZ
+  | NZB0 (b : bin)
+  | NZB1 (b : bin)
+.
+
+Inductive bin2 : Type :=
+  | Z2
+  | nzbin2 : nzbin -> bin2.
+
 (** Before you start working on the next exercise, replace the stub
     definitions of [incr] and [bin_to_nat], below, with your solution
     from [Basics].  That will make it possible for this file to
     be graded on its own. *)
-
+(*
 Fixpoint incr (m:bin) : bin
   (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
 
 Fixpoint bin_to_nat (m:bin) : nat
   (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+*)
+
+Fixpoint incr (m:bin) : bin :=
+  match m with 
+  | Z => B1 Z
+  | B0 Z => B1 Z
+  | B1 Z => B0 (B1 Z)
+  | B0 m' => B1 m'
+  | B1 m' => B0 (incr m')
+  end.
+
+Fixpoint nat_exp (n: nat) (e: nat) : nat :=
+  match e with
+  | O => 1
+  | S e' => n * nat_exp n e'
+  end.
+
+Fixpoint bin_to_nat_helper (m: bin) (exp: nat) : nat :=
+  match m with 
+  | Z => 0
+  | B0 Z => 0
+  | B1 Z => nat_exp 2 exp
+  | B0 m' => bin_to_nat_helper m' (exp + 1)
+  | B1 m' => (bin_to_nat_helper m' (exp + 1)) + (nat_exp 2 exp)
+  end.
+
+Definition bin_to_nat (m:bin) : nat :=
+  match m with 
+  | Z => 0
+  | B0 Z => 0
+  | m' => bin_to_nat_helper m' 0
+  end.
 
 (** In [Basics], we did some unit testing of [bin_to_nat], but we
     didn't prove its correctness. Now we'll do so. *)
@@ -747,7 +890,12 @@ Fixpoint bin_to_nat (m:bin) : nat
 Theorem bin_to_nat_pres_incr : forall b : bin,
   bin_to_nat (incr b) = 1 + bin_to_nat b.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b.
+  simpl.
+  induction b as [| b1' IHb1'| b2' IHb2'].
+  - simpl. reflexivity.
+  - admit.
+Admitted.
 
 (** [] *)
 
@@ -875,3 +1023,58 @@ Proof.
 (** [] *)
 
 (* 2025-08-24 14:26 *)
+
+
+(* classwork *)
+
+Fixpoint add (n a : nat ) : nat :=
+  match n with
+  | O => a
+  | S n' => S (add n' a)
+  end.
+
+Fixpoint add_accum (n a : nat ) : nat :=
+  match n with
+  | O => a
+  | S n' => add_accum n' (S a)
+  end.
+
+Theorem my_lemma : forall (n m : nat), S (add_accum n m) = add_accum n (S m).
+intros n.
+induction n as [| n' IHn'].
+- intros. simpl. reflexivity.
+- intros o. simpl. rewrite (IHn' (S o)). reflexivity.
+Qed.
+(*- simpl. assert (H1: add_accum n' (S m) = S (add_accum n' m)).
+  { rewrite -> IHn'. reflexivity. }
+  rewrite H1.
+  assert (H2: S (S (add_accum n' m)) = (add_accum n' (S (S m)))).
+  { }*)
+
+
+Theorem my_lemma2 : forall (n m : nat), add n m = add_accum n m.
+intros.
+induction n .
+- simpl. reflexivity.
+- simpl. rewrite IHn. apply my_lemma.
+Qed.
+
+Goal forall (n : nat), add_accum n 0 = n.
+intros.
+rewrite <- my_lemma2.
+admit.
+Admitted.
+
+Inductive tree : Set := 
+|  Leaf : tree
+|  Node : tree -> tree -> tree.
+
+
+Parameter count : tree -> nat.
+Parameter reflect : tree -> tree.
+
+Goal forall (t : tree), count t = count (reflect t).
+  intros t.
+  induction t.
+  - admit.
+  -
