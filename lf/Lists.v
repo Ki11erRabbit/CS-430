@@ -755,6 +755,83 @@ Fixpoint rev (l:natlist) : natlist :=
   | h :: t => rev t ++ [h]
   end.
 
+Fixpoint rev_stack (l: natlist) (s : natlist) : natlist :=
+  match l with
+  | nil => s
+  | n :: l' => rev_stack l' (n :: s)
+  end.
+
+Definition rev' (l: natlist) : natlist :=
+  rev_stack l [].
+
+Theorem rev_stack_length : forall (l: natlist) (a : natlist),
+  length (rev_stack l a) = length l + length a.
+  Proof.
+    induction l.
+    -  simpl. reflexivity.
+    - intros. 
+      simpl. 
+      rewrite IHl.
+      simpl.
+      rewrite plus_n_Sm.
+      reflexivity.
+  Qed.
+
+
+Theorem rev_stack_length' : forall l: natlist,
+  length (rev' l) = length (rev_stack l nil).
+  Proof.
+    induction l.
+    - simpl. reflexivity.
+  - simpl. rewrite -> rev_stack_length. simpl. Abort.
+
+
+Theorem rev_length' : forall l: natlist,
+  length (rev' l) = length l.
+  Proof.
+    induction l as [|n' l' IHl'].
+    - simpl. reflexivity.
+  - Abort.
+
+
+(* classwork *)
+
+(* operations on a set *)
+
+Definition natset := natlist.
+
+Fixpoint set_union (s0 s1 : natset) : natset := 
+  match s0 with 
+  | nil => s1
+  | n :: s0' => if member n s1 then set_union s0' s1 else n :: set_union s0' s1
+  end.
+Definition set_intersection (s0 s1 : natset) : natset.
+Fixpoint contains (s0 s1 : natset) : bool := 
+  match s0 with
+  | nil => true
+  | n :: s0' => if member n s1 then contains s0' s1 else false
+  end.
+Definition singleton (n : nat) : natset.
+Definition emptyset : natset :=
+  [].
+
+Theorem p1 : forall (s : natset), contains emptyset s = true.
+Proof.
+  intros s.
+  simpl.
+  reflexivity.
+Qed.
+
+Theorem p2 : forall (s1 s2 : natset), 
+  contains s1 (set_union s1 s2) = true.
+  Proof.
+    intros s1. induction s1.
+    - intros. simpl. reflexivity.
+    - intros.
+Theorem p3 : forall (s : natset), 
+  (set_intersection s emptyset) = emptyset.
+  (* contains (set_intersection s emptyset) emptyset.*)
+
 Example test_rev1:            rev [1;2;3] = [3;2;1].
 Proof. reflexivity.  Qed.
 Example test_rev2:            rev nil = nil.
