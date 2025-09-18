@@ -1077,4 +1077,39 @@ Goal forall (t : tree), count t = count (reflect t).
   intros t.
   induction t.
   - admit.
-  -
+Admitted.
+(*
+Inductive hdigit : Set :=
+| H0: hdigit
+| H1: hdigit
+| H2: hdigit
+| H3: hdigit
+| H4: hdigit
+| H5: hdigit
+| H6: hdigit
+| H7: hdigit
+| H8: hdigit
+| H9: hdigit
+| HA: hdigit
+| HB: hdigit
+| HC: hdigit
+| HD: hdigit
+| HE: hdigit
+| HF: hdigit.
+
+Inductive hex : Set :=
+| Oh : hex
+| Sh : hdigit -> hex -> hex.
+
+Parameter bin_to_hex : bin -> hex.
+Parameter hex_to_bin : hex -> bin.
+
+Parameter bin_to_nat : bin -> nat.
+Parameter hex_to_nat : hex -> nat.
+
+Parameter nat_to_bin : nat -> bin.
+Parameter nat_to_hex : nat -> hex.
+
+Theorem bin_hex_iso : forall (n : bin), hex_to_nat (bin_to_hex n) = n.
+
+*)
