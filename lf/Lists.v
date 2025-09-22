@@ -809,12 +809,14 @@ Fixpoint set_union (s0 s1 : natset) : natset :=
   | n :: s0' => if member n s1 then set_union s0' s1 else n :: set_union s0' s1
   end.
 Definition set_intersection (s0 s1 : natset) : natset.
+Admitted.
 Fixpoint contains (s0 s1 : natset) : bool := 
   match s0 with
   | nil => true
   | n :: s0' => if member n s1 then contains s0' s1 else false
   end.
 Definition singleton (n : nat) : natset.
+Admitted.
 Definition emptyset : natset :=
   [].
 
@@ -1069,6 +1071,7 @@ Proof.
   induction l.
   - simpl. reflexivity.
   - simpl. rewrite rev_app_distr. rewrite IHl. simpl. reflexivity.
+Qed.
 
 (** There is a short solution to the next one.  If you find yourself
     getting tangled up, step back and try to look for a simpler
@@ -1224,7 +1227,15 @@ Qed.
 Theorem rev_injective : forall (l1 l2 : natlist),
   rev l1 = rev l2 -> l1 = l2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+    intros l1 l2.
+    intros H.
+    rewrite <- rev_involutive.
+    rewrite <- H.
+    rewrite -> rev_involutive.
+    reflexivity.
+Qed.
+    
+    
 (** [] *)
 
 (* ################################################################# *)
@@ -1300,17 +1311,26 @@ Definition option_elim (d : nat) (o : natoption) : nat :=
     Using the same idea, fix the [hd] function from earlier so we don't
     have to pass a default element for the [nil] case.  *)
 
-Definition hd_error (l : natlist) : natoption
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Definition hd_error (l : natlist) : natoption :=
+  match l with 
+  | nil => None
+  | cons n _ => Some n
+  end.
 
 Example test_hd_error1 : hd_error [] = None.
- (* FILL IN HERE *) Admitted.
+ Proof.
+  reflexivity.
+ Qed.
 
 Example test_hd_error2 : hd_error [1] = Some 1.
- (* FILL IN HERE *) Admitted.
+ Proof.
+  reflexivity.
+ Qed.
 
 Example test_hd_error3 : hd_error [5;6] = Some 5.
- (* FILL IN HERE *) Admitted.
+ Proof.
+  reflexivity.
+ Qed.
 
 (** [] *)
 
@@ -1352,10 +1372,15 @@ Definition eqb_id (x1 x2 : id) :=
   | Id n1, Id n2 => n1 =? n2
   end.
 
+
 (** **** Exercise: 1 star, standard (eqb_id_refl) *)
 Theorem eqb_id_refl : forall x, eqb_id x x = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  destruct x.
+  simpl.
+  rewrite eqb_refl.
+  reflexivity.
+Qed.
 (** [] *)
 
 (** Now we define the type of partial maps: *)
@@ -1401,7 +1426,11 @@ Theorem update_eq :
   forall (d : partial_map) (x : id) (v: nat),
     find x (update d x v) = Some v.
 Proof.
- (* FILL IN HERE *) Admitted.
+ simpl.
+ destruct x.
+ rewrite eqb_id_refl.
+ reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 1 star, standard (update_neq) *)
@@ -1409,7 +1438,11 @@ Theorem update_neq :
   forall (d : partial_map) (x y : id) (o: nat),
     eqb_id x y = false -> find x (update d y o) = find x d.
 Proof.
- (* FILL IN HERE *) Admitted.
+ intros.
+ simpl.
+ rewrite H.
+ reflexivity.
+Qed.
 (** [] *)
 End PartialMap.
 
