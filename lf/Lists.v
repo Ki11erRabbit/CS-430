@@ -499,8 +499,11 @@ Proof.
     to fill in the definition of [remove_one] for a later
     exercise.) *)
 
-Fixpoint remove_one (v : nat) (s : bag) : bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint remove_one (v : nat) (s : bag) : bag :=
+  match s with
+  | nil => nil
+  | cons n s' => if v =? n then s' else remove_one v s'
+  end.
 
 Example test_remove_one1:
   count 5 (remove_one 5 [2;1;5;4;1]) = 0.
@@ -827,9 +830,9 @@ Theorem p2 : forall (s1 s2 : natset),
   Proof.
     intros s1. induction s1.
     - intros. simpl. reflexivity.
-    - intros.
-Theorem p3 : forall (s : natset), 
-  (set_intersection s emptyset) = emptyset.
+  - intros. Abort.
+(*Theorem p3 : forall (s : natset), 
+  (set_intersection s emptyset) = emptyset.*)
   (* contains (set_intersection s emptyset) emptyset.*)
 
 Example test_rev1:            rev [1;2;3] = [3;2;1].
@@ -1044,19 +1047,28 @@ Search (?x + ?y = ?y + ?x).
 Theorem app_nil_r : forall l : natlist,
   l ++ [] = l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  induction l.
+  - simpl. reflexivity.
+  - simpl. rewrite IHl. reflexivity.
+Qed.
+
 
 Theorem rev_app_distr: forall l1 l2 : natlist,
   rev (l1 ++ l2) = rev l2 ++ rev l1.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  induction l1.
+  - simpl. intros. rewrite app_nil_r. reflexivity.
+  - simpl. intros. rewrite IHl1. rewrite app_assoc. reflexivity.
+Qed.  
 
 (** An _involution_ is a function that is its own inverse. That is,
     applying the function twice yield the original input. *)
 Theorem rev_involutive : forall l : natlist,
   rev (rev l) = l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  induction l.
+  - simpl. reflexivity.
+  - simpl. rewrite rev_app_distr. rewrite IHl. simpl. reflexivity.
 
 (** There is a short solution to the next one.  If you find yourself
     getting tangled up, step back and try to look for a simpler
@@ -1065,14 +1077,22 @@ Proof.
 Theorem app_assoc4 : forall l1 l2 l3 l4 : natlist,
   l1 ++ (l2 ++ (l3 ++ l4)) = ((l1 ++ l2) ++ l3) ++ l4.
 Proof.
-  (* FILL IN HERE *) Admitted.
+    destruct l4.
+    - rewrite app_nil_r. rewrite app_assoc. rewrite app_assoc. rewrite app_nil_r. reflexivity.
+    - rewrite app_assoc. rewrite app_assoc. reflexivity.
+Qed.
 
 (** An exercise about your implementation of [nonzeros]: *)
 
 Lemma nonzeros_app : forall l1 l2 : natlist,
   nonzeros (l1 ++ l2) = (nonzeros l1) ++ (nonzeros l2).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  induction l1.
+  - simpl. reflexivity.
+  - simpl. destruct n.
+    -- intros. rewrite IHl1. reflexivity.
+    -- intros. simpl. rewrite IHl1. reflexivity.
+Qed. 
 (** [] *)
 
 (** **** Exercise: 2 stars, standard (eqblist)
@@ -1081,25 +1101,38 @@ Proof.
     lists of numbers for equality.  Prove that [eqblist l l]
     yields [true] for every list [l]. *)
 
-Fixpoint eqblist (l1 l2 : natlist) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint eqblist (l1 l2 : natlist) : bool :=
+  match l1, l2 with
+  | (cons n1 l1'), (cons n2 l2') => if eqb n1 n2 then (eqblist l1' l2') else false
+  | nil, nil => true
+  | _, _ => false
+  end.
 
 Example test_eqblist1 :
   (eqblist nil nil = true).
- (* FILL IN HERE *) Admitted.
+Proof. simpl. reflexivity. Qed.
 
 Example test_eqblist2 :
   eqblist [1;2;3] [1;2;3] = true.
-(* FILL IN HERE *) Admitted.
+Proof.
+  simpl.
+  reflexivity.
+Qed.
 
 Example test_eqblist3 :
   eqblist [1;2;3] [1;2;4] = false.
- (* FILL IN HERE *) Admitted.
+ Proof.
+  simpl.
+  reflexivity.
+ Qed.
 
 Theorem eqblist_refl : forall l:natlist,
   true = eqblist l l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  induction l.
+  - simpl. reflexivity.
+  - simpl. rewrite n_equals_n. rewrite IHl. reflexivity.
+Qed.
 (** [] *)
 
 (* ================================================================= *)
@@ -1112,7 +1145,10 @@ Proof.
 Theorem count_member_nonzero : forall (s : bag),
   1 <=? (count 1 (1 :: s)) = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  destruct s.
+  - simpl. reflexivity.
+  - simpl. reflexivity.
+Qed.
 (** [] *)
 
 (** The following lemma about [leb] might help you in the next
@@ -1133,7 +1169,12 @@ Proof.
 Theorem remove_does_not_increase_count: forall (s : bag),
   (count 0 (remove_one 0 s)) <=? (count 0 s) = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  induction s.
+  - simpl. reflexivity.
+  - simpl. destruct n.
+    -- rewrite leb_n_Sn. reflexivity.
+    -- rewrite IHs. reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, optional (bag_count_sum)
@@ -1160,7 +1201,16 @@ Proof.
 Theorem involution_injective : forall (f : nat -> nat),
     (forall n : nat, n = f (f n)) -> (forall n1 n2 : nat, f n1 = f n2 -> n1 = n2).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros f.
+  intros H1.
+  intros n.
+  intros m.
+  intros H2.
+  rewrite H1.
+  rewrite <- H2.
+  rewrite <- H1.
+  reflexivity.
+Qed.
 
 (** [] *)
 
