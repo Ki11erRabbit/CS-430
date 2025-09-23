@@ -7,6 +7,39 @@
 Set Warnings "-notation-overridden".
 From LF Require Export Lists.
 
+(* Classwork *)
+Module Type OrderedType.
+  Parameter T : Type.
+  Parameter eq : T -> T -> Prop.
+  Axiom reflexive : forall (t : T), eq t t.
+  Axiom eq_dec : forall (t0 t1 : T), {eq t0 t1} + {~eq t0 t1}.
+  Parameter lt : T -> T -> Prop.
+End OrderedType.
+
+Module BST (O : OrderedType).
+  Import O.
+
+  Inductive BST : Type :=
+  | leaf
+  | node (o : T) (left : BST) (right : BST).
+
+  Fixpoint insert (x : T) (tr : BST) : BST :=
+    match tr with
+    | leaf => node x leaf leaf
+    | node x' lc rc => 
+      if eq_dec x x' 
+      then node x' lc rc 
+      else if lt_dec x x' then node x' (insert x lc) rc
+                      else node x' lc (insert x rc)
+    end.
+  
+    Definition valid : BST -> Prop
+
+    Theorem insert_good : forall (x : T) (t : BST),
+      valid t -> valid (insert x t).
+End BST.
+(* End Classwork *)
+
 (* ################################################################# *)
 (** * Polymorphism *)
 
