@@ -662,7 +662,20 @@ Proof.
 Theorem eqb_true : forall n m,
   n =? m = true -> n = m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  induction n.
+  - intros m H. destruct m.
+    -- reflexivity.
+    -- discriminate H.
+  - intros m H. destruct m.
+    -- discriminate H.
+    -- f_equal.
+      simpl in H. 
+      apply IHn.
+      apply H.
+Qed.
+       
+
 (** [] *)
 
 (** **** Exercise: 2 stars, advanced (eqb_true_informal)
@@ -685,7 +698,23 @@ Theorem plus_n_n_injective : forall n m,
   n + n = m + m ->
   n = m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  induction n.
+  - intros m eq. 
+    destruct m.
+    -- reflexivity.
+    -- discriminate.
+  - intros m eq.
+    destruct m.
+    -- discriminate.
+    -- simpl in eq.
+       rewrite <- plus_n_Sm in eq.
+       f_equal.
+       rewrite <- plus_n_Sm in eq.
+       injection eq.
+       apply IHn.
+Qed.
+       
 (** [] *)
 
 (** The strategy of doing fewer [intros] before an [induction] to
@@ -835,7 +864,14 @@ Theorem nth_error_after_last: forall (n : nat) (X : Type) (l : list X),
   length l = n ->
   nth_error l n = None.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n X l.
+  generalize dependent n.
+  induction l.
+  - simpl. intros n. reflexivity.
+  - intros n H. destruct n.
+    -- simpl. discriminate.
+    -- simpl. apply IHl. simpl in H. injection H. intros H1. apply H1.
+Qed. 
 (** [] *)
 
 (* ################################################################# *)
@@ -1024,7 +1060,7 @@ Theorem combine_split : forall X Y (l : list (X * Y)) l1 l2,
   combine l1 l2 = l.
 Proof.
   intros X Y l.
-  induction l.
+  induction l as [|x' l' IHl'] eqn:impl.
   - intros. simpl in H.
     injection H.
     intros.
@@ -1032,7 +1068,17 @@ Proof.
     rewrite <- H1.
     simpl.
     reflexivity.
-  - 
+  - intros l1 l2.
+    intros H.
+    rewrite <- impl in H.
+    rewrite impl in IHl'.
+    rewrite IHl'.
+    -- 
+Abort.
+
+
+    
+
 (** [] *)
 
 (** The [eqn:] part of the [destruct] tactic is optional; although
