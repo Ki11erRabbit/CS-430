@@ -1153,7 +1153,8 @@ Theorem bool_fn_applied_thrice :
   forall (f : bool -> bool) (b : bool),
   f (f (f b)) = f b.
 Proof.
-  (* FILL IN HERE *) Admitted.
+Abort.
+
 (** [] *)
 
 (* ################################################################# *)
@@ -1234,7 +1235,18 @@ Proof.
 Theorem eqb_sym : forall (n m : nat),
   (n =? m) = (m =? n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m.
+  destruct (n =? m) eqn:E.
+  - apply eqb_true in E. rewrite -> E. symmetry. apply eqb_refl.
+  - generalize dependent m.
+    induction n.
+    -- simpl. destruct m.
+      + intros. discriminate.
+      + intros. reflexivity.
+    -- destruct m.
+      + simpl. reflexivity.
+      + intros. simpl in E. apply IHn in E. simpl. rewrite <- E. reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced, optional (eqb_sym_informal)
@@ -1255,7 +1267,12 @@ Theorem eqb_trans : forall n m p,
   m =? p = true ->
   n =? p = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p.
+  intros eq1 eq2. 
+  apply eqb_true in eq1.
+  apply eqb_true in eq2.
+  rewrite eq1. rewrite <- eq2. apply eqb_refl.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced (split_combine)
@@ -1288,7 +1305,9 @@ Theorem filter_exercise : forall (X : Type) (test : X -> bool)
   filter test l = x :: lf ->
   test x = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X test x l lf.
+  intros eq.
+Abort.
 (** [] *)
 
 (** **** Exercise: 4 stars, advanced, especially useful (forall_exists_challenge)
