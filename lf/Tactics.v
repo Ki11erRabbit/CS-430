@@ -1153,7 +1153,81 @@ Theorem bool_fn_applied_thrice :
   forall (f : bool -> bool) (b : bool),
   f (f (f b)) = f b.
 Proof.
+  intros.
+  destruct b eqn:Eb.
+  - destruct (f true) eqn:Eft.
+    -- rewrite Eft. apply Eft.
+    -- destruct (f false) eqn:Eff.
+      --- rewrite Eft. reflexivity.
+      --- apply Eff.
+  - destruct (f false) eqn:Eff.
+    -- rewrite <- Eff.
 Abort.
+
+Theorem some_conj : 1 = 1 /\ true = true.
+  Proof.
+    split.
+    - reflexivity.
+    - reflexivity.
+  Qed.
+
+Print some_conj.
+
+Theorem curry : forall (X : Set) (P Q : X -> Prop),
+  (forall (x : X), P x /\ Q x) <-> (forall (x : X), P x) /\ (forall (x : X), Q x).
+Proof.
+  Show Proof.
+  intros X P Q.
+  Show Proof.
+  split.
+  Show Proof.
+  - intros H.
+    split.
+    -- intros x. 
+       specialize H with x.
+       destruct H.
+       apply H.
+    -- intros x.
+       specialize H with x.
+       destruct H.
+       apply H0.
+  - intros.
+    destruct H.
+    split.
+    apply H.
+    apply H0.
+Qed.
+
+Theorem test : forall (x y : nat), x = y.
+  intros x y.
+  Show Proof.
+  generalize dependent x.
+  Show Proof.
+
+Print curry.
+
+Definition curry' (X Y Z : Set) (f : X -> Y * Z) : (X -> Y) * (X -> Z) :=
+  (fun (x : X) => match (f x) with
+  | (y, _) => y
+  end, fun (x : X) => match (f x) with
+  | (_, z) => z
+  end).
+
+Print curry.
+
+Definition curry'' (X Y Z : Set) (fg : (X -> Y) * (X -> Z)) : X -> Y * Z :=
+  let (f, g) := fg in fun (x : X) => (f x, g x).
+
+
+Definition set0 (X : Type) := list X.
+
+Definition set1 (X : Type) := X -> Prop.
+
+Definition empty_set {X : Type} := fun (x : X) => False.
+Definition universal_set {X : Type} := fun (x : X) => True.
+Definition element {X : Type} (A : set1 X) (x : X) := A x.
+Definition subset {X : Type} (A B : set1 X) : Prop :=
+  forall (x : X), element A x -> element B x.
 
 (** [] *)
 
