@@ -357,6 +357,76 @@ Proof.
 Qed.
 (** [] *)
 
+Inductive sum (A B : Type) : Type :=
+| inl : A -> sum A B
+| inr : B -> sum A B.
+(* Definition or_commut_type : forall (A B : Type), sum A B -> sum B A*)
+Definition or_commut_type (A B : Type) (ab : sum A B) : sum B A :=
+  match ab with 
+  | inl _ _ a => inr _ _ a
+  | inr _ _ b => inl _ _ b
+  end. 
+
+Definition xor1 (A B : Prop) := A <-> ~B.
+
+Definition xor2 (A B : Prop) := (A \/ B) /\ (~A \/ ~B).
+
+Theorem even_xor_odd : forall (n : nat), xor2 (even n = true) (odd n = true).
+Proof.
+  intros n.
+  unfold xor2.
+  split.
+  unfold odd.
+  destruct (even n) eqn:E.
+  left. reflexivity.
+  right. simpl. reflexivity.
+  unfold not.
+  destruct (even n) eqn:E.
+  right. 
+  intros.
+  unfold odd in H.
+  rewrite E in H.
+  simpl in H.
+  discriminate H.
+  left.
+  intros H.
+  discriminate H.
+Qed.
+
+Theorem xor1_eq_xor2 : forall (A B : Prop), xor1 A B <-> xor2 A B.
+Proof.
+  intros A B.
+  unfold xor1.
+  unfold iff.
+  split.
+  - unfold not.
+    intros [HAB HBFA].
+    apply HAB in HBFA.
+-- Admitted.
+  
+Definition our_injective (A B : Type) (f : A -> B) : Prop :=
+  forall (x y : A), f x = f y.
+
+Definition our_surjective (A B : Type) (f : A -> B) : Prop :=
+  forall (x : A), exists (y : B), f x = y.
+
+Definition our_bijective (A B : Type) (f : A -> B) : Prop :=
+  exists (g: B -> A), forall (x : A) (y : B), g (f x) = x /\ f (g y) = y.
+
+Definition our_zero_function (A : Type) (f : A -> A -> A) : Prop :=
+  exists (x : A), forall (y : A), f x y = y.
+
+Theorem negb_injective: our_injective bool bool negb.
+Proof.
+  unfold our_injective.
+  intros x y.
+  destruct x.
+  - destruct y.
+    -- reflexivity.
+    -- simpl. Admitted. 
+
+
+
 (* ================================================================= *)
 (** ** Falsehood and Negation
 
@@ -413,7 +483,11 @@ Proof.
 Theorem not_implies_our_not : forall (P:Prop),
   ~ P -> (forall (Q:Prop), P -> Q).
 Proof.
-Admitted.
+  unfold not.
+  intros P contra Q HP.
+  apply contra in HP.
+  destruct HP.
+Qed.
 (** [] *)
 
 (** Inequality is a very common form of negated statement, so there is a
@@ -545,7 +619,10 @@ Qed.
     [S] and [pred] are inverses of each other: *)
 Lemma not_S_pred_n : ~(forall n : nat, S (pred n) = n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold not.
+  intros H.
+Admitted.
+
 (** [] *)
 
 (** Since inequality involves a negation, it also requires a little
