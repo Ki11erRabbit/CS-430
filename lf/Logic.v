@@ -527,7 +527,16 @@ Proof.
   unfold not.
   intros H.
   split.
-- Abort.
+  intros HP.
+  apply H.
+  left.
+  apply HP.
+  intros HQ.
+  apply H.
+  right.
+  apply HQ.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 1 star, standard, optional (not_S_inverse_pred)
@@ -695,19 +704,43 @@ Qed.
 Theorem iff_refl : forall P : Prop,
   P <-> P.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros P.
+  split.
+  - intros H. apply H.
+  - intros H. apply H.
+Qed.
 
 Theorem iff_trans : forall P Q R : Prop,
   (P <-> Q) -> (Q <-> R) -> (P <-> R).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros P Q R PQiff QRiff.
+  split. 
+  - intros HP. apply QRiff. apply PQiff. apply HP.
+  - intros HR. apply PQiff. apply QRiff. apply HR.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (or_distributes_over_and) *)
 Theorem or_distributes_over_and : forall P Q R : Prop,
   P \/ (Q /\ R) <-> (P \/ Q) /\ (P \/ R).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros P Q R.
+  split.
+  - intros [HP | QR].
+    split.
+    -- left. apply HP.
+    -- left. apply HP.
+    -- split.
+       + right. apply QR.
+       + right. apply QR.
+  - intros [[HP| HQ] [HP1 | HR]].
+    -- left. apply HP.
+    -- left. apply HP.
+    -- left. apply HP1.
+    -- right. split.
+       + apply HQ.
+       + apply HR.
+Qed.
 (** [] *)
 
 (* ================================================================= *)
@@ -817,7 +850,13 @@ Proof.
 Theorem dist_not_exists : forall (X:Type) (P : X -> Prop),
   (forall x, P x) -> ~ (exists x, ~ P x).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X P.
+  intros HF.
+  unfold not.
+  intros [x Hx].
+  apply Hx.
+  apply HF.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, standard (dist_exists_or)
@@ -828,7 +867,18 @@ Proof.
 Theorem dist_exists_or : forall (X:Type) (P Q : X -> Prop),
   (exists x, P x \/ Q x) <-> (exists x, P x) \/ (exists x, Q x).
 Proof.
-   (* FILL IN HERE *) Admitted.
+  intros X P Q.
+  split.
+  - intros [x [HP | HQ]].
+    -- left. exists x. apply HP.
+    -- right. exists x. apply HQ.
+  - intros [[x HP] | [x HQ]].
+    -- exists x. left. apply HP.
+    -- exists x. right. apply HQ.
+Qed.
+
+    
+     
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, optional (leb_plus_exists) *)
