@@ -1053,7 +1053,20 @@ Theorem In_map_iff :
 Proof.
   intros A B f l y. split.
   - induction l as [|x l' IHl'].
-    (* FILL IN HERE *) Admitted.
+    -- simpl. intros [].
+    -- simpl. intros [Hfxy | HIn].
+       + exists x. apply and_commut.
+         split.
+         ++ left. reflexivity.
+         ++ apply Hfxy.
+       + apply IHl' in HIn. destruct HIn as [x' [HIn1 HIn2]].
+         exists x'. split.
+         ++ apply HIn1.
+         ++ right. apply HIn2.
+  - intros [x [Hfxy HInxl]].
+    rewrite <- Hfxy. apply In_map. apply HInxl.
+Qed.
+         
 (** [] *)
 
 (** **** Exercise: 2 stars, standard (In_app_iff) *)
@@ -1061,7 +1074,21 @@ Theorem In_app_iff : forall A l l' (a:A),
   In a (l++l') <-> In a l \/ In a l'.
 Proof.
   intros A l. induction l as [|a' l' IH].
-  (* FILL IN HERE *) Admitted.
+  - intros l'. simpl. intros a. split.
+    -- intros H. right. apply H.
+    -- intros [HF | HInal'].
+       + destruct HF.
+       + apply HInal'.
+  - split.
+    -- intros [H | H].
+       + left. left. apply H.
+       + simpl. apply or_assoc. right. apply IH. apply H.
+    -- intros [H | H].
+       + destruct H.
+         ++ left. apply H.
+         ++ right. apply IH. left. apply H.
+       + right. apply IH. right. apply H.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, especially useful (All)
@@ -1076,15 +1103,27 @@ Proof.
     lemma below.  (Of course, your definition should _not_ just
     restate the left-hand side of [All_In].) *)
 
-Fixpoint All {T : Type} (P : T -> Prop) (l : list T) : Prop
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint All {T : Type} (P : T -> Prop) (l : list T) : Prop := 
+  match l with
+  | [] => True
+  | x :: l' => P x /\ All P l'
+  end.
 
 Theorem All_In :
   forall T (P : T -> Prop) (l : list T),
     (forall x, In x l -> P x) <->
     All P l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros T P l.
+  split.
+  - intros H. induction l as [|x l' IHl'].
+    -- simpl. apply I.
+    -- split.
+       + apply H. left. reflexivity.
+       + apply IHl'. intros x0 HIn. apply H. right. apply HIn.
+  - induction l. 
+    -- simpl. intros HT x HF. destruct HF.
+    -- simpl. intros [HPx HAll] x0. 
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, optional (combine_odd_even)
