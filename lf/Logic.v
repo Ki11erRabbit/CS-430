@@ -1715,7 +1715,19 @@ Proof.
         destruct H.
 Abort.
 
-
+Theorem eqb_list_true_iff' :
+  forall A (eqb : A -> A -> bool),
+    (forall a1 a2, eqb a1 a2 = true <-> a1 = a2) ->
+    forall l1 l2, eqb_list eqb l1 l2 = true <-> l1 = l2.
+Proof.
+  intros.
+  split; intros.
+  generalize dependent l2.
+  induction l1; intros.
+  - destruct l2.
+    + reflexivity.
+    + discriminate.
+Abort.
 
 (** [] *)
 
@@ -1902,9 +1914,42 @@ Definition tr_rev {X} (l : list X) : list X :=
 
     Prove that the two definitions are indeed equivalent. *)
 
+Lemma rev_append_fact : forall (X: Type), forall (l1 l2 : list X), 
+  rev_append l1 l2 = (rev l1) ++ l2.
+Proof.
+  intros X.
+  induction l1.
+  - intros l2. simpl. reflexivity.
+  - intros l2. simpl. rewrite IHl1. 
+    rewrite <- app_assoc.
+    simpl.
+    reflexivity.
+Qed.
+
 Theorem tr_rev_correct : forall X, @tr_rev X = @rev X.
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros X.
+  apply functional_extensionality.
+  intros l.
+  destruct l.
+  - simpl. unfold tr_rev. simpl. reflexivity.
+  - unfold tr_rev. simpl. 
+  (*generalize dependent ([x]) is something that works*)
+    rewrite rev_append_fact.
+    reflexivity.
+Qed.
+
+Theorem tr_rev_correct' : forall X, @tr_rev X = @rev X.
+Proof.
+  intros X.
+  apply functional_extensionality.
+  intros l.
+  unfold tr_rev.
+  rewrite <- app_nil_r.
+Admitted.
+
+
+
 (** [] *)
 
 (* ================================================================= *)
