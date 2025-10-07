@@ -1123,7 +1123,12 @@ Proof.
        + apply IHl'. intros x0 HIn. apply H. right. apply HIn.
   - induction l. 
     -- simpl. intros HT x HF. destruct HF.
-    -- simpl. intros [HPx HAll] x0. 
+    -- simpl. intros [HPx HAll] x0. intros [H1 |H2].
+       + rewrite <- H1. apply HPx.
+       + apply IHl.
+         ++ apply HAll.
+         ++ apply H2.
+Qed. 
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, optional (combine_odd_even)
@@ -1434,7 +1439,15 @@ Lemma even_double_conv : forall n, exists k,
   n = if even n then double k else S (double k).
 Proof.
   (* Hint: Use the [even_S] lemma from [Induction.v]. *)
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  induction n.
+  - simpl. exists 0. simpl. reflexivity.
+  - rewrite even_S.
+    destruct (even n).
+    -- simpl. destruct IHn. exists x. f_equal. apply H.
+    -- simpl. destruct IHn as [k]. exists (S k). rewrite H. simpl. f_equal.
+Qed.
+  
 (** [] *)
 
 (** Now the main theorem: *)
@@ -1607,12 +1620,33 @@ Qed.
 Theorem andb_true_iff : forall b1 b2:bool,
   b1 && b2 = true <-> b1 = true /\ b2 = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b1 b2.
+  split.
+  - intros. destruct b1.
+    -- destruct b2.
+       + split; reflexivity; reflexivity.
+       + discriminate H.
+    -- destruct b2.
+       + discriminate H.
+       + discriminate H.
+  - intros [H1 H2]. rewrite H1. rewrite H2. reflexivity.
+Qed.
+
+
+   
 
 Theorem orb_true_iff : forall b1 b2,
   b1 || b2 = true <-> b1 = true \/ b2 = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b1 b2.
+  split.
+  - intros. destruct b1.
+    -- left. reflexivity.
+    -- destruct b2. right. reflexivity. discriminate H.
+  - intros [H1 | H2].
+    -- rewrite H1. reflexivity.
+    -- rewrite H2. destruct b1. reflexivity. reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 1 star, standard (eqb_neq)
@@ -1624,7 +1658,23 @@ Proof.
 Theorem eqb_neq : forall x y : nat,
   x =? y = false <-> x <> y.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros x y.
+  split.
+  - rewrite <- not_true_iff_false. 
+    unfold not.
+    intros H1 H2.
+    apply H1.
+    destruct (x =? y) eqn:H3.
+    -- reflexivity.
+    -- rewrite <- eqb_eq in H2. rewrite <- H3. rewrite <- H2. reflexivity.
+  - unfold not.
+    intros H1.
+    destruct (x =? y) eqn:XYeq.
+    -- rewrite eqb_eq in XYeq.
+       apply H1 in XYeq.
+       destruct XYeq.
+    -- reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (eqb_list)
@@ -1636,15 +1686,36 @@ Proof.
     definition is correct, prove the lemma [eqb_list_true_iff]. *)
 
 Fixpoint eqb_list {A : Type} (eqb : A -> A -> bool)
-                  (l1 l2 : list A) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+                  (l1 l2 : list A) : bool :=
+  match l1, l2 with
+  | [], [] => true
+  | x1 :: l1', x2 :: l2' => (eqb x1 x2) && eqb_list eqb l1' l2'
+  | _, _ => false
+  end.
 
 Theorem eqb_list_true_iff :
   forall A (eqb : A -> A -> bool),
     (forall a1 a2, eqb a1 a2 = true <-> a1 = a2) ->
     forall l1 l2, eqb_list eqb l1 l2 = true <-> l1 = l2.
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros A eqb.
+  intros Iffeq.
+  split.
+  - intros Heqb_list.
+    generalize dependent l2.
+    induction l1.
+    + destruct l2.
+      * reflexivity.
+      * discriminate.
+    + destruct l2.
+      * simpl. discriminate.
+      * simpl.
+        intros H.
+        rewrite andb_true_iff in H.
+        destruct H.
+Abort.
+
+
 
 (** [] *)
 
@@ -1656,13 +1727,34 @@ Proof.
 
 (** Copy the definition of [forallb] from your [Tactics] here
     so that this file can be graded on its own. *)
-Fixpoint forallb {X : Type} (test : X -> bool) (l : list X) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint forallb {X : Type} (test : X -> bool) (l : list X) : bool :=
+  match l with
+  | [] => true
+  | x :: l' => (test x) && forallb test l'
+  end.
 
 Theorem forallb_true_iff : forall X test (l : list X),
   forallb test l = true <-> All (fun x => test x = true) l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X test l.
+  split.
+  - intros H.
+    destruct l.
+    -- simpl. apply I.
+    -- simpl. split.
+       + destruct (test x) eqn:Etest.
+         ++ reflexivity.
+         ++ rewrite <- H.
+            simpl.
+            rewrite Etest.
+            simpl.
+            reflexivity.
+       + induction l.
+         ++ simpl. apply I.
+         ++ simpl in IHl. simpl.
+            split.
+Abort.
+
 
 (** (Ungraded thought question) Are there any important properties of
     the function [forallb] which are not captured by this
