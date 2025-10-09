@@ -566,7 +566,12 @@ Qed.
 Theorem ev_double : forall n,
   ev (double n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  simpl.
+  induction n.
+  - simpl. apply ev_0.
+  - simpl. apply ev_SS. apply IHn.
+Qed.
 (** [] *)
 
 (* ================================================================= *)
@@ -606,12 +611,19 @@ Qed.
 (** **** Exercise: 1 star, standard (Perm3) *)
 Lemma Perm3_ex1 : Perm3 [1;2;3] [2;3;1].
 Proof.
-  (* FILL IN HERE *) Admitted.
+  apply perm3_trans with (l2 := [2;1;3]).
+  - apply perm3_swap12.
+  - apply perm3_swap23.
+Qed.
 
 Lemma Perm3_refl : forall (X : Type) (a b c : X),
   Perm3 [a;b;c] [a;b;c].
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X a b c.
+  apply perm3_trans with (l2 := [b;a;c]).
+  - apply perm3_swap12.
+  - apply perm3_swap12.
+Qed.
 (** [] *)
 
 (* ################################################################# *)
@@ -679,7 +691,13 @@ Theorem le_inversion : forall (n m : nat),
   le n m ->
   (n = m) \/ (exists m', m = S m' /\ le n m').
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m Hle.
+  destruct Hle.
+  - left. reflexivity.
+  - right. exists m. split.
+    -- reflexivity.
+    -- apply Hle.
+Qed.
 (** [] *)
 
 (** We can use the inversion lemma that we proved above to help
@@ -740,7 +758,12 @@ Proof. intros H. inversion H. Qed.
 Theorem SSSSev__even : forall n,
   ev (S (S (S (S n)))) -> ev n.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n H.
+  inversion H as [| n0 H0 Heq0].
+  inversion H0 as [|n1 H1 Heq1].
+  apply H1.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 1 star, standard (ev5_nonsense)
@@ -750,7 +773,12 @@ Proof.
 Theorem ev5_nonsense :
   ev 5 -> 2 + 2 = 9.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros H.
+  inversion H.
+  simpl.
+  inversion H1.
+  inversion H3.
+Qed.
 (** [] *)
 
 (** The [inversion] tactic does quite a bit of work. For
@@ -911,7 +939,11 @@ Qed.
 (** **** Exercise: 2 stars, standard (ev_sum) *)
 Theorem ev_sum : forall n m, ev n -> ev m -> ev (n + m).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m Hevn Hevm.
+  induction Hevn.
+  - simpl. apply Hevm.
+  - simpl. apply ev_SS. apply IHHevn.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced, especially useful (ev_ev__ev) *)
@@ -920,7 +952,13 @@ Theorem ev_ev__ev : forall n m,
   (* Hint: There are two pieces of evidence you could attempt to induct upon
       here. If one doesn't work, try the other. *)
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m Hevnm Hevn.
+  induction Hevn; simpl in Hevnm.
+  - apply Hevnm.
+  - apply IHHevn.
+    inversion Hevnm.
+    apply H0.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, optional (ev_plus_plus)
@@ -988,7 +1026,26 @@ Qed.
 Lemma Perm3_In : forall (X : Type) (x : X) (l1 l2 : list X),
     Perm3 l1 l2 -> In x l1 -> In x l2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X x l1 l2 HPerm HIn.
+  induction HPerm.
+  - simpl. destruct HIn.
+    -- right. left. apply H.
+    -- inversion H.
+       + left. apply H0.
+       + inversion H0.
+         ++ right. right. left. apply H1.
+         ++ simpl in H1. destruct H1.
+  - simpl. destruct HIn.
+    + left. apply H.
+    + inversion H.
+      * right. right. left. apply H0.
+      * inversion H0.
+        -- right. left. apply H1.
+        -- destruct H1.
+  - apply IHHPerm2.
+    apply IHHPerm1.
+    apply HIn.
+Qed.
 (** [] *)
 
 (** **** Exercise: 1 star, standard, optional (Perm3_NotIn) *)
