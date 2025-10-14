@@ -3,6 +3,61 @@
 Set Warnings "-notation-overridden".
 From LF Require Export Logic.
 
+
+Fixpoint In' {A : Type} (x : A) (l : list A) : Prop :=
+  match l with
+  | [] => False
+  | x' :: l' => x' = x \/ In' x l'
+  end.
+
+Inductive In_ind {A : Type} (x : A) : list A -> Prop :=
+| In_here : forall (l : list A), In_ind x l
+| In_there: forall (y : A) (l : list A), 
+  In_ind x l -> In_ind x (y::l).
+
+Inductive BST : Type :=
+| leaf : BST
+| node : nat -> BST -> BST -> BST.
+
+(*Definition bst_thing (n : nat) (t : BST) (f : BST -> nat) : Prop :=
+  match T
+  | leaf => True
+| node _ _ _ => *)
+
+Inductive bst_lt (n : nat) : BST -> Prop :=
+| bst_lt_leaf : bst_lt n leaf
+| bst_lt_node : forall (n' : nat) (lt rt : BST),
+  n' < n -> bst_lt n lt -> bst_lt n (node n' lt rt).
+
+Fixpoint leftmost (t : BST) : nat := 
+  match t with
+  | node n leaf _ => n
+  | node _ lhs _ => leftmost lhs
+  end.
+
+Fixpoint rightmost (t : BST) : nat := 
+  match t with
+  | node n _ leaf => n
+  | node _ _ rhs => rightmost rhs
+  end.
+
+Definition valid_bst (t : BST) : Prop :=
+  leftmost t < rightmost t.
+
+Inductive valid_bst' : BST -> Prop :=
+| leaf_valid : valid_bst' leaf
+| node_valid : forall (n : nat) (lt rt : BST),
+    valid_bst' lt -> valid_bst' rt -> 
+    (rightmost lt) < n -> n < (leftmost rt) -> valid_bst' (node n lt rt).
+
+Fixpoint insert (n : nat) (t : BST) : BST :=
+  match t with
+  | leaf => (node n leaf leaf)
+  | node n' lt rt => if n <? n' then node n' (insert n lt) rt
+                                else if n' <? n then node n' lt (insert n rt)
+                                                else node n' lt rt
+  end.
+
 (* ################################################################# *)
 (** * Inductively Defined Propositions *)
 
