@@ -29,22 +29,22 @@ Inductive bst_lt (n : nat) : BST -> Prop :=
 | bst_lt_node : forall (n' : nat) (lt rt : BST),
   n' < n -> bst_lt n lt -> bst_lt n (node n' lt rt).
 
-Fixpoint leftmost (t : BST) : nat := 
+Fail Fixpoint leftmost (t : BST) : nat := 
   match t with
   | node n leaf _ => n
   | node _ lhs _ => leftmost lhs
   end.
 
-Fixpoint rightmost (t : BST) : nat := 
+Fail Fixpoint rightmost (t : BST) : nat := 
   match t with
   | node n _ leaf => n
   | node _ _ rhs => rightmost rhs
   end.
 
-Definition valid_bst (t : BST) : Prop :=
+Fail Definition valid_bst (t : BST) : Prop :=
   leftmost t < rightmost t.
 
-Inductive valid_bst' : BST -> Prop :=
+Fail Inductive valid_bst' : BST -> Prop :=
 | leaf_valid : valid_bst' leaf
 | node_valid : forall (n : nat) (lt rt : BST),
     valid_bst' lt -> valid_bst' rt -> 
@@ -1213,27 +1213,63 @@ End Playground.
 (** **** Exercise: 3 stars, standard, especially useful (le_facts) *)
 Lemma le_trans : forall m n o, m <= n -> n <= o -> m <= o.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros m n o.
+  intros HMgeN.
+  intros HNgeO.
+  induction HNgeO.
+  - apply HMgeN.
+  - apply le_S.
+    apply IHHNgeO.
+Qed.
 
 Theorem O_le_n : forall n,
   0 <= n.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  induction n.
+  - apply le_n.
+  - apply le_S.
+    apply IHn.
+Qed.
 
 Theorem n_le_m__Sn_le_Sm : forall n m,
   n <= m -> S n <= S m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m.
+  intros Hnm.
+  induction Hnm.
+  - apply le_n.
+  - apply le_S.
+    apply IHHnm.
+Qed.
 
 Theorem Sn_le_Sm__n_le_m : forall n m,
   S n <= S m -> n <= m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m.
+  intros HSnm.
+  induction m.
+  - inversion HSnm.
+    + apply le_n.
+    + inversion H0.
+  - inversion HSnm.
+    + apply le_n.
+    + apply le_S.
+      apply IHm.
+      apply H0.
+Qed.
 
 Theorem le_plus_l : forall a b,
   a <= a + b.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros a b.
+  induction b.
+  - rewrite add_0_r.
+    apply le_n.
+  - rewrite <- plus_n_Sm.
+    apply le_S.
+    apply IHb.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, especially useful (plus_le_facts1) *)
@@ -1242,13 +1278,39 @@ Theorem plus_le : forall n1 n2 m,
   n1 + n2 <= m ->
   n1 <= m /\ n2 <= m.
 Proof.
- (* FILL IN HERE *) Admitted.
+  intros n1 n2 m.
+  intros H.
+  induction H.
+  - split.
+    + apply le_plus_l.
+    + rewrite add_comm. apply le_plus_l.
+  - destruct IHle.
+    + split.
+      * apply le_S. apply H0.
+      * apply le_S. apply H1.
+Qed.
 
 Theorem plus_le_cases : forall n m p q,
   n + m <= p + q -> n <= p \/ m <= q.
   (** Hint: May be easiest to prove by induction on [n]. *)
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros n.
+  induction n.
+  - left. apply O_le_n.
+  - destruct p.
+    + right. 
+      apply plus_le in H.
+      simpl in H.
+      destruct H.
+      apply H0.
+    + intros. simpl in H.
+      apply Sn_le_Sm__n_le_m in H.
+      apply IHn in H.
+      destruct H.
+      * left. apply n_le_m__Sn_le_Sm. apply H.
+      * right. apply H.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, especially useful (plus_le_facts2) *)
@@ -1257,19 +1319,39 @@ Theorem plus_le_compat_l : forall n m p,
   n <= m ->
   p + n <= p + m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p H.
+  induction p.
+  - simpl. apply H.
+  - simpl. apply n_le_m__Sn_le_Sm. apply IHp.
+Qed.
 
 Theorem plus_le_compat_r : forall n m p,
   n <= m ->
   n + p <= m + p.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p H.
+  induction p.
+  - rewrite add_0_r.
+    rewrite add_0_r.
+    apply H.
+  - rewrite <- plus_n_Sm.
+    rewrite <- plus_n_Sm.
+    apply n_le_m__Sn_le_Sm.
+    apply IHp.
+Qed.
 
 Theorem le_plus_trans : forall n m p,
   n <= m ->
   n <= m + p.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n m p H.
+  induction p.
+  - rewrite add_0_r.
+    apply H.
+  - rewrite <- plus_n_Sm.
+    apply le_S.
+    apply IHp.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, optional (lt_facts) *)
