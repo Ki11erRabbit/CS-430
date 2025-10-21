@@ -1358,7 +1358,23 @@ Qed.
 Theorem lt_ge_cases : forall n m,
   n < m \/ n >= m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold lt.
+  unfold ge.
+  intros n.
+  induction n.
+  - intros m.
+    destruct m eqn:Em.
+    + right. apply le_n.
+    + left. 
+      apply n_le_m__Sn_le_Sm.
+      apply O_le_n.
+  - intros m.
+    destruct m eqn:Em.
+    + right. apply le_S. apply O_le_n.
+    + destruct (IHn n0).
+      * left. apply n_le_m__Sn_le_Sm. apply H.
+      * right. apply n_le_m__Sn_le_Sm. apply H.
+Qed.
 
 Theorem n_lt_m__n_le_m : forall n m,
   n < m ->
@@ -1413,6 +1429,32 @@ Inductive R : nat -> nat -> nat -> Prop :=
   | c4 m n o (H : R (S m) (S n) (S (S o))) : R m     n     o
   | c5 m n o (H : R m     n     o        ) : R n     m     o
 .
+
+Inductive R' : nat -> nat -> nat -> Prop :=
+  | c1'                                     : R' 0     0     0
+  | c2' m n o (H : R' m     n     o        ) : R' (S m) n     (S o)
+  | c3' m n o (H : R' m     n     o        ) : R' m     (S n) (S o)
+.
+
+Theorem fact_1: ~(R' 2 2 6).
+Proof.
+  unfold not.
+  intros.
+  inversion H; subst.
+  inversion H3; subst.
+  inversion H4; subst.
+  inversion H5; subst.
+  inversion H6.
+  inversion H4; subst.
+  inversion H5; subst.
+  inversion H6.
+  inversion H5; subst.
+  inversion H6.
+Admitted.
+
+Theorem fact_2: ~(R 2 2 6).
+Proof.
+Admitted.
 
 (** - Which of the following propositions are provable?
       - [R 1 1 2]
@@ -1647,6 +1689,10 @@ Arguments Star {T} _.
                     (s1 ++ s2) =~ (Star re)
 *)
 
+Inductive re_match {T : Type}: list T -> reg_exp T -> Prop :=
+| MEmpty' : re_match [] EmptyStr
+| MChar' : forall (x : T), re_match [x] (Char x).
+
 (** This directly corresponds to the following [Inductive] definition.
     We use the notation [s =~ re] in  place of [exp_match s re].
     (By "reserving" the notation before defining the [Inductive],
@@ -1674,6 +1720,11 @@ Inductive exp_match {T} : list T -> reg_exp T -> Prop :=
                : (s1 ++ s2) =~ (Star re)
 
   where "s =~ re" := (exp_match s re).
+
+Theorem empty_matches_nothing {T: Type} : forall (s : list T), s =~ EmptySet -> False.
+Proof.
+
+Admitted.
 
 (** Notice that these rules are not _quite_ the same as the
     intuition that we gave at the beginning of the section.
