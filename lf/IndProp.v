@@ -2345,7 +2345,15 @@ Qed.
 (** **** Exercise: 2 stars, standard, especially useful (reflect_iff) *)
 Theorem reflect_iff : forall P b, reflect P b -> (P <-> b = true).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros P b H.
+  destruct H as [HP | HnP].
+  - split.
+    + intros H0. reflexivity.
+    + intros. apply HP.
+  - split.
+    + intros. exfalso. apply HnP. apply H.
+    + discriminate.
+Qed.
 (** [] *)
 
 (** We can think of [reflect] as a variant of the usual "if and only
@@ -2404,7 +2412,14 @@ Theorem eqbP_practice : forall n l,
   count n l = 0 -> ~(In n l).
 Proof.
   intros n l Hcount. induction l as [| m l' IHl'].
-  (* FILL IN HERE *) Admitted.
+  - intros H. inversion H.
+  - simpl in Hcount. destruct (eqb n m).
+    + inversion Hcount.
+    + intros contra.
+      destruct contra as [Heq | HIn].
+* Abort.
+
+
 (** [] *)
 
 (** This small example shows reflection giving us a small gain in
@@ -2437,8 +2452,11 @@ Proof.
     [nostutter]. *)
 
 Inductive nostutter {X:Type} : list X -> Prop :=
- (* FILL IN HERE *)
+| nostutter_empty: nostutter []
+| nostutter_one x: nostutter [x]
+| nostutter_two x y l (P: x <> y) (H: nostutter (y::l)) : nostutter (x :: y:: l)
 .
+
 (** Make sure each of these tests succeeds, but feel free to change
     the suggested proof (in comments) if the given one doesn't work
     for you.  Your definition might be different from ours and still
@@ -2450,33 +2468,56 @@ Inductive nostutter {X:Type} : list X -> Prop :=
     example with more basic tactics.)  *)
 
 Example test_nostutter_1: nostutter [3;1;4;1;5;6].
-(* FILL IN HERE *) Admitted.
+Proof.
+  apply nostutter_two.
+  intros H.
+  discriminate.
+  apply nostutter_two.
+  intros H.
+  discriminate.
+  apply nostutter_two.
+  intros H.
+  discriminate.
+  apply nostutter_two.
+  intros H.
+  discriminate.
+  apply nostutter_two.
+  intros H.
+  discriminate.
+  apply nostutter_one.
+Qed.
+
+   
 (*
   Proof. repeat constructor; apply eqb_neq; auto.
   Qed.
 *)
 
 Example test_nostutter_2:  nostutter (@nil nat).
-(* FILL IN HERE *) Admitted.
+Proof.
+  apply nostutter_empty.
+Qed.
 (*
   Proof. repeat constructor; apply eqb_neq; auto.
   Qed.
 *)
 
 Example test_nostutter_3:  nostutter [5].
-(* FILL IN HERE *) Admitted.
+Proof.
+  apply nostutter_one.
+Qed.
 (*
-  Proof. repeat constructor; auto. Qed.
+  
 *)
 
 Example test_nostutter_4:      not (nostutter [3;1;1;4]).
-(* FILL IN HERE *) Admitted.
-(*
-  Proof. intro.
+Proof. intro.
   repeat match goal with
     h: nostutter _ |- _ => inversion h; clear h; subst
   end.
   contradiction; auto. Qed.
+(*
+  
 *)
 
 (* Do not modify the following line: *)
