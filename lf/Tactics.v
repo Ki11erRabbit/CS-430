@@ -1199,10 +1199,12 @@ Proof.
 Qed.
 
 Theorem test : forall (x y : nat), x = y.
+Proof.
   intros x y.
   Show Proof.
   generalize dependent x.
   Show Proof.
+Abort.
 
 Print curry.
 

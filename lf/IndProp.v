@@ -28,7 +28,7 @@ Inductive bst_lt (n : nat) : BST -> Prop :=
 | bst_lt_leaf : bst_lt n leaf
 | bst_lt_node : forall (n' : nat) (lt rt : BST),
   n' < n -> bst_lt n lt -> bst_lt n (node n' lt rt).
-
+(*
 Fail Fixpoint leftmost (t : BST) : nat := 
   match t with
   | node n leaf _ => n
@@ -57,7 +57,7 @@ Fixpoint insert (n : nat) (t : BST) : BST :=
                                 else if n' <? n then node n' lt (insert n rt)
                                                 else node n' lt rt
   end.
-
+*)
 (* ################################################################# *)
 (** * Inductively Defined Propositions *)
 
@@ -1961,13 +1961,39 @@ Qed.
     regular expression matches some string. Prove that your function
     is correct. *)
 
-Fixpoint re_not_empty {T : Type} (re : reg_exp T) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint re_not_empty {T : Type} (re : reg_exp T) : bool :=
+  match re with
+  | EmptySet => false
+  | EmptyStr => true
+  | Char c => true
+  | App re1 re2 => andb (re_not_empty re1) (re_not_empty re2)
+  | Union re1 re2 => orb (re_not_empty re1) (re_not_empty re2)
+  | Star re => true
+  end.
 
 Lemma re_not_empty_correct : forall T (re : reg_exp T),
   (exists s, s =~ re) <-> re_not_empty re = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  split; intros.
+  + induction re.
+    - destruct H.
+      inversion H.
+    - simpl. reflexivity.
+    - simpl. reflexivity.
+    - destruct H.
+      inversion H; subst.
+      simpl. apply andb_true_iff. split.
+      apply IHre1. exists s1. apply H3.
+      apply IHre2. exists s2. apply H4.
+    - admit.
+    - simpl. reflexivity.
+  + induction re.
+    - simpl in H. discriminate H.
+    - exists []. apply MEmpty.
+    - exists [t]. apply MChar.
+    - admit.
+Admitted.
 (** [] *)
 
 (* ================================================================= *)
@@ -2277,6 +2303,32 @@ End Pumping.
     performing this conversion as we did there can result in tedious
     proof scripts.  Consider the proof of the following theorem: *)
 
+
+Theorem eqb_is_eq : forall (n m : nat),
+  n =? m = true <-> n = m.
+Proof.
+  split.
+  - generalize dependent m.
+    induction n.
+    + intros m.
+      destruct m.
+      * simpl. intros.
+        reflexivity.
+      * simpl. intros.
+        discriminate.
+    + intros m.
+      destruct m.
+      * simpl. discriminate.
+      * simpl. intros.
+        f_equal.
+        apply IHn.
+        apply H.
+  - intros H.
+    rewrite H. 
+    apply eqb_refl.
+Qed.
+
+
 Theorem filter_not_empty_In : forall n l,
   filter (fun x => n =? x) l <> [] -> In n l.
 Proof.
@@ -2313,6 +2365,17 @@ Qed.
 Inductive reflect (P : Prop) : bool -> Prop :=
   | ReflectT (H :   P) : reflect P true
   | ReflectF (H : ~ P) : reflect P false.
+
+Theorem reflect_nat_eq : forall (n m : nat), 
+  reflect (n = m) (n =? m).
+Proof.
+  intros n m.
+  destruct (n =? m) eqn:E.
+  - apply ReflectT. apply eqb_is_eq. apply E.
+  - apply ReflectF. intros H. apply eqb_is_eq in H.
+    rewrite E in H.
+    discriminate H.
+Qed.
 
 (** The [reflect] property takes two arguments: a proposition
     [P] and a boolean [b].  It states that the property [P]
@@ -2554,8 +2617,19 @@ Definition manual_grade_for_nostutter : option (nat*string) := None.
     others.  Do this with an inductive relation, not a [Fixpoint].  *)
 
 Inductive merge {X:Type} : list X -> list X -> list X -> Prop :=
-(* FILL IN HERE *)
+| merge_empty : merge [] [] []
+| merge_left x l1 l2 lout : merge l1 l2 lout -> merge (x::l1) l2 (x::lout)
+| merge_right x l1 l2 lout : merge l1 l2 lout -> merge l1 (x :: l2) (x :: lout)
 .
+
+Example merge_ex1 : merge [1; 2] [3; 4] [1; 3; 2; 4].
+Proof.
+  apply merge_left.
+  apply merge_right.
+  apply merge_left.
+  apply merge_right.
+  apply merge_empty.
+Qed.
 
 Theorem merge_filter : forall (X : Set) (test: X->bool) (l l1 l2 : list X),
   merge l1 l2 l ->
@@ -2563,7 +2637,24 @@ Theorem merge_filter : forall (X : Set) (test: X->bool) (l l1 l2 : list X),
   All (fun n => test n = false) l2 ->
   filter test l = l1.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X test l l1 l2.
+  intros.
+  generalize dependent l1.
+  generalize dependent l2.
+  induction l; intros.
+  - simpl.
+    inversion H.
+    reflexivity.
+  - simpl. destruct (test x) eqn:E.
+    + inversion H; subst.
+      * f_equal.
+        apply IHl with (l2 := l2).
+        apply H1.
+        apply H5.
+        simpl in H0.
+        destruct H0.
+        apply H2.
+* Abort.
 
 (* FILL IN HERE *)
 
