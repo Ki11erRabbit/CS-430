@@ -1623,7 +1623,6 @@ Arguments Char {T} _.
 Arguments App {T} _ _.
 Arguments Union {T} _ _.
 Arguments Star {T} _.
-
 (** Note that this definition is _polymorphic_: Regular
     expressions in [reg_exp T] describe strings with characters drawn
     from [T] -- which in this exercise we represent as _lists_ with
@@ -1724,6 +1723,66 @@ Inductive exp_match {T} : list T -> reg_exp T -> Prop :=
 Theorem empty_matches_nothing {T: Type} : forall (s : list T), s =~ EmptySet -> False.
 Proof.
 
+Admitted.
+
+
+Theorem reg_app_assoc : forall (T: Type) (re0 re1 re2 : reg_exp T) (s : list T),
+  (s =~ (App (App re0 re1) re2)) <-> (s =~ App re0 (App re1 re2)).
+Proof.
+Admitted.
+
+Definition lang (T : Type) := list T -> Prop.
+
+Inductive star_match {T: Type} (L: lang T) : lang T :=
+| SMatch0 : star_match L []
+| SMatchS : forall s0 s1, L s0 -> star_match L s1 -> star_match L (s0 ++ s1).
+
+(* what strings the reg_exp matches *)
+Fixpoint re_interp {T : Type} (re : reg_exp T) : lang T :=
+  match re with
+  | EmptySet => fun s => False
+  | EmptyStr => fun s => s = []
+  | Char x => fun s => s = [x]
+  | App re0 re1 => fun s => exists s0 s1, s = s0 ++ s1 /\ (re_interp re0 s0 /\ re_interp re1 s1)
+  | Union re0 re1 => fun s => re_interp re0 s \/ re_interp re1 s
+  | Star re' => star_match (re_interp re')
+  end.
+
+Example re_interp_ex1 : re_interp (Char 1) [1].
+Proof.
+  simpl.
+  reflexivity.
+Qed.
+
+Example re_interp_ex2 : re_interp (Union (Char 0) (Char 1)) [1].
+Proof.
+  simpl.
+  right.
+  reflexivity.
+Qed.
+
+Example re_interp_ex3 : re_interp (App (Char 0) (Char 1)) [0; 1].
+Proof.
+  simpl. exists [0]. exists [1]. simpl. split; try split; reflexivity.
+Qed.
+
+Example re_interp_ex4 : re_interp (Star (Char 0)) [0; 0; 0].
+Proof.
+  simpl.
+  apply (SMatchS _ [0] [0; 0]).
+  reflexivity.
+  apply (SMatchS _ [0] [0]).
+  reflexivity.
+  apply (SMatchS _ [0] []).
+  reflexivity.
+  apply SMatch0.
+Qed.
+
+Theorem re_same {T : Type} : forall (re : reg_exp T) (s: list T),
+  re_interp re s <-> s =~ re.
+Proof.
+  intros re s.
+  split.
 Admitted.
 
 (** Notice that these rules are not _quite_ the same as the

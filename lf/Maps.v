@@ -227,7 +227,16 @@ Proof.
 Lemma t_update_shadow : forall (A : Type) (m : total_map A) x v1 v2,
   (x !-> v2 ; x !-> v1 ; m) = (x !-> v2 ; m).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  Show Proof.
+  apply functional_extensionality.
+  Show Proof.
+  intros x0.
+  unfold t_update.
+  destruct (eqb_spec x x0).
+  - reflexivity.
+  - reflexivity.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, standard (t_update_same)
