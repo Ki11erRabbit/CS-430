@@ -301,6 +301,14 @@ Print add1.
 Compute add1 2.
 (* ==> 3 : nat *)
 
+Definition add1d : forall (n : nat), exists (m : nat), S n = m.
+  intros n.
+  exists (S n).
+  reflexivity.
+  Defined.
+
+Print add1d.
+
 (** Notice that we terminated the [Definition] with a [.] rather than
     with [:=] followed by a term.  This tells Coq to enter _proof
     scripting mode_ to build an object of type [nat -> nat].  Also, we
@@ -928,7 +936,14 @@ Proof.
 Lemma pe_implies_true_eq :
   propositional_extensionality ->
   forall (P : Prop), P -> True = P.
-Proof. (* FILL IN HERE *) Admitted.
+Proof. 
+  unfold propositional_extensionality.
+  intros H P HP.
+  apply H.
+  split.
+  - intro HT. apply HP.
+  - intros HP0. apply I.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced (pe_implies_pi)
@@ -951,7 +966,21 @@ Definition proof_irrelevance : Prop :=
 
 Theorem pe_implies_pi :
   propositional_extensionality -> proof_irrelevance.
-Proof. (* FILL IN HERE *) Admitted.
+Proof. 
+  unfold propositional_extensionality.
+  unfold proof_irrelevance.
+  intros.
+  assert (HP: P -> True = P).
+  { apply pe_implies_true_eq. unfold propositional_extensionality. exact H. }
+  assert (HP3: True = P).
+  { apply HP. apply pf1. }
+  subst.
+  clear HP.
+  destruct pf1.
+  destruct pf2.
+  reflexivity.
+
+
 (** [] *)
 
 (* 2025-08-24 14:26 *)

@@ -1777,13 +1777,61 @@ Proof.
   reflexivity.
   apply SMatch0.
 Qed.
-
-Theorem re_same {T : Type} : forall (re : reg_exp T) (s: list T),
-  re_interp re s <-> s =~ re.
+(* 4 *)
+Theorem re_same  : forall T (re : reg_exp T) (s: list T),
+  s =~ re <-> re_interp re s .
 Proof.
-  intros re s.
-  split.
+  intros T.
+  induction re.
+  - intros. split; intros.
+    + inversion H.
+    + simpl in H. destruct H.
+  - intros. split; intros.
+    + inversion H. simpl. reflexivity.
+    + simpl in H. rewrite H. apply MEmpty.
+  - intros. split; intros.
+    + inversion H; subst. simpl. reflexivity.
+    + simpl in H. subst. apply MChar.
+  - intros s.
+    split.
+    + intros H.
+      inversion H; subst.
+      simpl.
+      exists s1.
+      exists s2.
+      split.
+      * reflexivity.
+      * split.
+        -- apply IHre1.
+           apply H3.
+        -- apply IHre2.
+           apply H4.
+    + intros H.
+      simpl in H. destruct H. destruct H. destruct H. destruct H0. subst.
+      apply MApp.
+      * apply IHre1. apply H0.
+      * apply IHre2. apply H1.
+      (*inversion H; subst.
+      destruct H0.
+      destruct H0.
+      destruct H1.
+      apply IHre1 in H1.
+      apply IHre2 in H2.*)
+  - admit.
+  - intros.
+    split; intros.
+    + remember (Star re) as re'. induction H; try inversion Heqre'; clear Heqre'; subst.
+      * simpl. apply SMatch0.
+      * simpl. apply SMatchS. apply IHexp_match1. admit.
+        simpl in IHexp_match2. apply IHexp_match2. reflexivity.
+    + induction H.
+      apply MStar0.
+      apply MStarApp. apply IHre. apply H. apply IHstar_match.
 Admitted.
+
+
+
+
 
 (** Notice that these rules are not _quite_ the same as the
     intuition that we gave at the beginning of the section.
