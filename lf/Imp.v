@@ -463,23 +463,60 @@ Admitted.
     it is sound.  Use the tacticals we've just seen to make the proof
     as short and elegant as possible. *)
 
-Fixpoint optimize_0plus_b (b : bexp) : bexp
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+(*
+Fixpoint beval (b : bexp) : bool :=
+  match b with
+  | BTrue       => true
+  | BFalse      => false
+  | BEq a1 a2   => (aeval a1) =? (aeval a2)
+  | BNeq a1 a2  => negb ((aeval a1) =? (aeval a2))
+  | BLe a1 a2   => (aeval a1) <=? (aeval a2)
+  | BGt a1 a2   => negb ((aeval a1) <=? (aeval a2))
+  | BNot b1     => negb (beval b1)
+  | BAnd b1 b2  => andb (beval b1) (beval b2)
+  end.
+*)
+
+Fixpoint optimize_0plus_b (b : bexp) : bexp :=
+  match b with
+  | BEq a1 a2 => BEq (optimize_0plus a1) (optimize_0plus a2)
+  | BNeq a1 a2 => BNeq (optimize_0plus a1) (optimize_0plus a2)
+  | BLe a1 a2 => BLe (optimize_0plus a1) (optimize_0plus a2)
+  | BGt a1 a2 => BGt (optimize_0plus a1) (optimize_0plus a2)
+  | BNot b => BNot (optimize_0plus_b b)
+  | BAnd x y => BAnd (optimize_0plus_b x) (optimize_0plus_b y)
+  | x => x
+  end.
+
 
 Example optimize_0plus_b_test1:
   optimize_0plus_b (BNot (BGt (APlus (ANum 0) (ANum 4)) (ANum 8))) =
                    (BNot (BGt (ANum 4) (ANum 8))).
-Proof. (* FILL IN HERE *) Admitted.
+Proof. 
+  simpl.
+  reflexivity.
+Qed.
 
 Example optimize_0plus_b_test2:
   optimize_0plus_b (BAnd (BLe (APlus (ANum 0) (ANum 4)) (ANum 5)) BTrue) =
                    (BAnd (BLe (ANum 4) (ANum 5)) BTrue).
-Proof. (* FILL IN HERE *) Admitted.
+Proof. 
+  simpl.
+  reflexivity.
+Qed.
 
 Theorem optimize_0plus_b_sound : forall b,
   beval (optimize_0plus_b b) = beval b.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b.
+  induction b;
+  try (simpl; repeat (rewrite optimize_0plus_sound); reflexivity).
+  - simpl. f_equal. apply IHb.
+  - simpl. rewrite IHb1. rewrite IHb2. reflexivity.
+Qed.
+
+  
+
 (** [] *)
 
 (** **** Exercise: 4 stars, standard, optional (optimize)
@@ -856,16 +893,48 @@ Qed.
     Write a relation [bevalR] in the same style as
     [aevalR], and prove that it is equivalent to [beval]. *)
 
+(*
+Fixpoint beval (b : bexp) : bool :=
+  match b with
+  | BTrue       => true
+  | BFalse      => false
+  | BEq a1 a2   => (aeval a1) =? (aeval a2)
+  | BNeq a1 a2  => negb ((aeval a1) =? (aeval a2))
+  | BLe a1 a2   => (aeval a1) <=? (aeval a2)
+  | BGt a1 a2   => negb ((aeval a1) <=? (aeval a2))
+  | BNot b1     => negb (beval b1)
+  | BAnd b1 b2  => andb (beval b1) (beval b2)
+  end.
+*)
+
+
 Reserved Notation "e '==>b' b" (at level 90, left associativity).
 Inductive bevalR: bexp -> bool -> Prop :=
-(* FILL IN HERE *)
+  | E_BTrue: (BTrue) ==>b true
+  | E_BFalse: (BFalse) ==>b false
+  | E_BEq (x y: aexp) (n1 n2: nat): (x ==> n1) -> (y ==> n2) -> (BEq x y) ==>b (n1 =? n2)
+  | E_BNeq (x y : aexp) (n1 n2: nat): (x ==> n1) -> (y ==> n2) -> (BNeq x y) ==>b (negb (n1 =? n2))
+  | E_BLe (x y : aexp) (n1 n2: nat): (x ==> n1) -> (y ==> n2) -> (BLe x y) ==>b (n1 <=? n2)
+  | E_BGt (x y : aexp) (n1 n2: nat): (x ==> n1) -> (y ==> n2) -> (BGt x y) ==>b (negb (n1 <=? n2))
+  | E_BNot (x : bexp) (b: bool): (x ==>b b) -> (BNot x) ==>b (negb b)
+  | E_And (x y : bexp) (b1 b2: bool): (x ==>b b1) -> (y ==>b b2) -> (BAnd x y) ==>b (andb b1 b2)
 where "e '==>b' b" := (bevalR e b) : type_scope
 .
 
 Lemma bevalR_iff_beval : forall b bv,
   b ==>b bv <-> beval b = bv.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  split.
+  - intros; induction H; simpl; try (apply aevalR_iff_aeval in H; apply aevalR_iff_aeval in H0); subst; try reflexivity.
+  - intros H.
+    destruct b; subst; constructor;
+    try (apply aevalR_iff_aeval; reflexivity).
+    + induction b; constructor; try (apply aevalR_iff_aeval; reflexivity); try apply IHb; try apply IHb1; try apply IHb2.
+    + induction b1; constructor; try (apply aevalR_iff_aeval; reflexivity); try apply IHb; try apply IHb1_1; try apply IHb1_2; try apply IHb1.
+    + induction b2; constructor; try (apply aevalR_iff_aeval; reflexivity); try apply IHb; try apply IHb2_1; try apply IHb2_2; try apply IHb2.
+Qed.
+    
+    
 (** [] *)
 
 End AExp.
