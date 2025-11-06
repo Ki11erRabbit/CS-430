@@ -979,6 +979,7 @@ Proof.
   destruct pf1.
   destruct pf2.
   reflexivity.
+Qed.
 
 
 (** [] *)

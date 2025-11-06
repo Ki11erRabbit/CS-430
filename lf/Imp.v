@@ -529,6 +529,18 @@ Qed.
     optimization and its correctness proof -- and build up
     incrementally to something more interesting.)  *)
 
+(* 0 + a => a
+   a + 0 => a
+   1 * a => a
+   a * 1 => a
+   a - a => 0
+   a * 0 => 0
+   0 * a => 0
+   X + e => X + [[e]]
+
+
+*)
+
 (* FILL IN HERE
 
     [] *)
@@ -1638,7 +1650,12 @@ Example ceval_example2:
     Z := 2
   ]=> (Z !-> 2 ; Y !-> 1 ; X !-> 0).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  apply E_Seq with (X !-> 0).
+  - apply E_Asgn. reflexivity.
+  - apply E_Seq with (Y !-> 1; X !-> 0).
+    + apply E_Asgn. reflexivity.
+    + apply E_Asgn. reflexivity.
+Qed.
 (** [] *)
 
 Set Printing Implicit.
