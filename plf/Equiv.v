@@ -186,7 +186,15 @@ Theorem skip_right : forall c,
     <{ c ; skip }>
     c.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros c st st'.
+  split; intros H.
+  - inversion H; subst.
+    inversion H5; subst.
+    assumption.
+  - apply E_Seq with st'.
+    + apply H. 
+    + apply E_Skip.
+Qed.
 (** [] *)
 
 (** Similarly, here is a simple equivalence that optimizes [if]
@@ -278,7 +286,17 @@ Theorem if_false : forall b c1 c2,
     <{ if b then c1 else c2 end }>
     c2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b c1 c2 Hb.
+  split; intros H.
+  - inversion H; subst.
+    + unfold bequiv in Hb. simpl in Hb.
+      rewrite Hb in H5.
+      discriminate.
+    + assumption.
+  - apply E_IfFalse; try assumption.
+    unfold bequiv in Hb. simpl in Hb.
+    apply Hb.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (swap_if_branches)
@@ -291,7 +309,22 @@ Theorem swap_if_branches : forall b c1 c2,
     <{ if b then c1 else c2 end }>
     <{ if ~ b then c2 else c1 end }>.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b c1 c2.
+  split; intros H; inversion H; subst.
+  - apply E_IfFalse.
+    + simpl. rewrite H5. reflexivity.
+    + assumption.
+  - apply E_IfTrue.
+    + simpl. rewrite H5. reflexivity.
+    + assumption.
+  - apply E_IfFalse.
+    + simpl in H5. destruct (beval st b); try reflexivity; try discriminate.
+    + simpl in H5. destruct (beval st b); try reflexivity; try discriminate.
+      assumption.
+  - apply E_IfTrue.
+    + simpl in H5. destruct (beval st b); try reflexivity; try discriminate.
+    + assumption.
+Qed.
 (** [] *)
 
 (** For [while] loops, we can give a similar pair of theorems.  A loop
@@ -394,7 +427,21 @@ Theorem while_true : forall b c,
     <{ while b do c end }>
     <{ while true do skip end }>.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b c Hb.
+  split; intros H.
+  - inversion H; subst.
+    + apply while_true_nonterm in H.
+      * destruct H.
+      * assumption.
+    + apply while_true_nonterm in H6.
+      * destruct H6.
+      * assumption.
+  - inversion H; subst.
+    + simpl in H4. discriminate.
+    + apply while_true_nonterm in H6.
+      * destruct H6.
+      * intros st'1. reflexivity.
+Qed.
 (** [] *)
 
 (** A more interesting fact about [while] commands is that any number
@@ -467,7 +514,14 @@ Theorem assign_aequiv : forall (X : string) (a : aexp),
   aequiv <{ X }> a ->
   cequiv <{ skip }> <{ X := a }>.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X a Ha.
+  unfold aequiv in Ha.
+  split; intros H; inversion H; subst; clear H.
+  - assert (H: st' =[X := a]=> (X !-> st' X ; st')).
+    { constructor. rewrite <- Ha. reflexivity. }
+    rewrite t_update_same in H. assumption.
+  - rewrite <- (Ha st). rewrite t_update_same. constructor.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, standard (equiv_classes) *)
@@ -531,8 +585,8 @@ Definition prog_i : com :=
        X := Y + 1
      end }>.
 
-Definition equiv_classes : list (list com)
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Definition equiv_classes : list (list com) :=
+  [ [prog_a; prog_d; prog_g; prog_f; prog_h; prog_i] ; [prog_b; prog_c; prog_e]].
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_equiv_classes : option (nat*string) := None.
