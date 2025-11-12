@@ -16,6 +16,17 @@ Fixpoint make_dance_ring (size : nat) (ring : dance_ring) : dance_ring :=
   | S size', (inner, outer) => make_dance_ring size' ((size :: inner), (size :: outer))
   end.
 
+Definition dance_ring_length (ring: dance_ring) : nat :=
+  match ring with
+  | (x, _) => length x
+  end.
+
+Definition dance_ring_eqb (ring1 ring2: dance_ring) : bool :=
+  match ring1, ring2 with
+  | (x1, y1), (x2, y2) => if (list_eq_dec Nat.eq_dec x1 x2) then (if (list_eq_dec Nat.eq_dec y1 y2) then true else false) else false
+  end.
+
+
 Inductive movement : Type :=
 | InnerMoveForwardOne
 | InnerMoveBackwardOne
@@ -81,5 +92,10 @@ Definition korobushka_one (ring: dance_ring) : dance_ring :=
     (move_dance_ring InnerMoveBackwardOne 
       (move_dance_ring OuterMoveForwardOne 
         (move_dance_ring SwapInnerOuter ring)))).
+
+
+Theorem korobushka_n_start_eq_end: forall (ring: dance_ring) (n: nat),
+  n = (dance_ring_length ring) -> (dance_ring_eqb (apply_dance_n ring n korobushka_one) ring) = true.
+Proof
 
 
