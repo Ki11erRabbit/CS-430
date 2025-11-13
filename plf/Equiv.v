@@ -788,7 +788,22 @@ Theorem CIf_congruence : forall b b' c1 c1' c2 c2',
   cequiv <{ if b then c1 else c2 end }>
          <{ if b' then c1' else c2' end }>.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros b b' c1 c1' c2 c2' Hbe Hc1e Hc2e.
+  unfold cequiv.
+  split; intros H; inversion H; subst.
+  - apply E_IfTrue.
+    + rewrite <- Hbe. apply H5.
+    + apply Hc1e. apply H6.
+  - apply E_IfFalse.
+    + rewrite <- Hbe. assumption.
+    + apply Hc2e. assumption.
+  - apply E_IfTrue.
+    + rewrite Hbe. assumption.
+    + apply Hc1e. assumption.
+  - apply E_IfFalse.
+    + rewrite Hbe. assumption.
+    + apply Hc2e. assumption.
+Qed.
 (** [] *)
 
 (** For example, here are two equivalent programs and a proof of their
@@ -1169,9 +1184,25 @@ Proof.
        become constants after folding *)
       simpl. destruct (n =? n0); reflexivity.
   - (* BLe *)
-    (* FILL IN HERE *) admit.
+    simpl.
+    remember (fold_constants_aexp a1) as a1' eqn:Heqa1'.
+    remember (fold_constants_aexp a2) as a2' eqn:Heqa2'.
+    replace (aeval st a1) with (aeval st a1') by
+      (subst a1'; rewrite <- fold_constants_aexp_sound; reflexivity).
+    replace (aeval st a2) with (aeval st a2') by
+      (subst a2'; rewrite <- fold_constants_aexp_sound; reflexivity).
+    destruct a1'; destruct a2'; try reflexivity.
+    simpl. destruct (n <=? n0); reflexivity.
   - (* BGt *)
-    (* FILL IN HERE *) admit.
+    simpl.
+    remember (fold_constants_aexp a1) as a1' eqn:Heqa1'.
+    remember (fold_constants_aexp a2) as a2' eqn:Heqa2'.
+    replace (aeval st a1) with (aeval st a1') by
+      (subst a1'; rewrite <- fold_constants_aexp_sound; reflexivity).
+    replace (aeval st a2) with (aeval st a2') by
+      (subst a2'; rewrite <- fold_constants_aexp_sound; reflexivity).
+    destruct a1'; destruct a2'; try reflexivity.
+    simpl. destruct (n <=? n0); reflexivity.
   - (* BNot *)
     simpl. remember (fold_constants_bexp b) as b' eqn:Heqb'.
     rewrite IHb.
@@ -1182,7 +1213,7 @@ Proof.
     remember (fold_constants_bexp b2) as b2' eqn:Heqb2'.
     rewrite IHb1. rewrite IHb2.
     destruct b1'; destruct b2'; reflexivity.
-(* FILL IN HERE *) Admitted.
+Qed.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (fold_constants_com_sound)
@@ -1213,7 +1244,14 @@ Proof.
       apply trans_cequiv with c2; try assumption.
       apply if_false; assumption.
   - (* while *)
-    (* FILL IN HERE *) Admitted.
+    assert (bequiv b (fold_constants_bexp b)). {
+      apply fold_constants_bexp_sound. }
+    destruct (fold_constants_bexp b) eqn:Heqb;
+      try (apply CWhile_congruence; assumption).
+    + apply while_true. assumption.
+    + apply while_false. assumption.
+Qed.
+    
 (** [] *)
 
 (* ================================================================= *)
@@ -1458,7 +1496,28 @@ Proof.
 Theorem inequiv_exercise:
   ~ cequiv <{ while true do skip end }> <{ skip }>.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold cequiv.
+  intros contra.
+  assert (H1: forall st st', ~( st =[ while true do skip end ]=> st' )).
+  { 
+    intros st st'.
+    apply while_true_nonterm.
+    Search (bequiv _ _).
+    apply refl_bequiv.
+   }
+  assert (H2: exists st st', st =[ skip ]=> st').
+  {
+    exists empty_st.
+    exists empty_st.
+    apply E_Skip.
+  }
+  destruct H2 as [st [st' H2]].
+  apply (H1 st st').
+  apply contra.
+  apply H2.
+Qed.
+
+  
 (** [] *)
 
 (* ################################################################# *)
