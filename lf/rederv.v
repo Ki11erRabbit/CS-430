@@ -6,6 +6,8 @@ From Stdlib Require Import EqNat. Import Nat.
 From Stdlib Require Import Lia.
 From Stdlib Require Import List. Import ListNotations.
 From Stdlib Require Import Strings.String.
+From Stdlib Require Import Logic.FunctionalExtensionality.
+From Stdlib Require Import Logic.PropExtensionality.
 
 Parameter Sigma : Set.
 Parameter eq_sigma_dec : forall (c0 c1 : Sigma), { c0 = c1 } + { c0 <> c1 }.
@@ -19,13 +21,6 @@ Inductive RE : Set :=
 | REdisj : RE -> RE -> RE
 | REconj : RE -> RE -> RE
 | REneg : RE -> RE.
-
-Definition disj (re0 re1 : RE) : RE :=
-  match re0, re1 with
-  | REemptyset, _ => re1
-  | _, REemptyset => re0
-  | _, _ => REdisj re0 re1
-  end.
 
 
 Check REdisj REemptyset REemptystring.
@@ -96,6 +91,13 @@ Admitted.
 
 Definition v (re : RE) : RE := if nullable re then REemptystring else REemptyset.
 
+Definition disj (re0 re1 : RE) : RE :=
+  match re0, re1 with
+  | REemptyset, _ => re1
+  | _, REemptyset => re0
+  | _, _ => REdisj re0 re1
+  end.
+
 Definition conj (re0 re1 : RE) : RE :=
   match re0, re1 with
   | REemptyset, _ => REemptyset
@@ -133,6 +135,22 @@ Definition lang_equiv (l0 l1 : lang) := forall (s : string),
 Theorem deriv_equiv_rederiv : forall (c : Sigma) (re : RE),
   deriv c (re_interp re) = re_interp (rederiv c re).
 Proof.
-  intros.
+  intros c re. (*
   unfold deriv.
   unfold re_interp.
+  *)
+  apply functional_extensionality.
+  intros.
+  apply propositional_extensionality.
+  induction re; split; simpl; intros.
+  - unfold deriv in H. tauto.
+  - admit.
+  - admit.
+  - admit.
+  - admit.
+  - admit.
+  - admit.
+  - unfold deriv in H.
+    
+  
+
