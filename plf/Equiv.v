@@ -586,8 +586,9 @@ Definition prog_i : com :=
      end }>.
 
 Definition equiv_classes : list (list com) :=
-  [ [prog_a; prog_d; prog_g; prog_f; prog_h; prog_i] ; [prog_b; prog_c; prog_e]].
-
+  [ [prog_c; prog_h]; [prog_a; prog_d]; [prog_f; prog_g]; [prog_i]; [prog_b; prog_e]].
+  (*[ [prog_a; prog_d; prog_g; prog_f; prog_h; prog_i] ; [prog_b; prog_c; prog_e]].*)
+(* [prog_c, prog_h] [prog_a, prog_d] [prog_f, prog_g] *)
 (* Do not modify the following line: *)
 Definition manual_grade_for_equiv_classes : option (nat*string) := None.
 (** [] *)
@@ -838,6 +839,8 @@ Qed.
     that it is an equivalence but not a congruence. *)
 
 (* FILL IN HERE *)
+
+
 (* Do not modify the following line: *)
 Definition manual_grade_for_not_congr : option (nat*string) := None.
 (** [] *)
