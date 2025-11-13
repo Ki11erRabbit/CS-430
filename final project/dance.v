@@ -6,8 +6,31 @@ From Stdlib Require Import Lia.
 From Stdlib Require Import List. Import ListNotations.
 
 Definition partner: Type := nat.
-Definition partner_ring: Type := list nat.
+Definition partner_ring: Type := list partner.
 Definition dance_ring: Type := (partner_ring * partner_ring).
+
+Fixpoint partner_ring_eqb (ring1 ring2: partner_ring) : bool :=
+  match ring1, ring2 with
+  | [], [] => true
+  | _, [] => false
+  | [], _ => false
+  | (x :: xs), (y :: ys) => if x =? y then partner_ring_eqb xs ys else false
+  end.
+
+Definition partner_ring_eq_dec (ring1 ring2: partner_ring) := list_eq_dec Nat.eq_dec.
+
+
+Theorem partner_ring_equal_to_self: forall (ring : partner_ring),
+  partner_ring_eqb ring ring = true.
+Proof.
+  intros ring.
+  induction ring.
+  - reflexivity.
+  - simpl. 
+    Search (_ =? _).
+    rewrite eqb_refl.
+    apply IHring.
+Qed.
 
 
 Fixpoint make_dance_ring (size : nat) (ring : dance_ring) : dance_ring :=
@@ -23,8 +46,24 @@ Definition dance_ring_length (ring: dance_ring) : nat :=
 
 Definition dance_ring_eqb (ring1 ring2: dance_ring) : bool :=
   match ring1, ring2 with
-  | (x1, y1), (x2, y2) => if (list_eq_dec Nat.eq_dec x1 x2) then (if (list_eq_dec Nat.eq_dec y1 y2) then true else false) else false
+  | (x1, y1), (x2, y2) => partner_ring_eqb x1 x2 && partner_ring_eqb y1 y2
   end.
+
+Definition dance_ring_eq_dec (ring1 ring2: dance_ring) : { ring1 = ring2 } + { ring1 <> ring2 }.
+  decide equality; apply list_eq_dec; apply Nat.eq_dec.
+Defined.
+
+
+Theorem dance_ring_equal_to_self: forall (ring : dance_ring),
+  dance_ring_eqb ring ring = true.
+Proof.
+  intros ring.
+  destruct ring.
+  simpl.
+  rewrite partner_ring_equal_to_self.
+  rewrite partner_ring_equal_to_self.
+  reflexivity.
+Qed.
 
 
 Inductive movement : Type :=
@@ -54,6 +93,18 @@ Definition partner_ring_backward_one (ring: partner_ring) : partner_ring :=
   | x :: rest => x :: (rev rest)
   end.
 
+Theorem partner_ring_backward_one_moves_to_front : forall (p: partner) (ring: partner_ring),
+  partner_ring_backward_one (ring ++ [p]) = p :: ring.
+Proof.
+  intros p ring.
+  unfold partner_ring_backward_one.
+  rewrite rev_app_distr.
+  simpl.
+  rewrite rev_involutive.
+  reflexivity.
+Qed.
+
+
 Definition partner_ring_backward_two (ring: partner_ring) : partner_ring :=
   partner_ring_backward_one (partner_ring_backward_one ring).
 
@@ -70,6 +121,26 @@ Definition move_dance_ring (movement : movement) (ring: dance_ring) : dance_ring
   | OuterMoveBackwardTwo, (inner, outer) => (inner, (partner_ring_backward_two outer))
   | SwapInnerOuter, (inner, outer) => (outer, inner)
   end. 
+
+Theorem inner_move_forward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
+  move_dance_ring InnerMoveForwardOne ((p_inner :: ring_inner), ring_outer) = ((ring_inner ++ [p_inner]), ring_outer).
+Proof.
+  intros p_inner ring_inner.
+  destruct ring_inner.
+  - simpl. reflexivity.
+  - simpl. reflexivity.
+Qed.
+
+Theorem inner_move_backward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
+  move_dance_ring InnerMoveBackwardOne ((ring_inner ++ [p_inner]), ring_outer) = ((p_inner :: ring_inner), ring_outer).
+Proof.
+  intros p_inner ring_inner ring_outer.
+  simpl.
+  rewrite partner_ring_backward_one_moves_to_front.
+  reflexivity.
+Qed.
+
+
 
 Fixpoint apply_dance_n (ring : dance_ring) (n : nat) (dance : dance_ring -> dance_ring) :=
   match n with
@@ -93,9 +164,24 @@ Definition korobushka_one (ring: dance_ring) : dance_ring :=
       (move_dance_ring OuterMoveForwardOne 
         (move_dance_ring SwapInnerOuter ring)))).
 
+Theorem korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) (ring_inner ring_outer : partner_ring),
+  (dance_ring_eqb (korobushka_one ((p_inner :: ring_inner), (p_outer_start :: (ring_outer ++ [p_outer_end])))) ((ring_inner ++ [p_inner]),(p_outer_end :: p_outer_start :: ring_outer))) = true.
+Proof.
+  intros p_inner p_outer_start p_outer_end ring_inner ring_outer.
+  simpl.
+  induction ring_inner; induction ring_outer.
+  - simpl. rewrite eqb_refl. rewrite eqb_refl. rewrite eqb_refl. reflexivity.
+  - simpl. rewrite eqb_refl. simpl.
 
 Theorem korobushka_n_start_eq_end: forall (ring: dance_ring) (n: nat),
   n = (dance_ring_length ring) -> (dance_ring_eqb (apply_dance_n ring n korobushka_one) ring) = true.
-Proof
+Proof.
+  intros ring n.
+  intros H.
+  induction n.
+  - simpl. rewrite dance_ring_equal_to_self. reflexivity.
+  - simpl. rewrite <- IHn.
+    + 
+    +  
 
 
