@@ -33,11 +33,40 @@ Proof.
 Qed.
 
 
-Fixpoint make_dance_ring (size : nat) (ring : dance_ring) : dance_ring :=
+Fixpoint make_dance_ring_inner (size : nat) (ring : dance_ring) : dance_ring :=
   match size, ring with 
   | O, (inner, outer) => (0 :: inner, 0 ::outer)
-  | S size', (inner, outer) => make_dance_ring size' ((size :: inner), (size :: outer))
+  | S size', (inner, outer) => make_dance_ring_inner size' ((size :: inner), (size :: outer))
   end.
+
+Definition make_dance_ring (size : nat) : dance_ring := 
+  match size with
+  | O => ([], [])
+  | _ => make_dance_ring_inner size ([],[])
+  end.
+
+Lemma make_dance_ring_inner_equal_lengths: forall (n: nat) (inner outer: list nat),
+  length inner = length outer ->
+  length (fst (make_dance_ring_inner n (inner, outer))) = 
+  length (snd (make_dance_ring_inner n (inner, outer))).
+Proof.
+  intros n inner outer H.
+  generalize dependent inner.
+  generalize dependent outer.
+  induction n; intros.
+  - simpl. simpl in H. auto.
+  - simpl. apply IHn. simpl. auto.
+Qed.
+
+Lemma make_dance_ring_equal_lengths: forall (n: nat),
+  length (fst (make_dance_ring n )) = length (snd (make_dance_ring n)).
+Proof.
+  intros n.
+  induction n.
+  - simpl. reflexivity.
+  - simpl. apply make_dance_ring_inner_equal_lengths.
+    reflexivity.
+Qed.
 
 Definition dance_ring_length (ring: dance_ring) : nat :=
   match ring with
