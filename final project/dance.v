@@ -4,10 +4,11 @@ From Stdlib Require Import Arith.
 From Stdlib Require Import EqNat. Import Nat.
 From Stdlib Require Import Lia.
 From Stdlib Require Import List. Import ListNotations.
+From Stdlib Require Import ProofIrrelevance.
 
 Definition partner: Type := nat.
 Definition partner_ring: Type := list partner.
-Definition dance_ring: Type := (partner_ring * partner_ring).
+
 
 Fixpoint partner_ring_eqb (ring1 ring2: partner_ring) : bool :=
   match ring1, ring2 with
@@ -32,67 +33,74 @@ Proof.
     apply IHring.
 Qed.
 
+Record dance_ring := make_dance_ring_internal {
+  inner_ring : partner_ring;
+  outer_ring : partner_ring;
+  ring_well_formed : length inner_ring = length outer_ring
+}.
 
-Fixpoint make_dance_ring_inner (size : nat) (ring : dance_ring) : dance_ring :=
-  match size, ring with 
-  | O, (inner, outer) => (0 :: inner, 0 ::outer)
-  | S size', (inner, outer) => make_dance_ring_inner size' ((size :: inner), (size :: outer))
-  end.
-
-Definition make_dance_ring (size : nat) : dance_ring := 
-  match size with
-  | O => ([], [])
-  | _ => make_dance_ring_inner size ([],[])
-  end.
-
-Lemma make_dance_ring_inner_equal_lengths: forall (n: nat) (inner outer: list nat),
-  length inner = length outer ->
-  length (fst (make_dance_ring_inner n (inner, outer))) = 
-  length (snd (make_dance_ring_inner n (inner, outer))).
+Definition make_dance_ring (n: nat) : dance_ring.
 Proof.
-  intros n inner outer H.
-  generalize dependent inner.
-  generalize dependent outer.
-  induction n; intros.
-  - simpl. simpl in H. auto.
-  - simpl. apply IHn. simpl. auto.
-Qed.
+  (* Build the two rings *)
+  set (inner := seq 0 n).           (* [0; 1; 2; ...; n-1] *)
+  set (outer := seq 0 n).           (* [n; n+1; ...; 2n-1] *)
+  
+  (* Create the record *)
+  refine (make_dance_ring_internal inner outer _).
+  
+  (* Prove they have equal length *)
+  unfold inner, outer.
+  repeat rewrite length_seq.
+  reflexivity.
+Defined.
 
-Lemma make_dance_ring_equal_lengths: forall (n: nat),
-  length (fst (make_dance_ring n )) = length (snd (make_dance_ring n)).
+Definition dance_ring_swap (ring : dance_ring) : dance_ring.
 Proof.
-  intros n.
-  induction n.
-  - simpl. reflexivity.
-  - simpl. apply make_dance_ring_inner_equal_lengths.
-    reflexivity.
-Qed.
-
-Definition dance_ring_length (ring: dance_ring) : nat :=
-  match ring with
-  | (x, _) => length x
-  end.
-
-Definition dance_ring_eqb (ring1 ring2: dance_ring) : bool :=
-  match ring1, ring2 with
-  | (x1, y1), (x2, y2) => partner_ring_eqb x1 x2 && partner_ring_eqb y1 y2
-  end.
-
-Definition dance_ring_eq_dec (ring1 ring2: dance_ring) : { ring1 = ring2 } + { ring1 <> ring2 }.
-  decide equality; apply list_eq_dec; apply Nat.eq_dec.
+  destruct ring as [inner_ring outer_ring proof].
+  refine (make_dance_ring_internal outer_ring inner_ring _).
+  symmetry in proof.
+  apply proof.
 Defined.
 
 
-Theorem dance_ring_equal_to_self: forall (ring : dance_ring),
-  dance_ring_eqb ring ring = true.
+
+
+
+Definition dance_ring_length (ring: dance_ring) : nat :=
+  length (inner_ring ring).
+
+Definition dance_ring_eqb (ring1 ring2: dance_ring) : bool :=
+  partner_ring_eqb (inner_ring ring1) (inner_ring ring2) && partner_ring_eqb (outer_ring ring1) (outer_ring ring2).
+
+Definition dance_ring_eq_dec (ring1 ring2: dance_ring) : { ring1 = ring2 } + { ring1 <> ring2 }.
 Proof.
-  intros ring.
-  destruct ring.
-  simpl.
-  rewrite partner_ring_equal_to_self.
-  rewrite partner_ring_equal_to_self.
-  reflexivity.
-Qed.
+  destruct ring1 as [inner1 outer1 H1].
+  destruct ring2 as [inner2 outer2 H2].
+  
+  (* First decide if inner rings are equal *)
+  destruct (list_eq_dec Nat.eq_dec inner1 inner2) as [H_inner | H_inner].
+  - (* inner1 = inner2 *)
+    destruct (list_eq_dec Nat.eq_dec outer1 outer2) as [H_outer | H_outer].
+    + (* outer1 = outer2 *)
+      (* Both components equal, so records are equal *)
+      left.
+      subst inner2. subst outer2.
+      (* Now need to show the proofs are equal *)
+      (* Use proof irrelevance *)
+      f_equal.
+      apply proof_irrelevance.
+    + (* outer1 <> outer2 *)
+      right.
+      intro H_contra.
+      injection H_contra as H_i H_o.
+      contradiction.
+  - (* inner1 <> inner2 *)
+    right.
+    intro H_contra.
+    injection H_contra as H_i H_o.
+    contradiction.
+Defined.
+
 
 
 Inductive movement : Type :=
@@ -126,16 +134,60 @@ Proof.
   reflexivity.
 Qed.
 
+Theorem partner_ring_forward_one_preserves_length : forall (ring : partner_ring),
+  length ring = length (partner_ring_forward_one ring).
+Proof.
+  intros ring.
+  destruct ring.
+  - simpl. reflexivity.
+  - simpl. Search (length (_ ++ [_])).
+    rewrite last_length.
+    reflexivity.
+Qed.
 
-Definition move_dance_ring (movement : movement) (ring: dance_ring) : dance_ring :=
-  match movement, ring with 
-  | InnerMoveForwardOne, (inner, outer) => ((partner_ring_forward_one inner), outer)
-  | InnerMoveBackwardOne, (inner, outer) => ((partner_ring_backward_one inner), outer)
-  | OuterMoveForwardOne, (inner, outer) => (inner, (partner_ring_forward_one outer))
-  | OuterMoveBackwardOne, (inner, outer) => (inner, (partner_ring_backward_one outer))
-  | SwapInnerOuter, (inner, outer) => (outer, inner)
-  end. 
+Theorem partner_ring_backward_one_preserves_length : forall (ring : partner_ring),
+  length ring = length (partner_ring_backward_one ring).
+Proof.
+  intros ring.
+  destruct ring as [| p ring'] using rev_ind.
+  - (* ring = [] *)
+    simpl. reflexivity.
+  - (* ring = ring' ++ [p] *)
+    unfold partner_ring_backward_one.
+    rewrite rev_app_distr.
+    simpl.
+    rewrite length_rev.
+    rewrite length_app.
+    simpl.
+    rewrite length_rev.
+    Search (_ + 1).
+    rewrite add_1_r.
+    reflexivity.
+Qed.
+  
 
+Definition dance_ring_move (movement : movement) (ring: dance_ring) : dance_ring.
+Proof.
+  destruct ring as [inner_ring outer_ring ring_well_formed].
+  destruct movement.
+  - refine (make_dance_ring_internal (partner_ring_forward_one inner_ring) outer_ring _).
+    rewrite <- partner_ring_forward_one_preserves_length.
+    apply ring_well_formed.
+  - refine (make_dance_ring_internal (partner_ring_backward_one inner_ring) outer_ring _).
+    rewrite <- partner_ring_backward_one_preserves_length.
+    apply ring_well_formed.
+  - refine (make_dance_ring_internal inner_ring (partner_ring_forward_one outer_ring) _).
+    rewrite <- partner_ring_forward_one_preserves_length.
+    apply ring_well_formed.
+  - refine (make_dance_ring_internal inner_ring (partner_ring_backward_one outer_ring) _).
+    rewrite <- partner_ring_backward_one_preserves_length.
+    apply ring_well_formed.
+  - refine (make_dance_ring_internal outer_ring inner_ring _).
+    symmetry in ring_well_formed.
+    apply ring_well_formed.
+Defined.
+
+(*
 Theorem inner_move_forward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
   move_dance_ring InnerMoveForwardOne ((p_inner :: ring_inner), ring_outer) = ((ring_inner ++ [p_inner]), ring_outer).
 Proof.
@@ -179,6 +231,18 @@ Proof.
   intros ring_inner ring_outer.
   simpl. reflexivity.
 Qed.
+*)
+Theorem movement_preserves_length : forall (ring : dance_ring) (movement: movement),
+  dance_ring_length ring = dance_ring_length (dance_ring_move movement ring).
+Proof.
+  intros ring movement.
+  destruct ring as [inner_ring outer_ring ring_well_formed].
+  destruct movement; unfold dance_ring_move, dance_ring_length; simpl; try reflexivity.
+  - rewrite partner_ring_forward_one_preserves_length. reflexivity.
+  - rewrite partner_ring_backward_one_preserves_length. reflexivity.
+  - apply ring_well_formed.
+Qed.
+
 
 Fixpoint apply_dance_n (ring : dance_ring) (n : nat) (dance : dance_ring -> dance_ring) :=
   match n with
@@ -189,11 +253,12 @@ Fixpoint apply_dance_n (ring : dance_ring) (n : nat) (dance : dance_ring -> danc
 
 (* This is missing two line movements but since they undo each other I think it is fine to ignore them. *)
 Definition korobushka_one (ring: dance_ring) : dance_ring :=
-  (move_dance_ring SwapInnerOuter 
-    (move_dance_ring InnerMoveBackwardOne 
-      (move_dance_ring OuterMoveForwardOne 
-        (move_dance_ring SwapInnerOuter ring)))).
+  (dance_ring_move SwapInnerOuter 
+    (dance_ring_move InnerMoveBackwardOne 
+      (dance_ring_move OuterMoveForwardOne 
+        (dance_ring_move SwapInnerOuter ring)))).
 
+(*
 Theorem korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) (ring_inner ring_outer : partner_ring),
   (korobushka_one ((p_inner :: ring_inner), (p_outer_start :: (ring_outer ++ [p_outer_end])))) = ((ring_inner ++ [p_inner]),(p_outer_end :: p_outer_start :: ring_outer)).
 Proof.
@@ -202,7 +267,7 @@ Proof.
   unfold korobushka_one.
   rewrite outer_inner_swap.
   rewrite outer_move_forward_one.
-  unfold move_dance_ring.
+  unfold dance_ring_move.
   rewrite <- partner_ring_backward_one_moves_to_front.
   simpl.
   unfold partner_ring_backward_one.
@@ -214,15 +279,13 @@ Proof.
   simpl.
   reflexivity.
 Qed.
+*)
 
 Theorem korobushka_n_start_eq_end: forall (ring: dance_ring) (n: nat),
   n = (dance_ring_length ring) -> (apply_dance_n ring n korobushka_one) = ring.
 Proof.
   intros ring n.
   intros H.
-  induction n.
-  - simpl. reflexivity.
-  - 
       
 
 
@@ -232,11 +295,11 @@ Proof.
 
 
 Definition anis_waltz_one (ring: dance_ring) : dance_ring :=
-  (move_dance_ring InnerMoveBackwardOne 
-    (move_dance_ring OuterMoveForwardOne 
-      (move_dance_ring SwapInnerOuter 
-        (move_dance_ring InnerMoveBackwardOne 
-          (move_dance_ring InnerMoveBackwardOne 
-            (move_dance_ring SwapInnerOuter 
-              (move_dance_ring InnerMoveForward 
-                (move_dance_ring InnerMoveForward ring)))))))).
+  (dance_ring_move InnerMoveBackwardOne 
+    (dance_ring_move OuterMoveForwardOne 
+      (dance_ring_move SwapInnerOuter 
+        (dance_ring_move InnerMoveBackwardOne 
+          (dance_ring_move InnerMoveBackwardOne 
+            (dance_ring_move SwapInnerOuter 
+              (dance_ring_move InnerMoveForward 
+                (dance_ring_move InnerMoveForward ring)))))))).
