@@ -188,13 +188,28 @@ Proof.
 Defined.
 
 
-Theorem inner_move_forward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring) (H: length (p_inner :: ring_inner) = length ring_outer),
-  move_dance_ring InnerMoveForwardOne (make_dance_ring_internal (p_inner :: ring_inner) ring_outer H) = ((ring_inner ++ [p_inner]), ring_outer).
+Theorem dance_ring_inner_move_forward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring) 
+(Hin: length (p_inner :: ring_inner) = length ring_outer) 
+(Hout: length (ring_inner ++ [p_inner]) = length ring_outer) 
+(Hinner_eq: length (p_inner :: ring_inner) = length (ring_inner ++ [p_inner])),
+  dance_ring_move InnerMoveForwardOne (make_dance_ring_internal (p_inner :: ring_inner) ring_outer Hin) = (make_dance_ring_internal (ring_inner ++ [p_inner]) ring_outer Hout).
 Proof.
-  intros p_inner ring_inner.
-  destruct ring_inner.
-  - simpl. reflexivity.
-  - simpl. reflexivity.
+  intros p_inner ring_inner Hin Hout Hinner_eq Heq.
+  unfold dance_ring_move.
+  simpl.
+  f_equal.
+  apply proof_irrelevance.
+Qed.
+
+Theorem dance_ring_inner_move_backward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring) 
+(Hin: length (ring_inner ++ [p_inner]) = length ring_outer) 
+(Hout: length (p_inner :: ring_inner) = length ring_outer) 
+(Hinner_eq: length (ring_inner ++ [p_inner]) = length (p_inner :: ring_inner)),
+  dance_ring_move InnerMoveBackwardOne (make_dance_ring_internal (ring_inner ++ [p_inner]) ring_outer Hin) = (make_dance_ring_internal (p_inner :: ring_inner) ring_outer Hout).
+Proof.
+  intros p_inner ring_inner Hin Hout Hinner_eq Heq.
+  unfold dance_ring_move.
+  unfold partner_ring_backward_one.
 Qed.
 
 Theorem inner_move_backward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
