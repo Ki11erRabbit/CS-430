@@ -187,9 +187,9 @@ Proof.
     apply ring_well_formed.
 Defined.
 
-(*
-Theorem inner_move_forward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
-  move_dance_ring InnerMoveForwardOne ((p_inner :: ring_inner), ring_outer) = ((ring_inner ++ [p_inner]), ring_outer).
+
+Theorem inner_move_forward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring) (H: length (p_inner :: ring_inner) = length ring_outer),
+  move_dance_ring InnerMoveForwardOne (make_dance_ring_internal (p_inner :: ring_inner) ring_outer H) = ((ring_inner ++ [p_inner]), ring_outer).
 Proof.
   intros p_inner ring_inner.
   destruct ring_inner.
@@ -231,7 +231,7 @@ Proof.
   intros ring_inner ring_outer.
   simpl. reflexivity.
 Qed.
-*)
+
 Theorem movement_preserves_length : forall (ring : dance_ring) (movement: movement),
   dance_ring_length ring = dance_ring_length (dance_ring_move movement ring).
 Proof.
@@ -281,11 +281,46 @@ Proof.
 Qed.
 *)
 
+Lemma korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) (ring_inner ring_outer : partner_ring) (H1: length (p_inner :: ring_inner) = length (p_outer_start :: (ring_outer ++ [p_outer_end]))) (H2: length (ring_inner ++ [p_inner]) = length (p_outer_end :: p_outer_start :: ring_outer)) (Heq1: length (p_inner :: ring_inner) = length (ring_inner ++ [p_inner])) (Heq2: length (p_outer_start :: (ring_outer ++ [p_outer_end])) = length (p_outer_end :: p_outer_start :: ring_outer)),
+  (korobushka_one (make_dance_ring_internal (p_inner :: ring_inner) (p_outer_start :: (ring_outer ++ [p_outer_end])) H1)) = (make_dance_ring_internal (ring_inner ++ [p_inner]) (p_outer_end :: p_outer_start :: ring_outer) H2). 
+Proof.
+  intros.
+  unfold korobushka_one.
+  rewrite outer_inner_swap.
+
+Lemma korobushka_n_rotation: forall (inner outer: partner_ring) (n: nat) (H: length inner = length outer),
+  n = length inner ->
+  apply_dance_n (make_dance_ring_internal inner outer H) n korobushka_one = 
+  (make_dance_ring_internal inner outer H).
+Proof.
+  intros inner.
+  induction inner as [| p_inner inner IHinner]; intros outer n Hlen_eq Hlen; destruct outer as [| p_outer outer].
+  - simpl in Hlen_eq. simpl in Hlen.
+    subst. simpl. reflexivity.
+  - simpl in Hlen.
+    simpl in Hlen_eq.
+    subst.
+    simpl.
+    reflexivity.
+  - simpl in Hlen_eq.
+    simpl in Hlen.
+    subst.
+    simpl.
+    discriminate.
+  - simpl in Hlen.
+    simpl in Hlen_eq.
+    subst.
+    simpl.
+
+
 Theorem korobushka_n_start_eq_end: forall (ring: dance_ring) (n: nat),
   n = (dance_ring_length ring) -> (apply_dance_n ring n korobushka_one) = ring.
 Proof.
   intros ring n.
   intros H.
+  induction n.
+  - simpl. reflexivity.
+  - unfold dance_ring_length in H, IHn.
       
 
 
