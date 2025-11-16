@@ -63,9 +63,6 @@ Proof.
 Defined.
 
 
-
-
-
 Definition dance_ring_length (ring: dance_ring) : nat :=
   length (inner_ring ring).
 
@@ -101,7 +98,13 @@ Proof.
     contradiction.
 Defined.
 
-
+Lemma make_dance_ring_eq: forall inner outer (H1 H2: length inner = length outer),
+  make_dance_ring_internal inner outer H1 = make_dance_ring_internal inner outer H2.
+Proof.
+  intros.
+  f_equal.
+  apply proof_irrelevance.
+Qed.
 
 Inductive movement : Type :=
 | InnerMoveForwardOne
@@ -205,11 +208,10 @@ Theorem dance_ring_inner_move_backward_one : forall (p_inner : partner) (ring_in
 (Hin: length (ring_inner ++ [p_inner]) = length ring_outer) 
 (Hout: length (p_inner :: ring_inner) = length ring_outer) 
 (Hinner_eq: length (ring_inner ++ [p_inner]) = length (p_inner :: ring_inner)),
-  dance_ring_move InnerMoveBackwardOne (make_dance_ring_internal (ring_inner ++ [p_inner]) ring_outer Hin) = (make_dance_ring_internal (p_inner :: ring_inner) ring_outer Hout).
+  dance_ring_move InnerMoveBackwardOne (make_dance_ring_internal (ring_inner ++ [p_inner]) ring_outer Hin) = 
+  (make_dance_ring_internal (p_inner :: ring_inner) ring_outer Hout).
 Proof.
-  intros p_inner ring_inner Hin Hout Hinner_eq Heq.
-  unfold dance_ring_move.
-  unfold partner_ring_backward_one.
+  intros p_inner ring_inner ring_outer Hin Hout Hinner_eq.
 Qed.
 
 Theorem inner_move_backward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
