@@ -395,11 +395,7 @@ Proof.
   - rewrite partner_ring_backward_one_moves_to_front.
     reflexivity.
 Qed.
-<<<<<<< HEAD
 (*
-=======
-
->>>>>>> 68887c3ff1a7a3cc931fdd16efe3f34878ef7d51
 Lemma korobushka_parts_n_rotation : forall (n : nat) (p_inner p_outer : partner) 
 (ring_inner ring_outer : partner_ring) 
 (H: length (p_inner :: ring_inner) = length (ring_outer ++ [p_outer]))  
@@ -417,11 +413,7 @@ Proof.
     rewrite korobushka_shifts_one.
   - simpl. reflexivity.
   - simpl. induction
-<<<<<<< HEAD
 *)
-=======
-
->>>>>>> 68887c3ff1a7a3cc931fdd16efe3f34878ef7d51
 Lemma korobushka_n_rotation: forall (inner outer: partner_ring) (n: nat) (H: length inner = length outer),
   n = length inner -> n = length outer ->
   apply_dance_n (make_dance_ring_internal inner outer H) n korobushka_one = 
