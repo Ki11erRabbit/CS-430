@@ -136,6 +136,12 @@ Proof.
   reflexivity.
 Qed.
 
+Theorem partner_ring_of_one_backward_one_doesnt_move : forall (p: partner),
+  partner_ring_backward_one [p] = [p].
+Proof.
+  intros p.
+  unfold partner_ring_backward_one.
+
 Theorem partner_ring_backward_one_moves_to_front_cons : forall (p_back p_front: partner) (ring: partner_ring),
   partner_ring_backward_one (p_front :: ring ++ [p_back]) = p_back :: p_front :: ring.
 Proof.
@@ -333,22 +339,53 @@ Proof.
 Qed.
 *)
 
-Lemma korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) 
+Lemma korobushka__shift_one_2_dancers : forall (p_inner p_outer : partner)
+  (H: length [p_inner] = length [p_outer]),
+  (korobushka_one (make_dance_ring_internal [p_inner] [p_outer] H)) = (make_dance_ring_internal [p_inner] [p_outer] H).
+Proof.
+  intros p_inner p_outer H.
+  unfold korobushka_one.
+  simpl.
+  apply dance_ring_eq.
+  - reflexivity.
+  - unfold partner_ring_backward_one.
+    destruct (rev [p_outer]).
+    + discriminate.
+
+Lemma korobushka_shifts_one : forall (p_inner p_outer : partner) 
 (ring_inner ring_outer : partner_ring) 
-(Hin: length (p_inner :: ring_inner) = length (p_outer_start :: (ring_outer ++ [p_outer_end]))) 
-(Hout: length (ring_inner ++ [p_inner]) = length (p_outer_end :: p_outer_start :: ring_outer)) 
+(Hin: length (p_inner :: ring_inner) = length (ring_outer ++ [p_outer])) 
+(Hout: length (ring_inner ++ [p_inner]) = length (p_outer :: ring_outer)) 
 (Heq1: length (p_inner :: ring_inner) = length (ring_inner ++ [p_inner])) 
-(Heq2: length (p_outer_start :: (ring_outer ++ [p_outer_end])) = length (p_outer_end :: p_outer_start :: ring_outer)),
-  (korobushka_one (make_dance_ring_internal (p_inner :: ring_inner) (p_outer_start :: (ring_outer ++ [p_outer_end])) Hin)) = (make_dance_ring_internal (ring_inner ++ [p_inner]) (p_outer_end :: p_outer_start :: ring_outer) Hout). 
+(Heq2: length (ring_outer ++ [p_outer]) = length (p_outer :: ring_outer)),
+  (korobushka_one (make_dance_ring_internal (p_inner :: ring_inner) (ring_outer ++ [p_outer]) Hin)) = (make_dance_ring_internal (ring_inner ++ [p_inner]) (p_outer :: ring_outer) Hout). 
 Proof.
   intros.
   unfold korobushka_one.
   simpl.
   apply dance_ring_eq.
   - reflexivity.
-  - rewrite partner_ring_backward_one_moves_to_front_cons.
+  - rewrite partner_ring_backward_one_moves_to_front.
     reflexivity.
 Qed.
+
+Lemma korobushka_parts_n_rotation : forall (n : nat) (p_inner p_outer : partner) 
+(ring_inner ring_outer : partner_ring) 
+(H: length (p_inner :: ring_inner) = length (ring_outer ++ [p_outer]))  
+(Heq1: length (p_inner :: ring_inner) = length (ring_inner ++ [p_inner])) 
+(Heq2: length (ring_outer ++ [p_outer]) = length (p_outer :: ring_outer)),
+  n = length (p_inner :: ring_inner) -> n = length (ring_outer ++ [p_outer]) -> (apply_dance_n (make_dance_ring_internal (p_inner :: ring_inner) (ring_outer ++ [p_outer]) H) n korobushka_one) = (make_dance_ring_internal (p_inner :: ring_inner) (ring_outer ++ [p_outer]) H). 
+Proof.
+  intros n p_inner p_outer inner outer.
+  intros Hlen Heq1 Heq2.
+  intros Hlen_inner Hlen_outer.
+  induction inner as [| p_inner' inner IHinner]; induction outer as [| p_outer' outer IHouter].
+  - simpl. simpl in Hlen, Heq1, Heq2, Hlen_outer.
+    subst. rewrite Hlen_outer.
+    simpl.
+    rewrite korobushka_shifts_one.
+  - simpl. reflexivity.
+  - simpl. induction
 
 Lemma korobushka_n_rotation: forall (inner outer: partner_ring) (n: nat) (H: length inner = length outer),
   n = length inner -> n = length outer ->
@@ -357,14 +394,13 @@ Lemma korobushka_n_rotation: forall (inner outer: partner_ring) (n: nat) (H: len
 Proof.
   intros inner outer.
   intros n Hlen_eq Hlen_inner Hlen_outer.
-  induction outer as [| p_outer outer IHouter]; induction inner as [| p_inner inner IHinner].
+  induction inner as [| p_inner inner IHinner]; induction outer as [| p_outer outer IHouter].
   - simpl in Hlen_eq. simpl in Hlen_inner, Hlen_outer.
     subst. simpl. reflexivity.
   - simpl in Hlen_inner, Hlen_outer.
     simpl in Hlen_eq.
     subst.
     simpl.
-    simpl in IHinner.
     discriminate.
   - simpl in Hlen_eq.
     simpl in Hlen_inner, Hlen_outer.
@@ -374,8 +410,8 @@ Proof.
   - subst.
     simpl in IHinner. 
     simpl in Hlen_eq.
-    discriminate.
     simpl.
+    rewrite <- korobushka_shifts_one.
 
 
 Theorem korobushka_n_start_eq_end: forall (ring: dance_ring) (n: nat),
