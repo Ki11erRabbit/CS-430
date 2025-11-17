@@ -351,26 +351,31 @@ Proof.
 Qed.
 
 Lemma korobushka_n_rotation: forall (inner outer: partner_ring) (n: nat) (H: length inner = length outer),
-  n = length inner ->
+  n = length inner -> n = length outer ->
   apply_dance_n (make_dance_ring_internal inner outer H) n korobushka_one = 
   (make_dance_ring_internal inner outer H).
 Proof.
   intros inner outer.
-  induction inner as [| p_inner inner IHinner]; intros n Hlen_eq Hlen; destruct outer as [| p_outer outer].
-  - simpl in Hlen_eq. simpl in Hlen.
+  intros n Hlen_eq Hlen_inner Hlen_outer.
+  induction outer as [| p_outer outer IHouter]; induction inner as [| p_inner inner IHinner].
+  - simpl in Hlen_eq. simpl in Hlen_inner, Hlen_outer.
     subst. simpl. reflexivity.
-  - simpl in Hlen.
+  - simpl in Hlen_inner, Hlen_outer.
     simpl in Hlen_eq.
     subst.
     simpl.
-    reflexivity.
+    simpl in IHinner.
+    discriminate.
   - simpl in Hlen_eq.
-    simpl in Hlen.
+    simpl in Hlen_inner, Hlen_outer.
     subst.
     simpl.
     discriminate.
-  - simpl in Hlen.
+  - subst.
+    simpl in IHinner. 
     simpl in Hlen_eq.
+    discriminate.
+    simpl.
 
 
 Theorem korobushka_n_start_eq_end: forall (ring: dance_ring) (n: nat),
