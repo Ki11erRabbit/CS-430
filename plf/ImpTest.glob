@@ -1,0 +1,836 @@
+DIGEST 711e40dd2eb79fdad64079c5d32f7f9b
+FPLF.ImpTest
+R73:78 Stdlib.Strings.String <> <> lib
+R105:107 PLF.Imp <> <> lib
+ax 121:127 <> MISSING
+mod 144:148 <> Check
+R214:220 PLF.ImpTest <> MISSING defax
+R214:220 PLF.ImpTest <> MISSING defax
+R413:416 Corelib.Init.Datatypes <> Some constr
+R413:416 Corelib.Init.Datatypes <> Some constr
+R596:599 Corelib.Init.Datatypes <> None constr
+R596:599 Corelib.Init.Datatypes <> None constr
+R681:685 PLF.ImpTest Check <> mod
+R713:715 PLF.Imp <> <> lib
+R725:729 PLF.ImpTest Check <> mod
+def 733:741 <> Unnamed_thm
+R738:741 Corelib.Init.Logic <> True ind
+R914:940 PLF.Imp AExp optimize_0plus_b_test1 prfax
+R946:947 Corelib.Init.Logic <> eq ind
+R949:957 PLF.Imp AExp bexp ind
+R963:983 PLF.Imp AExp optimize_0plus_b prfax
+R992:1000 PLF.Imp AExp BNot constr
+R1012:1019 PLF.Imp AExp BGt constr
+R1022:1031 PLF.Imp AExp APlus constr
+R1034:1042 PLF.Imp AExp ANum constr
+R1048:1056 PLF.Imp AExp ANum constr
+R1063:1071 PLF.Imp AExp ANum constr
+R1083:1091 PLF.Imp AExp BNot constr
+R1094:1101 PLF.Imp AExp BGt constr
+R1104:1112 PLF.Imp AExp ANum constr
+R1118:1126 PLF.Imp AExp ANum constr
+R914:940 PLF.Imp AExp optimize_0plus_b_test1 prfax
+R946:947 Corelib.Init.Logic <> eq ind
+R949:957 PLF.Imp AExp bexp ind
+R963:983 PLF.Imp AExp optimize_0plus_b prfax
+R992:1000 PLF.Imp AExp BNot constr
+R1012:1019 PLF.Imp AExp BGt constr
+R1022:1031 PLF.Imp AExp APlus constr
+R1034:1042 PLF.Imp AExp ANum constr
+R1048:1056 PLF.Imp AExp ANum constr
+R1063:1071 PLF.Imp AExp ANum constr
+R1083:1091 PLF.Imp AExp BNot constr
+R1094:1101 PLF.Imp AExp BGt constr
+R1104:1112 PLF.Imp AExp ANum constr
+R1118:1126 PLF.Imp AExp ANum constr
+R1183:1209 PLF.Imp AExp optimize_0plus_b_test1 prfax
+def 1212:1220 <> Unnamed_thm
+R1217:1220 Corelib.Init.Logic <> True ind
+R1317:1343 PLF.Imp AExp optimize_0plus_b_test2 prfax
+R1349:1350 Corelib.Init.Logic <> eq ind
+R1352:1360 PLF.Imp AExp bexp ind
+R1366:1386 PLF.Imp AExp optimize_0plus_b prfax
+R1395:1403 PLF.Imp AExp BAnd constr
+R1415:1422 PLF.Imp AExp BLe constr
+R1425:1434 PLF.Imp AExp APlus constr
+R1437:1445 PLF.Imp AExp ANum constr
+R1451:1459 PLF.Imp AExp ANum constr
+R1466:1474 PLF.Imp AExp ANum constr
+R1489:1498 PLF.Imp AExp BTrue constr
+R1506:1514 PLF.Imp AExp BAnd constr
+R1517:1524 PLF.Imp AExp BLe constr
+R1527:1535 PLF.Imp AExp ANum constr
+R1541:1549 PLF.Imp AExp ANum constr
+R1555:1564 PLF.Imp AExp BTrue constr
+R1317:1343 PLF.Imp AExp optimize_0plus_b_test2 prfax
+R1349:1350 Corelib.Init.Logic <> eq ind
+R1352:1360 PLF.Imp AExp bexp ind
+R1366:1386 PLF.Imp AExp optimize_0plus_b prfax
+R1395:1403 PLF.Imp AExp BAnd constr
+R1415:1422 PLF.Imp AExp BLe constr
+R1425:1434 PLF.Imp AExp APlus constr
+R1437:1445 PLF.Imp AExp ANum constr
+R1451:1459 PLF.Imp AExp ANum constr
+R1466:1474 PLF.Imp AExp ANum constr
+R1489:1498 PLF.Imp AExp BTrue constr
+R1506:1514 PLF.Imp AExp BAnd constr
+R1517:1524 PLF.Imp AExp BLe constr
+R1527:1535 PLF.Imp AExp ANum constr
+R1541:1549 PLF.Imp AExp ANum constr
+R1555:1564 PLF.Imp AExp BTrue constr
+R1617:1643 PLF.Imp AExp optimize_0plus_b_test2 prfax
+def 1646:1654 <> Unnamed_thm
+R1651:1654 Corelib.Init.Logic <> True ind
+R1749:1775 PLF.Imp AExp optimize_0plus_b_sound prfax
+R1791:1799 PLF.Imp AExp bexp ind
+binder 1787:1787 <> b:3
+R1804:1805 Corelib.Init.Logic <> eq ind
+R1807:1810 Corelib.Init.Datatypes <> bool ind
+R1813:1822 PLF.Imp AExp beval def
+R1825:1845 PLF.Imp AExp optimize_0plus_b prfax
+R1847:1847 PLF.ImpTest <> b:3 var
+R1852:1861 PLF.Imp AExp beval def
+R1863:1863 PLF.ImpTest <> b:3 var
+R1749:1775 PLF.Imp AExp optimize_0plus_b_sound prfax
+R1791:1799 PLF.Imp AExp bexp ind
+binder 1787:1787 <> b:4
+R1804:1805 Corelib.Init.Logic <> eq ind
+R1807:1810 Corelib.Init.Datatypes <> bool ind
+R1813:1822 PLF.Imp AExp beval def
+R1825:1845 PLF.Imp AExp optimize_0plus_b prfax
+R1847:1847 PLF.ImpTest <> b:4 var
+R1852:1861 PLF.Imp AExp beval def
+R1863:1863 PLF.ImpTest <> b:4 var
+R1916:1942 PLF.Imp AExp optimize_0plus_b_sound prfax
+def 1945:1953 <> Unnamed_thm
+R1950:1953 Corelib.Init.Logic <> True ind
+R2113:2133 PLF.Imp AExp bevalR_iff_beval prfax
+R2150:2158 PLF.Imp AExp bexp ind
+binder 2146:2146 <> b:5
+R2167:2170 Corelib.Init.Datatypes <> bool ind
+binder 2162:2163 <> bv:6
+R2175:2177 Corelib.Init.Logic <> iff def
+R2200:2201 Corelib.Init.Logic <> eq ind
+R2203:2206 Corelib.Init.Datatypes <> bool ind
+R2209:2218 PLF.Imp AExp beval def
+R2220:2220 PLF.ImpTest <> b:5 var
+R2223:2224 PLF.ImpTest <> bv:6 var
+R2180:2190 PLF.Imp AExp bevalR ind
+R2192:2192 PLF.ImpTest <> b:5 var
+R2194:2195 PLF.ImpTest <> bv:6 var
+R2113:2133 PLF.Imp AExp bevalR_iff_beval prfax
+R2150:2158 PLF.Imp AExp bexp ind
+binder 2146:2146 <> b:7
+R2167:2170 Corelib.Init.Datatypes <> bool ind
+binder 2162:2163 <> bv:8
+R2175:2177 Corelib.Init.Logic <> iff def
+R2200:2201 Corelib.Init.Logic <> eq ind
+R2203:2206 Corelib.Init.Datatypes <> bool ind
+R2209:2218 PLF.Imp AExp beval def
+R2220:2220 PLF.ImpTest <> b:7 var
+R2223:2224 PLF.ImpTest <> bv:8 var
+R2180:2190 PLF.Imp AExp bevalR ind
+R2192:2192 PLF.ImpTest <> b:7 var
+R2194:2195 PLF.ImpTest <> bv:8 var
+R2277:2297 PLF.Imp AExp bevalR_iff_beval prfax
+def 2300:2308 <> Unnamed_thm
+R2305:2308 Corelib.Init.Logic <> True ind
+R2469:2482 PLF.Imp <> ceval_example2 prfax
+R2487:2491 PLF.Imp <> ceval ind
+R2494:2497 PLF.Imp <> CSeq constr
+R2500:2504 PLF.Imp <> CAsgn constr
+R2506:2506 PLF.Imp <> X def
+R2509:2512 PLF.Imp <> ANum constr
+R2519:2522 PLF.Imp <> CSeq constr
+R2525:2529 PLF.Imp <> CAsgn constr
+R2531:2531 PLF.Imp <> Y def
+R2534:2537 PLF.Imp <> ANum constr
+R2544:2548 PLF.Imp <> CAsgn constr
+R2550:2550 PLF.Imp <> Z def
+R2553:2556 PLF.Imp <> ANum constr
+R2567:2574 PLF.Imp <> empty_st def
+R2581:2593 PLF.Maps <> t_update def
+R2595:2597 Corelib.Init.Datatypes <> nat ind
+R2607:2619 PLF.Maps <> t_update def
+R2621:2623 Corelib.Init.Datatypes <> nat ind
+R2627:2639 PLF.Maps <> t_update def
+R2641:2643 Corelib.Init.Datatypes <> nat ind
+R2645:2652 PLF.Imp <> empty_st def
+R2654:2654 PLF.Imp <> X def
+R2659:2659 PLF.Imp <> Y def
+R2664:2664 PLF.Imp <> Z def
+R2469:2482 PLF.Imp <> ceval_example2 prfax
+R2487:2491 PLF.Imp <> ceval ind
+R2494:2497 PLF.Imp <> CSeq constr
+R2500:2504 PLF.Imp <> CAsgn constr
+R2506:2506 PLF.Imp <> X def
+R2509:2512 PLF.Imp <> ANum constr
+R2519:2522 PLF.Imp <> CSeq constr
+R2525:2529 PLF.Imp <> CAsgn constr
+R2531:2531 PLF.Imp <> Y def
+R2534:2537 PLF.Imp <> ANum constr
+R2544:2548 PLF.Imp <> CAsgn constr
+R2550:2550 PLF.Imp <> Z def
+R2553:2556 PLF.Imp <> ANum constr
+R2567:2574 PLF.Imp <> empty_st def
+R2581:2593 PLF.Maps <> t_update def
+R2595:2597 Corelib.Init.Datatypes <> nat ind
+R2607:2619 PLF.Maps <> t_update def
+R2621:2623 Corelib.Init.Datatypes <> nat ind
+R2627:2639 PLF.Maps <> t_update def
+R2641:2643 Corelib.Init.Datatypes <> nat ind
+R2645:2652 PLF.Imp <> empty_st def
+R2654:2654 PLF.Imp <> X def
+R2659:2659 PLF.Imp <> Y def
+R2664:2664 PLF.Imp <> Z def
+R2719:2732 PLF.Imp <> ceval_example2 prfax
+def 2735:2743 <> Unnamed_thm
+R2740:2743 Corelib.Init.Logic <> True ind
+R2908:2923 PLF.Imp <> loop_never_stops prfax
+R2943:2947 PLF.Imp <> state def
+binder 2934:2935 <> st:9
+binder 2937:2939 <> st':10
+R2950:2952 Corelib.Init.Logic <> not def
+R2955:2959 PLF.Imp <> ceval ind
+R2961:2964 PLF.Imp <> loop def
+R2966:2967 PLF.ImpTest <> st:9 var
+R2969:2971 PLF.ImpTest <> st':10 var
+R2908:2923 PLF.Imp <> loop_never_stops prfax
+R2943:2947 PLF.Imp <> state def
+binder 2934:2935 <> st:11
+binder 2937:2939 <> st':12
+R2950:2952 Corelib.Init.Logic <> not def
+R2955:2959 PLF.Imp <> ceval ind
+R2961:2964 PLF.Imp <> loop def
+R2966:2967 PLF.ImpTest <> st:11 var
+R2969:2971 PLF.ImpTest <> st':12 var
+R3024:3039 PLF.Imp <> loop_never_stops prfax
+def 3042:3050 <> Unnamed_thm
+R3047:3050 Corelib.Init.Logic <> True ind
+R3209:3221 PLF.Imp <> no_whiles_eqv prfax
+R3237:3239 PLF.Imp <> com ind
+binder 3233:3233 <> c:13
+R3242:3244 Corelib.Init.Logic <> iff def
+R3277:3286 PLF.Imp <> no_whilesR ind
+R3288:3288 PLF.ImpTest <> c:13 var
+R3248:3249 Corelib.Init.Logic <> eq ind
+R3251:3254 Corelib.Init.Datatypes <> bool ind
+R3257:3265 PLF.Imp <> no_whiles def
+R3267:3267 PLF.ImpTest <> c:13 var
+R3270:3273 PLF.Imp <> :::'true' not
+R3209:3221 PLF.Imp <> no_whiles_eqv prfax
+R3237:3239 PLF.Imp <> com ind
+binder 3233:3233 <> c:14
+R3242:3244 Corelib.Init.Logic <> iff def
+R3277:3286 PLF.Imp <> no_whilesR ind
+R3288:3288 PLF.ImpTest <> c:14 var
+R3248:3249 Corelib.Init.Logic <> eq ind
+R3251:3254 Corelib.Init.Datatypes <> bool ind
+R3257:3265 PLF.Imp <> no_whiles def
+R3267:3267 PLF.ImpTest <> c:14 var
+R3270:3273 PLF.Imp <> :::'true' not
+R3341:3353 PLF.Imp <> no_whiles_eqv prfax
+def 3356:3364 <> Unnamed_thm
+R3361:3364 Corelib.Init.Logic <> True ind
+R3563:3600 PLF.Imp <> manual_grade_for_no_whiles_terminating def
+R3757:3766 PLF.Imp <> s_execute1 prfax
+R3772:3773 Corelib.Init.Logic <> eq ind
+R3776:3779 Corelib.Init.Datatypes <> list ind
+R3781:3783 Corelib.Init.Datatypes <> nat ind
+R3790:3798 PLF.Imp <> s_execute prfax
+R3800:3807 PLF.Imp <> empty_st def
+R3811:3813 Corelib.Init.Datatypes <> nil constr
+R3815:3817 Corelib.Init.Datatypes <> nat ind
+R3828:3831 Corelib.Init.Datatypes <> cons constr
+R3833:3838 PLF.Imp <> sinstr ind
+R3841:3845 PLF.Imp <> SPush constr
+R3861:3864 Corelib.Init.Datatypes <> cons constr
+R3866:3871 PLF.Imp <> sinstr ind
+R3874:3878 PLF.Imp <> SPush constr
+R3897:3900 Corelib.Init.Datatypes <> cons constr
+R3902:3907 PLF.Imp <> sinstr ind
+R3910:3914 PLF.Imp <> SPush constr
+R3921:3924 Corelib.Init.Datatypes <> cons constr
+R3926:3931 PLF.Imp <> sinstr ind
+R3933:3938 PLF.Imp <> SMinus constr
+R3942:3944 Corelib.Init.Datatypes <> nil constr
+R3946:3951 PLF.Imp <> sinstr ind
+R3964:3967 Corelib.Init.Datatypes <> cons constr
+R3969:3971 Corelib.Init.Datatypes <> nat ind
+R3977:3980 Corelib.Init.Datatypes <> cons constr
+R3982:3984 Corelib.Init.Datatypes <> nat ind
+R3990:3992 Corelib.Init.Datatypes <> nil constr
+R3994:3996 Corelib.Init.Datatypes <> nat ind
+R3757:3766 PLF.Imp <> s_execute1 prfax
+R3772:3773 Corelib.Init.Logic <> eq ind
+R3776:3779 Corelib.Init.Datatypes <> list ind
+R3781:3783 Corelib.Init.Datatypes <> nat ind
+R3790:3798 PLF.Imp <> s_execute prfax
+R3800:3807 PLF.Imp <> empty_st def
+R3811:3813 Corelib.Init.Datatypes <> nil constr
+R3815:3817 Corelib.Init.Datatypes <> nat ind
+R3828:3831 Corelib.Init.Datatypes <> cons constr
+R3833:3838 PLF.Imp <> sinstr ind
+R3841:3845 PLF.Imp <> SPush constr
+R3861:3864 Corelib.Init.Datatypes <> cons constr
+R3866:3871 PLF.Imp <> sinstr ind
+R3874:3878 PLF.Imp <> SPush constr
+R3897:3900 Corelib.Init.Datatypes <> cons constr
+R3902:3907 PLF.Imp <> sinstr ind
+R3910:3914 PLF.Imp <> SPush constr
+R3921:3924 Corelib.Init.Datatypes <> cons constr
+R3926:3931 PLF.Imp <> sinstr ind
+R3933:3938 PLF.Imp <> SMinus constr
+R3942:3944 Corelib.Init.Datatypes <> nil constr
+R3946:3951 PLF.Imp <> sinstr ind
+R3964:3967 Corelib.Init.Datatypes <> cons constr
+R3969:3971 Corelib.Init.Datatypes <> nat ind
+R3977:3980 Corelib.Init.Datatypes <> cons constr
+R3982:3984 Corelib.Init.Datatypes <> nat ind
+R3990:3992 Corelib.Init.Datatypes <> nil constr
+R3994:3996 Corelib.Init.Datatypes <> nat ind
+R4051:4060 PLF.Imp <> s_execute1 prfax
+def 4063:4071 <> Unnamed_thm
+R4068:4071 Corelib.Init.Logic <> True ind
+R4151:4160 PLF.Imp <> s_execute2 prfax
+R4166:4167 Corelib.Init.Logic <> eq ind
+R4170:4173 Corelib.Init.Datatypes <> list ind
+R4175:4177 Corelib.Init.Datatypes <> nat ind
+R4184:4192 PLF.Imp <> s_execute prfax
+R4196:4208 PLF.Maps <> t_update def
+R4210:4212 Corelib.Init.Datatypes <> nat ind
+R4214:4221 PLF.Imp <> empty_st def
+R4223:4223 PLF.Imp <> X def
+R4236:4239 Corelib.Init.Datatypes <> cons constr
+R4241:4243 Corelib.Init.Datatypes <> nat ind
+R4249:4252 Corelib.Init.Datatypes <> cons constr
+R4254:4256 Corelib.Init.Datatypes <> nat ind
+R4262:4264 Corelib.Init.Datatypes <> nil constr
+R4266:4268 Corelib.Init.Datatypes <> nat ind
+R4281:4284 Corelib.Init.Datatypes <> cons constr
+R4286:4291 PLF.Imp <> sinstr ind
+R4294:4298 PLF.Imp <> SPush constr
+R4314:4317 Corelib.Init.Datatypes <> cons constr
+R4319:4324 PLF.Imp <> sinstr ind
+R4327:4331 PLF.Imp <> SLoad constr
+R4333:4333 PLF.Imp <> X def
+R4350:4353 Corelib.Init.Datatypes <> cons constr
+R4355:4360 PLF.Imp <> sinstr ind
+R4362:4366 PLF.Imp <> SMult constr
+R4370:4373 Corelib.Init.Datatypes <> cons constr
+R4375:4380 PLF.Imp <> sinstr ind
+R4382:4386 PLF.Imp <> SPlus constr
+R4390:4392 Corelib.Init.Datatypes <> nil constr
+R4394:4399 PLF.Imp <> sinstr ind
+R4412:4415 Corelib.Init.Datatypes <> cons constr
+R4417:4419 Corelib.Init.Datatypes <> nat ind
+R4426:4429 Corelib.Init.Datatypes <> cons constr
+R4431:4433 Corelib.Init.Datatypes <> nat ind
+R4439:4441 Corelib.Init.Datatypes <> nil constr
+R4443:4445 Corelib.Init.Datatypes <> nat ind
+R4151:4160 PLF.Imp <> s_execute2 prfax
+R4166:4167 Corelib.Init.Logic <> eq ind
+R4170:4173 Corelib.Init.Datatypes <> list ind
+R4175:4177 Corelib.Init.Datatypes <> nat ind
+R4184:4192 PLF.Imp <> s_execute prfax
+R4196:4208 PLF.Maps <> t_update def
+R4210:4212 Corelib.Init.Datatypes <> nat ind
+R4214:4221 PLF.Imp <> empty_st def
+R4223:4223 PLF.Imp <> X def
+R4236:4239 Corelib.Init.Datatypes <> cons constr
+R4241:4243 Corelib.Init.Datatypes <> nat ind
+R4249:4252 Corelib.Init.Datatypes <> cons constr
+R4254:4256 Corelib.Init.Datatypes <> nat ind
+R4262:4264 Corelib.Init.Datatypes <> nil constr
+R4266:4268 Corelib.Init.Datatypes <> nat ind
+R4281:4284 Corelib.Init.Datatypes <> cons constr
+R4286:4291 PLF.Imp <> sinstr ind
+R4294:4298 PLF.Imp <> SPush constr
+R4314:4317 Corelib.Init.Datatypes <> cons constr
+R4319:4324 PLF.Imp <> sinstr ind
+R4327:4331 PLF.Imp <> SLoad constr
+R4333:4333 PLF.Imp <> X def
+R4350:4353 Corelib.Init.Datatypes <> cons constr
+R4355:4360 PLF.Imp <> sinstr ind
+R4362:4366 PLF.Imp <> SMult constr
+R4370:4373 Corelib.Init.Datatypes <> cons constr
+R4375:4380 PLF.Imp <> sinstr ind
+R4382:4386 PLF.Imp <> SPlus constr
+R4390:4392 Corelib.Init.Datatypes <> nil constr
+R4394:4399 PLF.Imp <> sinstr ind
+R4412:4415 Corelib.Init.Datatypes <> cons constr
+R4417:4419 Corelib.Init.Datatypes <> nat ind
+R4426:4429 Corelib.Init.Datatypes <> cons constr
+R4431:4433 Corelib.Init.Datatypes <> nat ind
+R4439:4441 Corelib.Init.Datatypes <> nil constr
+R4443:4445 Corelib.Init.Datatypes <> nat ind
+R4500:4509 PLF.Imp <> s_execute2 prfax
+def 4512:4520 <> Unnamed_thm
+R4517:4520 Corelib.Init.Logic <> True ind
+R4600:4609 PLF.Imp <> s_compile1 prfax
+R4615:4616 Corelib.Init.Logic <> eq ind
+R4619:4622 Corelib.Init.Datatypes <> list ind
+R4624:4629 PLF.Imp <> sinstr ind
+R4633:4641 PLF.Imp <> s_compile prfax
+R4644:4649 PLF.Imp <> AMinus constr
+R4652:4654 PLF.Imp <> AId constr
+R4656:4656 PLF.Imp <> X def
+R4660:4664 PLF.Imp <> AMult constr
+R4667:4670 PLF.Imp <> ANum constr
+R4676:4678 PLF.Imp <> AId constr
+R4680:4680 PLF.Imp <> Y def
+R4691:4694 Corelib.Init.Datatypes <> cons constr
+R4696:4701 PLF.Imp <> sinstr ind
+R4704:4708 PLF.Imp <> SLoad constr
+R4710:4710 PLF.Imp <> X def
+R4721:4724 Corelib.Init.Datatypes <> cons constr
+R4726:4731 PLF.Imp <> sinstr ind
+R4734:4738 PLF.Imp <> SPush constr
+R4754:4757 Corelib.Init.Datatypes <> cons constr
+R4759:4764 PLF.Imp <> sinstr ind
+R4767:4771 PLF.Imp <> SLoad constr
+R4773:4773 PLF.Imp <> Y def
+R4790:4793 Corelib.Init.Datatypes <> cons constr
+R4795:4800 PLF.Imp <> sinstr ind
+R4802:4806 PLF.Imp <> SMult constr
+R4810:4813 Corelib.Init.Datatypes <> cons constr
+R4815:4820 PLF.Imp <> sinstr ind
+R4822:4827 PLF.Imp <> SMinus constr
+R4831:4833 Corelib.Init.Datatypes <> nil constr
+R4835:4840 PLF.Imp <> sinstr ind
+R4600:4609 PLF.Imp <> s_compile1 prfax
+R4615:4616 Corelib.Init.Logic <> eq ind
+R4619:4622 Corelib.Init.Datatypes <> list ind
+R4624:4629 PLF.Imp <> sinstr ind
+R4633:4641 PLF.Imp <> s_compile prfax
+R4644:4649 PLF.Imp <> AMinus constr
+R4652:4654 PLF.Imp <> AId constr
+R4656:4656 PLF.Imp <> X def
+R4660:4664 PLF.Imp <> AMult constr
+R4667:4670 PLF.Imp <> ANum constr
+R4676:4678 PLF.Imp <> AId constr
+R4680:4680 PLF.Imp <> Y def
+R4691:4694 Corelib.Init.Datatypes <> cons constr
+R4696:4701 PLF.Imp <> sinstr ind
+R4704:4708 PLF.Imp <> SLoad constr
+R4710:4710 PLF.Imp <> X def
+R4721:4724 Corelib.Init.Datatypes <> cons constr
+R4726:4731 PLF.Imp <> sinstr ind
+R4734:4738 PLF.Imp <> SPush constr
+R4754:4757 Corelib.Init.Datatypes <> cons constr
+R4759:4764 PLF.Imp <> sinstr ind
+R4767:4771 PLF.Imp <> SLoad constr
+R4773:4773 PLF.Imp <> Y def
+R4790:4793 Corelib.Init.Datatypes <> cons constr
+R4795:4800 PLF.Imp <> sinstr ind
+R4802:4806 PLF.Imp <> SMult constr
+R4810:4813 Corelib.Init.Datatypes <> cons constr
+R4815:4820 PLF.Imp <> sinstr ind
+R4822:4827 PLF.Imp <> SMinus constr
+R4831:4833 Corelib.Init.Datatypes <> nil constr
+R4835:4840 PLF.Imp <> sinstr ind
+R4898:4907 PLF.Imp <> s_compile1 prfax
+def 4910:4918 <> Unnamed_thm
+R4915:4918 Corelib.Init.Logic <> True ind
+R5073:5083 PLF.Imp <> execute_app prfax
+R5101:5105 PLF.Imp <> state def
+binder 5096:5097 <> st:15
+R5117:5120 Corelib.Init.Datatypes <> list ind
+R5122:5127 PLF.Imp <> sinstr ind
+binder 5109:5110 <> p1:16
+binder 5112:5113 <> p2:17
+R5139:5142 Corelib.Init.Datatypes <> list ind
+R5144:5146 Corelib.Init.Datatypes <> nat ind
+binder 5131:5135 <> stack:18
+R5152:5153 Corelib.Init.Logic <> eq ind
+R5156:5159 Corelib.Init.Datatypes <> list ind
+R5161:5163 Corelib.Init.Datatypes <> nat ind
+R5167:5175 PLF.Imp <> s_execute prfax
+R5177:5178 PLF.ImpTest <> st:15 var
+R5180:5184 PLF.ImpTest <> stack:18 var
+R5188:5190 Corelib.Init.Datatypes <> app def
+R5192:5197 PLF.Imp <> sinstr ind
+R5199:5200 PLF.ImpTest <> p1:16 var
+R5202:5203 PLF.ImpTest <> p2:17 var
+R5211:5219 PLF.Imp <> s_execute prfax
+R5221:5222 PLF.ImpTest <> st:15 var
+R5225:5233 PLF.Imp <> s_execute prfax
+R5235:5236 PLF.ImpTest <> st:15 var
+R5238:5242 PLF.ImpTest <> stack:18 var
+R5244:5245 PLF.ImpTest <> p1:16 var
+R5248:5249 PLF.ImpTest <> p2:17 var
+R5073:5083 PLF.Imp <> execute_app prfax
+R5101:5105 PLF.Imp <> state def
+binder 5096:5097 <> st:19
+R5117:5120 Corelib.Init.Datatypes <> list ind
+R5122:5127 PLF.Imp <> sinstr ind
+binder 5109:5110 <> p1:20
+binder 5112:5113 <> p2:21
+R5139:5142 Corelib.Init.Datatypes <> list ind
+R5144:5146 Corelib.Init.Datatypes <> nat ind
+binder 5131:5135 <> stack:22
+R5152:5153 Corelib.Init.Logic <> eq ind
+R5156:5159 Corelib.Init.Datatypes <> list ind
+R5161:5163 Corelib.Init.Datatypes <> nat ind
+R5167:5175 PLF.Imp <> s_execute prfax
+R5177:5178 PLF.ImpTest <> st:19 var
+R5180:5184 PLF.ImpTest <> stack:22 var
+R5188:5190 Corelib.Init.Datatypes <> app def
+R5192:5197 PLF.Imp <> sinstr ind
+R5199:5200 PLF.ImpTest <> p1:20 var
+R5202:5203 PLF.ImpTest <> p2:21 var
+R5211:5219 PLF.Imp <> s_execute prfax
+R5221:5222 PLF.ImpTest <> st:19 var
+R5225:5233 PLF.Imp <> s_execute prfax
+R5235:5236 PLF.ImpTest <> st:19 var
+R5238:5242 PLF.ImpTest <> stack:22 var
+R5244:5245 PLF.ImpTest <> p1:20 var
+R5248:5249 PLF.ImpTest <> p2:21 var
+R5302:5312 PLF.Imp <> execute_app prfax
+def 5315:5323 <> Unnamed_thm
+R5320:5323 Corelib.Init.Logic <> True ind
+R5501:5521 PLF.Imp <> s_compile_correct_aux prfax
+R5539:5543 PLF.Imp <> state def
+binder 5534:5535 <> st:23
+R5551:5554 PLF.Imp <> aexp ind
+binder 5547:5547 <> e:24
+R5566:5569 Corelib.Init.Datatypes <> list ind
+R5571:5573 Corelib.Init.Datatypes <> nat ind
+binder 5558:5562 <> stack:25
+R5579:5580 Corelib.Init.Logic <> eq ind
+R5583:5586 Corelib.Init.Datatypes <> list ind
+R5588:5590 Corelib.Init.Datatypes <> nat ind
+R5594:5602 PLF.Imp <> s_execute prfax
+R5604:5605 PLF.ImpTest <> st:23 var
+R5607:5611 PLF.ImpTest <> stack:25 var
+R5614:5622 PLF.Imp <> s_compile prfax
+R5624:5624 PLF.ImpTest <> e:24 var
+R5633:5636 Corelib.Init.Datatypes <> cons constr
+R5638:5640 Corelib.Init.Datatypes <> nat ind
+R5643:5647 PLF.Imp <> aeval def
+R5649:5650 PLF.ImpTest <> st:23 var
+R5652:5652 PLF.ImpTest <> e:24 var
+R5655:5659 PLF.ImpTest <> stack:25 var
+R5501:5521 PLF.Imp <> s_compile_correct_aux prfax
+R5539:5543 PLF.Imp <> state def
+binder 5534:5535 <> st:26
+R5551:5554 PLF.Imp <> aexp ind
+binder 5547:5547 <> e:27
+R5566:5569 Corelib.Init.Datatypes <> list ind
+R5571:5573 Corelib.Init.Datatypes <> nat ind
+binder 5558:5562 <> stack:28
+R5579:5580 Corelib.Init.Logic <> eq ind
+R5583:5586 Corelib.Init.Datatypes <> list ind
+R5588:5590 Corelib.Init.Datatypes <> nat ind
+R5594:5602 PLF.Imp <> s_execute prfax
+R5604:5605 PLF.ImpTest <> st:26 var
+R5607:5611 PLF.ImpTest <> stack:28 var
+R5614:5622 PLF.Imp <> s_compile prfax
+R5624:5624 PLF.ImpTest <> e:27 var
+R5633:5636 Corelib.Init.Datatypes <> cons constr
+R5638:5640 Corelib.Init.Datatypes <> nat ind
+R5643:5647 PLF.Imp <> aeval def
+R5649:5650 PLF.ImpTest <> st:26 var
+R5652:5652 PLF.ImpTest <> e:27 var
+R5655:5659 PLF.ImpTest <> stack:28 var
+R5712:5732 PLF.Imp <> s_compile_correct_aux prfax
+def 5735:5743 <> Unnamed_thm
+R5740:5743 Corelib.Init.Logic <> True ind
+R5830:5846 PLF.Imp <> s_compile_correct prfax
+R5864:5868 PLF.Imp <> state def
+binder 5859:5860 <> st:29
+R5876:5879 PLF.Imp <> aexp ind
+binder 5872:5872 <> e:30
+R5885:5886 Corelib.Init.Logic <> eq ind
+R5889:5892 Corelib.Init.Datatypes <> list ind
+R5894:5896 Corelib.Init.Datatypes <> nat ind
+R5900:5908 PLF.Imp <> s_execute prfax
+R5910:5911 PLF.ImpTest <> st:29 var
+R5915:5917 Corelib.Init.Datatypes <> nil constr
+R5919:5921 Corelib.Init.Datatypes <> nat ind
+R5925:5933 PLF.Imp <> s_compile prfax
+R5935:5935 PLF.ImpTest <> e:30 var
+R5944:5947 Corelib.Init.Datatypes <> cons constr
+R5949:5951 Corelib.Init.Datatypes <> nat ind
+R5954:5958 PLF.Imp <> aeval def
+R5960:5961 PLF.ImpTest <> st:29 var
+R5963:5963 PLF.ImpTest <> e:30 var
+R5968:5970 Corelib.Init.Datatypes <> nil constr
+R5972:5974 Corelib.Init.Datatypes <> nat ind
+R5830:5846 PLF.Imp <> s_compile_correct prfax
+R5864:5868 PLF.Imp <> state def
+binder 5859:5860 <> st:31
+R5876:5879 PLF.Imp <> aexp ind
+binder 5872:5872 <> e:32
+R5885:5886 Corelib.Init.Logic <> eq ind
+R5889:5892 Corelib.Init.Datatypes <> list ind
+R5894:5896 Corelib.Init.Datatypes <> nat ind
+R5900:5908 PLF.Imp <> s_execute prfax
+R5910:5911 PLF.ImpTest <> st:31 var
+R5915:5917 Corelib.Init.Datatypes <> nil constr
+R5919:5921 Corelib.Init.Datatypes <> nat ind
+R5925:5933 PLF.Imp <> s_compile prfax
+R5935:5935 PLF.ImpTest <> e:32 var
+R5944:5947 Corelib.Init.Datatypes <> cons constr
+R5949:5951 Corelib.Init.Datatypes <> nat ind
+R5954:5958 PLF.Imp <> aeval def
+R5960:5961 PLF.ImpTest <> st:31 var
+R5963:5963 PLF.ImpTest <> e:32 var
+R5968:5970 Corelib.Init.Datatypes <> nil constr
+R5972:5974 Corelib.Init.Datatypes <> nat ind
+R6028:6044 PLF.Imp <> s_compile_correct prfax
+def 6047:6055 <> Unnamed_thm
+R6052:6055 Corelib.Init.Logic <> True ind
+R6238:6258 PLF.Imp BreakImp break_ignore prfax
+R6275:6286 PLF.Imp BreakImp com ind
+binder 6271:6271 <> c:33
+R6299:6303 PLF.Imp <> state def
+binder 6290:6291 <> st:34
+binder 6293:6295 <> st':35
+R6311:6325 PLF.Imp BreakImp result ind
+binder 6307:6307 <> s:36
+R6336:6349 PLF.Imp BreakImp ceval ind
+R6352:6364 PLF.Imp BreakImp CSeq constr
+R6366:6380 PLF.Imp BreakImp CBreak constr
+R6382:6382 PLF.ImpTest <> c:33 var
+R6385:6386 PLF.ImpTest <> st:34 var
+R6388:6388 PLF.ImpTest <> s:36 var
+R6390:6392 PLF.ImpTest <> st':35 var
+R6398:6399 Corelib.Init.Logic <> eq ind
+R6401:6405 PLF.Imp <> state def
+R6407:6408 PLF.ImpTest <> st:34 var
+R6410:6412 PLF.ImpTest <> st':35 var
+R6238:6258 PLF.Imp BreakImp break_ignore prfax
+R6275:6286 PLF.Imp BreakImp com ind
+binder 6271:6271 <> c:37
+R6299:6303 PLF.Imp <> state def
+binder 6290:6291 <> st:38
+binder 6293:6295 <> st':39
+R6311:6325 PLF.Imp BreakImp result ind
+binder 6307:6307 <> s:40
+R6336:6349 PLF.Imp BreakImp ceval ind
+R6352:6364 PLF.Imp BreakImp CSeq constr
+R6366:6380 PLF.Imp BreakImp CBreak constr
+R6382:6382 PLF.ImpTest <> c:37 var
+R6385:6386 PLF.ImpTest <> st:38 var
+R6388:6388 PLF.ImpTest <> s:40 var
+R6390:6392 PLF.ImpTest <> st':39 var
+R6398:6399 Corelib.Init.Logic <> eq ind
+R6401:6405 PLF.Imp <> state def
+R6407:6408 PLF.ImpTest <> st:38 var
+R6410:6412 PLF.ImpTest <> st':39 var
+R6464:6484 PLF.Imp BreakImp break_ignore prfax
+def 6487:6495 <> Unnamed_thm
+R6492:6495 Corelib.Init.Logic <> True ind
+R6606:6628 PLF.Imp BreakImp while_continue prfax
+R6645:6648 PLF.Imp <> bexp ind
+binder 6641:6641 <> b:41
+R6656:6667 PLF.Imp BreakImp com ind
+binder 6652:6652 <> c:42
+R6680:6684 PLF.Imp <> state def
+binder 6671:6672 <> st:43
+binder 6674:6676 <> st':44
+R6695:6709 PLF.Imp BreakImp result ind
+binder 6691:6691 <> s:45
+R6717:6730 PLF.Imp BreakImp ceval ind
+R6733:6747 PLF.Imp BreakImp CWhile constr
+R6749:6749 PLF.ImpTest <> b:41 var
+R6751:6751 PLF.ImpTest <> c:42 var
+R6754:6755 PLF.ImpTest <> st:43 var
+R6757:6757 PLF.ImpTest <> s:45 var
+R6759:6761 PLF.ImpTest <> st':44 var
+R6767:6768 Corelib.Init.Logic <> eq ind
+R6770:6784 PLF.Imp BreakImp result ind
+R6786:6786 PLF.ImpTest <> s:45 var
+R6788:6805 PLF.Imp BreakImp SContinue constr
+R6606:6628 PLF.Imp BreakImp while_continue prfax
+R6645:6648 PLF.Imp <> bexp ind
+binder 6641:6641 <> b:46
+R6656:6667 PLF.Imp BreakImp com ind
+binder 6652:6652 <> c:47
+R6680:6684 PLF.Imp <> state def
+binder 6671:6672 <> st:48
+binder 6674:6676 <> st':49
+R6695:6709 PLF.Imp BreakImp result ind
+binder 6691:6691 <> s:50
+R6717:6730 PLF.Imp BreakImp ceval ind
+R6733:6747 PLF.Imp BreakImp CWhile constr
+R6749:6749 PLF.ImpTest <> b:46 var
+R6751:6751 PLF.ImpTest <> c:47 var
+R6754:6755 PLF.ImpTest <> st:48 var
+R6757:6757 PLF.ImpTest <> s:50 var
+R6759:6761 PLF.ImpTest <> st':49 var
+R6767:6768 Corelib.Init.Logic <> eq ind
+R6770:6784 PLF.Imp BreakImp result ind
+R6786:6786 PLF.ImpTest <> s:50 var
+R6788:6805 PLF.Imp BreakImp SContinue constr
+R6857:6879 PLF.Imp BreakImp while_continue prfax
+def 6882:6890 <> Unnamed_thm
+R6887:6890 Corelib.Init.Logic <> True ind
+R7005:7033 PLF.Imp BreakImp while_stops_on_break prfax
+R7050:7053 PLF.Imp <> bexp ind
+binder 7046:7046 <> b:51
+R7061:7072 PLF.Imp BreakImp com ind
+binder 7057:7057 <> c:52
+R7085:7089 PLF.Imp <> state def
+binder 7076:7077 <> st:53
+binder 7079:7081 <> st':54
+R7101:7102 Corelib.Init.Logic <> eq ind
+R7104:7107 Corelib.Init.Datatypes <> bool ind
+R7110:7114 PLF.Imp <> beval def
+R7116:7117 PLF.ImpTest <> st:53 var
+R7119:7119 PLF.ImpTest <> b:51 var
+R7122:7125 PLF.Imp <> :::'true' not
+R7136:7149 PLF.Imp BreakImp ceval ind
+R7151:7151 PLF.ImpTest <> c:52 var
+R7153:7154 PLF.ImpTest <> st:53 var
+R7156:7170 PLF.Imp BreakImp SBreak constr
+R7172:7174 PLF.ImpTest <> st':54 var
+R7179:7192 PLF.Imp BreakImp ceval ind
+R7195:7209 PLF.Imp BreakImp CWhile constr
+R7211:7211 PLF.ImpTest <> b:51 var
+R7213:7213 PLF.ImpTest <> c:52 var
+R7216:7217 PLF.ImpTest <> st:53 var
+R7219:7236 PLF.Imp BreakImp SContinue constr
+R7238:7240 PLF.ImpTest <> st':54 var
+R7005:7033 PLF.Imp BreakImp while_stops_on_break prfax
+R7050:7053 PLF.Imp <> bexp ind
+binder 7046:7046 <> b:55
+R7061:7072 PLF.Imp BreakImp com ind
+binder 7057:7057 <> c:56
+R7085:7089 PLF.Imp <> state def
+binder 7076:7077 <> st:57
+binder 7079:7081 <> st':58
+R7101:7102 Corelib.Init.Logic <> eq ind
+R7104:7107 Corelib.Init.Datatypes <> bool ind
+R7110:7114 PLF.Imp <> beval def
+R7116:7117 PLF.ImpTest <> st:57 var
+R7119:7119 PLF.ImpTest <> b:55 var
+R7122:7125 PLF.Imp <> :::'true' not
+R7136:7149 PLF.Imp BreakImp ceval ind
+R7151:7151 PLF.ImpTest <> c:56 var
+R7153:7154 PLF.ImpTest <> st:57 var
+R7156:7170 PLF.Imp BreakImp SBreak constr
+R7172:7174 PLF.ImpTest <> st':58 var
+R7179:7192 PLF.Imp BreakImp ceval ind
+R7195:7209 PLF.Imp BreakImp CWhile constr
+R7211:7211 PLF.ImpTest <> b:55 var
+R7213:7213 PLF.ImpTest <> c:56 var
+R7216:7217 PLF.ImpTest <> st:57 var
+R7219:7236 PLF.Imp BreakImp SContinue constr
+R7238:7240 PLF.ImpTest <> st':58 var
+R7292:7320 PLF.Imp BreakImp while_stops_on_break prfax
+def 7323:7331 <> Unnamed_thm
+R7328:7331 Corelib.Init.Logic <> True ind
+R7438:7458 PLF.Imp BreakImp seq_continue prfax
+R7479:7490 PLF.Imp BreakImp com ind
+binder 7471:7472 <> c1:59
+binder 7474:7475 <> c2:60
+R7508:7512 PLF.Imp <> state def
+binder 7494:7495 <> st:61
+binder 7497:7499 <> st':62
+binder 7501:7504 <> st'':63
+R7523:7536 PLF.Imp BreakImp ceval ind
+R7538:7539 PLF.ImpTest <> c1:59 var
+R7541:7542 PLF.ImpTest <> st:61 var
+R7544:7561 PLF.Imp BreakImp SContinue constr
+R7563:7565 PLF.ImpTest <> st':62 var
+R7576:7589 PLF.Imp BreakImp ceval ind
+R7591:7592 PLF.ImpTest <> c2:60 var
+R7594:7596 PLF.ImpTest <> st':62 var
+R7598:7615 PLF.Imp BreakImp SContinue constr
+R7617:7620 PLF.ImpTest <> st'':63 var
+R7625:7638 PLF.Imp BreakImp ceval ind
+R7641:7653 PLF.Imp BreakImp CSeq constr
+R7655:7656 PLF.ImpTest <> c1:59 var
+R7658:7659 PLF.ImpTest <> c2:60 var
+R7662:7663 PLF.ImpTest <> st:61 var
+R7665:7682 PLF.Imp BreakImp SContinue constr
+R7684:7687 PLF.ImpTest <> st'':63 var
+R7438:7458 PLF.Imp BreakImp seq_continue prfax
+R7479:7490 PLF.Imp BreakImp com ind
+binder 7471:7472 <> c1:64
+binder 7474:7475 <> c2:65
+R7508:7512 PLF.Imp <> state def
+binder 7494:7495 <> st:66
+binder 7497:7499 <> st':67
+binder 7501:7504 <> st'':68
+R7523:7536 PLF.Imp BreakImp ceval ind
+R7538:7539 PLF.ImpTest <> c1:64 var
+R7541:7542 PLF.ImpTest <> st:66 var
+R7544:7561 PLF.Imp BreakImp SContinue constr
+R7563:7565 PLF.ImpTest <> st':67 var
+R7576:7589 PLF.Imp BreakImp ceval ind
+R7591:7592 PLF.ImpTest <> c2:65 var
+R7594:7596 PLF.ImpTest <> st':67 var
+R7598:7615 PLF.Imp BreakImp SContinue constr
+R7617:7620 PLF.ImpTest <> st'':68 var
+R7625:7638 PLF.Imp BreakImp ceval ind
+R7641:7653 PLF.Imp BreakImp CSeq constr
+R7655:7656 PLF.ImpTest <> c1:64 var
+R7658:7659 PLF.ImpTest <> c2:65 var
+R7662:7663 PLF.ImpTest <> st:66 var
+R7665:7682 PLF.Imp BreakImp SContinue constr
+R7684:7687 PLF.ImpTest <> st'':68 var
+R7739:7759 PLF.Imp BreakImp seq_continue prfax
+def 7762:7770 <> Unnamed_thm
+R7767:7770 Corelib.Init.Logic <> True ind
+R7883:7909 PLF.Imp BreakImp seq_stops_on_break prfax
+R7930:7941 PLF.Imp BreakImp com ind
+binder 7922:7923 <> c1:69
+binder 7925:7926 <> c2:70
+R7954:7958 PLF.Imp <> state def
+binder 7945:7946 <> st:71
+binder 7948:7950 <> st':72
+R7969:7982 PLF.Imp BreakImp ceval ind
+R7984:7985 PLF.ImpTest <> c1:69 var
+R7987:7988 PLF.ImpTest <> st:71 var
+R7990:8004 PLF.Imp BreakImp SBreak constr
+R8006:8008 PLF.ImpTest <> st':72 var
+R8013:8026 PLF.Imp BreakImp ceval ind
+R8029:8041 PLF.Imp BreakImp CSeq constr
+R8043:8044 PLF.ImpTest <> c1:69 var
+R8046:8047 PLF.ImpTest <> c2:70 var
+R8050:8051 PLF.ImpTest <> st:71 var
+R8053:8067 PLF.Imp BreakImp SBreak constr
+R8069:8071 PLF.ImpTest <> st':72 var
+R7883:7909 PLF.Imp BreakImp seq_stops_on_break prfax
+R7930:7941 PLF.Imp BreakImp com ind
+binder 7922:7923 <> c1:73
+binder 7925:7926 <> c2:74
+R7954:7958 PLF.Imp <> state def
+binder 7945:7946 <> st:75
+binder 7948:7950 <> st':76
+R7969:7982 PLF.Imp BreakImp ceval ind
+R7984:7985 PLF.ImpTest <> c1:73 var
+R7987:7988 PLF.ImpTest <> st:75 var
+R7990:8004 PLF.Imp BreakImp SBreak constr
+R8006:8008 PLF.ImpTest <> st':76 var
+R8013:8026 PLF.Imp BreakImp ceval ind
+R8029:8041 PLF.Imp BreakImp CSeq constr
+R8043:8044 PLF.ImpTest <> c1:73 var
+R8046:8047 PLF.ImpTest <> c2:74 var
+R8050:8051 PLF.ImpTest <> st:75 var
+R8053:8067 PLF.Imp BreakImp SBreak constr
+R8069:8071 PLF.ImpTest <> st':76 var
+R8123:8149 PLF.Imp BreakImp seq_stops_on_break prfax
+def 8152:8160 <> Unnamed_thm
+R8157:8160 Corelib.Init.Logic <> True ind
+R9129:9155 PLF.Imp AExp optimize_0plus_b_test1 prfax
+R9234:9260 PLF.Imp AExp optimize_0plus_b_test2 prfax
+R9339:9365 PLF.Imp AExp optimize_0plus_b_sound prfax
+R9438:9458 PLF.Imp AExp bevalR_iff_beval prfax
+R9524:9537 PLF.Imp <> ceval_example2 prfax
+R9605:9620 PLF.Imp <> loop_never_stops prfax
+R9685:9697 PLF.Imp <> no_whiles_eqv prfax
+R9827:9836 PLF.Imp <> s_execute1 prfax
+R9898:9907 PLF.Imp <> s_execute2 prfax
+R9969:9978 PLF.Imp <> s_compile1 prfax
+R10041:10051 PLF.Imp <> execute_app prfax
+R10124:10144 PLF.Imp <> s_compile_correct_aux prfax
+R10213:10229 PLF.Imp <> s_compile_correct prfax
+R10352:10372 PLF.Imp BreakImp break_ignore prfax
+R10447:10469 PLF.Imp BreakImp while_continue prfax
+R10550:10578 PLF.Imp BreakImp while_stops_on_break prfax
+R10651:10671 PLF.Imp BreakImp seq_continue prfax
+R10750:10776 PLF.Imp BreakImp seq_stops_on_break prfax

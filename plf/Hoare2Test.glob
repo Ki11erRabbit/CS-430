@@ -1,0 +1,103 @@
+DIGEST 06fb8528eb7ac058c64f906bbb5ec477
+FPLF.Hoare2Test
+R73:78 Stdlib.Strings.String <> <> lib
+R105:110 PLF.Hoare2 <> <> lib
+ax 124:130 <> MISSING
+mod 147:151 <> Check
+R217:223 PLF.Hoare2Test <> MISSING defax
+R217:223 PLF.Hoare2Test <> MISSING defax
+R416:419 Corelib.Init.Datatypes <> Some constr
+R416:419 Corelib.Init.Datatypes <> Some constr
+R599:602 Corelib.Init.Datatypes <> None constr
+R599:602 Corelib.Init.Datatypes <> None constr
+R684:688 PLF.Hoare2Test Check <> mod
+R716:721 PLF.Hoare2 <> <> lib
+R731:735 PLF.Hoare2Test Check <> mod
+def 739:747 <> Unnamed_thm
+R744:747 Corelib.Init.Logic <> True ind
+R911:931 PLF.Hoare2 <> if_minus_plus_correct prfax
+R935:952 PLF.Hoare2 <> outer_triple_valid def
+R954:970 PLF.Hoare2 <> if_minus_plus_dec def
+R911:931 PLF.Hoare2 <> if_minus_plus_correct prfax
+R935:952 PLF.Hoare2 <> outer_triple_valid def
+R954:970 PLF.Hoare2 <> if_minus_plus_dec def
+R1022:1042 PLF.Hoare2 <> if_minus_plus_correct prfax
+def 1045:1053 <> Unnamed_thm
+R1050:1053 Corelib.Init.Logic <> True ind
+R1216:1230 PLF.Hoare2 <> slow_assignment prfax
+R1246:1248 Corelib.Init.Datatypes <> nat ind
+binder 1242:1242 <> m:3
+R1251:1268 PLF.Hoare2 <> outer_triple_valid def
+R1271:1289 PLF.Hoare2 <> slow_assignment_dec ex
+R1291:1291 PLF.Hoare2Test <> m:3 var
+R1216:1230 PLF.Hoare2 <> slow_assignment prfax
+R1246:1248 Corelib.Init.Datatypes <> nat ind
+binder 1242:1242 <> m:4
+R1251:1268 PLF.Hoare2 <> outer_triple_valid def
+R1271:1289 PLF.Hoare2 <> slow_assignment_dec ex
+R1291:1291 PLF.Hoare2Test <> m:4 var
+R1344:1358 PLF.Hoare2 <> slow_assignment prfax
+def 1361:1369 <> Unnamed_thm
+R1366:1369 Corelib.Init.Logic <> True ind
+R1554:1570 PLF.Hoare2 <> factorial_correct prfax
+R1585:1587 Corelib.Init.Datatypes <> nat ind
+binder 1581:1581 <> m:5
+R1590:1607 PLF.Hoare2 <> outer_triple_valid def
+R1610:1622 PLF.Hoare2 <> factorial_dec prfax
+R1624:1624 PLF.Hoare2Test <> m:5 var
+R1554:1570 PLF.Hoare2 <> factorial_correct prfax
+R1585:1587 Corelib.Init.Datatypes <> nat ind
+binder 1581:1581 <> m:6
+R1590:1607 PLF.Hoare2 <> outer_triple_valid def
+R1610:1622 PLF.Hoare2 <> factorial_dec prfax
+R1624:1624 PLF.Hoare2Test <> m:6 var
+R1677:1693 PLF.Hoare2 <> factorial_correct prfax
+def 1696:1704 <> Unnamed_thm
+R1701:1704 Corelib.Init.Logic <> True ind
+R1867:1881 PLF.Hoare2 <> minimum_correct prfax
+R1898:1900 Corelib.Init.Datatypes <> nat ind
+binder 1892:1892 <> a:7
+binder 1894:1894 <> b:8
+R1903:1920 PLF.Hoare2 <> outer_triple_valid def
+R1923:1933 PLF.Hoare2 <> minimum_dec def
+R1935:1935 PLF.Hoare2Test <> a:7 var
+R1937:1937 PLF.Hoare2Test <> b:8 var
+R1867:1881 PLF.Hoare2 <> minimum_correct prfax
+R1898:1900 Corelib.Init.Datatypes <> nat ind
+binder 1892:1892 <> a:9
+binder 1894:1894 <> b:10
+R1903:1920 PLF.Hoare2 <> outer_triple_valid def
+R1923:1933 PLF.Hoare2 <> minimum_dec def
+R1935:1935 PLF.Hoare2Test <> a:9 var
+R1937:1937 PLF.Hoare2Test <> b:10 var
+R1990:2004 PLF.Hoare2 <> minimum_correct prfax
+def 2007:2015 <> Unnamed_thm
+R2012:2015 Corelib.Init.Logic <> True ind
+R2166:2174 PLF.Hoare2 <> two_loops prfax
+R2193:2195 Corelib.Init.Datatypes <> nat ind
+binder 2185:2185 <> a:11
+binder 2187:2187 <> b:12
+binder 2189:2189 <> c:13
+R2198:2215 PLF.Hoare2 <> outer_triple_valid def
+R2218:2230 PLF.Hoare2 <> two_loops_dec def
+R2232:2232 PLF.Hoare2Test <> a:11 var
+R2234:2234 PLF.Hoare2Test <> b:12 var
+R2236:2236 PLF.Hoare2Test <> c:13 var
+R2166:2174 PLF.Hoare2 <> two_loops prfax
+R2193:2195 Corelib.Init.Datatypes <> nat ind
+binder 2185:2185 <> a:14
+binder 2187:2187 <> b:15
+binder 2189:2189 <> c:16
+R2198:2215 PLF.Hoare2 <> outer_triple_valid def
+R2218:2230 PLF.Hoare2 <> two_loops_dec def
+R2232:2232 PLF.Hoare2Test <> a:14 var
+R2234:2234 PLF.Hoare2Test <> b:15 var
+R2236:2236 PLF.Hoare2Test <> c:16 var
+R2289:2297 PLF.Hoare2 <> two_loops prfax
+def 2300:2308 <> Unnamed_thm
+R2305:2308 Corelib.Init.Logic <> True ind
+R3271:3291 PLF.Hoare2 <> if_minus_plus_correct prfax
+R3358:3372 PLF.Hoare2 <> slow_assignment prfax
+R3439:3453 PLF.Hoare2 <> minimum_correct prfax
+R3514:3522 PLF.Hoare2 <> two_loops prfax
+R3641:3657 PLF.Hoare2 <> factorial_correct prfax

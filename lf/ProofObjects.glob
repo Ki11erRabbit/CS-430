@@ -1,0 +1,905 @@
+DIGEST dfa02180bd6152a792a1905b225643e8
+FLF.ProofObjects
+R146:152 LF.IndProp <> <> lib
+ind 1840:1841 <> ev
+constr 1864:1867 <> ev_0
+constr 1902:1906 <> ev_SS
+R1848:1851 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1845:1847 Corelib.Init.Datatypes <> nat ind
+R1893:1894 LF.ProofObjects <> ev:1 ind
+R1913:1915 Corelib.Init.Datatypes <> nat ind
+binder 1909:1909 <> n:3
+R1923:1924 LF.ProofObjects <> ev:1 ind
+R1926:1926 LF.ProofObjects <> n:3 var
+binder 1919:1919 <> H:4
+R1931:1932 LF.ProofObjects <> ev:1 ind
+R1935:1935 Corelib.Init.Datatypes <> S constr
+R1938:1938 Corelib.Init.Datatypes <> S constr
+R1940:1940 LF.ProofObjects <> n:3 var
+scheme 1840:1841 <> ev_ind
+scheme 1840:1841 <> ev_sind
+binder 2875:2875 <> n:5
+R2886:2893 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2882:2883 LF.ProofObjects <> ev ind
+R2885:2885 LF.ProofObjects <> n:5 var
+R2894:2895 LF.ProofObjects <> ev ind
+R2898:2898 Corelib.Init.Datatypes <> S constr
+R2901:2901 Corelib.Init.Datatypes <> S constr
+R2903:2903 LF.ProofObjects <> n:5 var
+R2858:2862 LF.ProofObjects <> ev_SS constr
+prf 3182:3185 <> ev_4
+R3189:3190 LF.ProofObjects <> ev ind
+R3210:3214 LF.ProofObjects <> ev_SS constr
+R3210:3214 LF.ProofObjects <> ev_SS constr
+R3223:3227 LF.ProofObjects <> ev_SS constr
+R3223:3227 LF.ProofObjects <> ev_SS constr
+R3236:3239 LF.ProofObjects <> ev_0 constr
+R3236:3239 LF.ProofObjects <> ev_0 constr
+R3622:3623 LF.ProofObjects <> ev ind
+R3594:3598 LF.ProofObjects <> ev_SS constr
+R3603:3607 LF.ProofObjects <> ev_SS constr
+R3611:3614 LF.ProofObjects <> ev_0 constr
+prf 4611:4615 <> ev_4'
+R4618:4619 LF.ProofObjects <> ev ind
+R4640:4644 LF.ProofObjects <> ev_SS constr
+R4649:4653 LF.ProofObjects <> ev_SS constr
+R4657:4660 LF.ProofObjects <> ev_0 constr
+R4640:4644 LF.ProofObjects <> ev_SS constr
+R4649:4653 LF.ProofObjects <> ev_SS constr
+R4657:4660 LF.ProofObjects <> ev_0 constr
+prf 5319:5324 <> ev_4''
+R5328:5329 LF.ProofObjects <> ev ind
+R5363:5367 LF.ProofObjects <> ev_SS constr
+R5363:5367 LF.ProofObjects <> ev_SS constr
+R5392:5396 LF.ProofObjects <> ev_SS constr
+R5392:5396 LF.ProofObjects <> ev_SS constr
+R5421:5424 LF.ProofObjects <> ev_0 constr
+R5421:5424 LF.ProofObjects <> ev_0 constr
+def 6130:6136 <> ev_4'''
+R6140:6141 LF.ProofObjects <> ev ind
+R6150:6154 LF.ProofObjects <> ev_SS constr
+R6159:6163 LF.ProofObjects <> ev_SS constr
+R6167:6170 LF.ProofObjects <> ev_0 constr
+prf 6704:6707 <> ev_8
+R6711:6712 LF.ProofObjects <> ev ind
+R6732:6736 LF.ProofObjects <> ev_SS constr
+R6732:6736 LF.ProofObjects <> ev_SS constr
+R6747:6751 LF.ProofObjects <> ev_SS constr
+R6747:6751 LF.ProofObjects <> ev_SS constr
+R6762:6766 LF.ProofObjects <> ev_SS constr
+R6762:6766 LF.ProofObjects <> ev_SS constr
+R6777:6781 LF.ProofObjects <> ev_SS constr
+R6777:6781 LF.ProofObjects <> ev_SS constr
+R6792:6795 LF.ProofObjects <> ev_0 constr
+R6792:6795 LF.ProofObjects <> ev_0 constr
+def 6815:6819 <> ev_8'
+R6823:6824 LF.ProofObjects <> ev ind
+R6833:6837 LF.ProofObjects <> ev_SS constr
+R6842:6846 LF.ProofObjects <> ev_SS constr
+R6851:6855 LF.ProofObjects <> ev_SS constr
+R6860:6864 LF.ProofObjects <> ev_SS constr
+R6868:6871 LF.ProofObjects <> ev_0 constr
+prf 7524:7531 <> ev_plus4
+binder 7542:7542 <> n:6
+R7549:7552 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7545:7546 LF.ProofObjects <> ev ind
+R7548:7548 LF.ProofObjects <> n:6 var
+R7553:7554 LF.ProofObjects <> ev ind
+R7558:7560 LF.Basics <> ::nat_scope:x_'+'_x not
+R7561:7561 LF.ProofObjects <> n:6 var
+R7601:7605 LF.ProofObjects <> ev_SS constr
+R7601:7605 LF.ProofObjects <> ev_SS constr
+R7616:7620 LF.ProofObjects <> ev_SS constr
+R7616:7620 LF.ProofObjects <> ev_SS constr
+def 7945:7953 <> ev_plus4'
+binder 7964:7964 <> n:7
+R7971:7974 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7967:7968 LF.ProofObjects <> ev ind
+R7970:7970 LF.ProofObjects <> n:7 var
+R7975:7976 LF.ProofObjects <> ev ind
+R7980:7982 LF.Basics <> ::nat_scope:x_'+'_x not
+R7983:7983 LF.ProofObjects <> n:7 var
+R8000:8002 Corelib.Init.Datatypes <> nat ind
+binder 7996:7996 <> n:8
+R8017:8018 LF.ProofObjects <> ev ind
+R8020:8020 LF.ProofObjects <> n:8 var
+binder 8013:8013 <> H:9
+R8030:8034 LF.ProofObjects <> ev_SS constr
+R8037:8037 Corelib.Init.Datatypes <> S constr
+R8040:8040 Corelib.Init.Datatypes <> S constr
+R8042:8042 LF.ProofObjects <> n:8 var
+R8047:8051 LF.ProofObjects <> ev_SS constr
+R8053:8053 LF.ProofObjects <> n:8 var
+R8055:8055 LF.ProofObjects <> H:9 var
+def 8283:8292 <> ev_plus4''
+R8299:8301 Corelib.Init.Datatypes <> nat ind
+binder 8295:8295 <> n:10
+R8309:8310 LF.ProofObjects <> ev ind
+R8312:8312 LF.ProofObjects <> n:10 var
+binder 8305:8305 <> H:11
+R8337:8338 LF.ProofObjects <> ev ind
+R8342:8344 LF.Basics <> ::nat_scope:x_'+'_x not
+R8345:8345 LF.ProofObjects <> n:10 var
+R8353:8357 LF.ProofObjects <> ev_SS constr
+R8360:8360 Corelib.Init.Datatypes <> S constr
+R8363:8363 Corelib.Init.Datatypes <> S constr
+R8365:8365 LF.ProofObjects <> n:10 var
+R8370:8374 LF.ProofObjects <> ev_SS constr
+R8376:8376 LF.ProofObjects <> n:10 var
+R8378:8378 LF.ProofObjects <> H:11 var
+R8413:8415 Corelib.Init.Datatypes <> nat ind
+binder 8409:8409 <> n:12
+R8422:8425 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8418:8419 LF.ProofObjects <> ev ind
+R8421:8421 LF.ProofObjects <> n:12 var
+R8426:8427 LF.ProofObjects <> ev ind
+R8431:8433 LF.Basics <> ::nat_scope:x_'+'_x not
+R8434:8434 LF.ProofObjects <> n:12 var
+R8389:8398 LF.ProofObjects <> ev_plus4'' def
+def 9406:9413 <> ev_plus2
+binder 9434:9434 <> n:13
+R9449:9450 LF.ProofObjects <> ev ind
+R9452:9452 LF.ProofObjects <> n:13 var
+binder 9445:9445 <> E:14
+R9456:9457 LF.ProofObjects <> ev ind
+R9461:9463 LF.Basics <> ::nat_scope:x_'+'_x not
+R9460:9460 LF.ProofObjects <> n:13 var
+def 9883:9891 <> ev_plus2'
+binder 9912:9912 <> n:15
+R9927:9928 LF.ProofObjects <> ev ind
+R9930:9930 LF.ProofObjects <> n:15 var
+R9934:9935 LF.ProofObjects <> ev ind
+R9939:9941 LF.Basics <> ::nat_scope:x_'+'_x not
+R9938:9938 LF.ProofObjects <> n:15 var
+def 10024:10033 <> ev_plus2''
+binder 10054:10054 <> n:16
+R10061:10064 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10057:10058 LF.ProofObjects <> ev ind
+R10060:10060 LF.ProofObjects <> n:16 var
+R10065:10066 LF.ProofObjects <> ev ind
+R10070:10072 LF.Basics <> ::nat_scope:x_'+'_x not
+R10069:10069 LF.ProofObjects <> n:16 var
+def 10532:10535 <> add1
+R10542:10545 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10539:10541 Corelib.Init.Datatypes <> nat ind
+R10546:10548 Corelib.Init.Datatypes <> nat ind
+R10578:10578 Corelib.Init.Datatypes <> S constr
+R10578:10578 Corelib.Init.Datatypes <> S constr
+R10695:10698 LF.ProofObjects <> add1 def
+def 10733:10737 <> add1d
+R10753:10755 Corelib.Init.Datatypes <> nat ind
+binder 10749:10749 <> n:17
+R10759:10766 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R10774:10776 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R10771:10773 Corelib.Init.Datatypes <> nat ind
+binder 10767:10767 <> m:18
+R10780:10782 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10777:10777 Corelib.Init.Datatypes <> S constr
+R10779:10779 LF.ProofObjects <> n:17 var
+R10783:10783 LF.ProofObjects <> m:18 var
+R10808:10808 Corelib.Init.Datatypes <> S constr
+R10808:10808 Corelib.Init.Datatypes <> S constr
+mod 11938:11942 <> Props
+mod 12318:12320 <> Props.And
+ind 12334:12336 Props.And and
+constr 12365:12368 Props.And conj
+binder 12339:12339 <> P:19
+binder 12341:12341 <> Q:20
+R12373:12376 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12372:12372 LF.ProofObjects <> P:19 var
+R12378:12381 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R12377:12377 LF.ProofObjects <> Q:20 var
+R12382:12384 LF.ProofObjects <> and:21 ind
+R12388:12388 LF.ProofObjects <> Q:20 var
+R12386:12386 LF.ProofObjects <> P:19 var
+scheme 12334:12336 Props.And and_rect
+scheme 12334:12336 Props.And and_ind
+scheme 12334:12336 Props.And and_rec
+scheme 12334:12336 Props.And and_sind
+R12402:12405 LF.ProofObjects Props.And conj constr
+R12402:12405 LF.ProofObjects Props.And conj constr
+R12439:12441 LF.ProofObjects Props.And and ind
+not 12426:12426 Props.And ::type_scope:x_'/\'_x
+prf 13021:13026 Props.And proj1'
+binder 13037:13037 <> P:23
+binder 13039:13039 <> Q:24
+R13050:13053 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R13045:13048 LF.ProofObjects Props.And ::type_scope:x_'/\'_x not
+R13044:13044 LF.ProofObjects <> P:23 var
+R13049:13049 LF.ProofObjects <> Q:24 var
+R13054:13054 LF.ProofObjects <> P:23 var
+prf 13310:13317 Props.And and_comm
+binder 13328:13328 <> P:25
+binder 13330:13330 <> Q:26
+R13346:13350 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R13341:13344 LF.ProofObjects Props.And ::type_scope:x_'/\'_x not
+R13340:13340 LF.ProofObjects <> P:25 var
+R13345:13345 LF.ProofObjects <> Q:26 var
+R13352:13355 LF.ProofObjects Props.And ::type_scope:x_'/\'_x not
+R13351:13351 LF.ProofObjects <> Q:26 var
+R13356:13356 LF.ProofObjects <> P:25 var
+R13515:13517 LF.ProofObjects Props.And <> mod
+def 13733:13739 Props proj1''
+binder 13741:13741 <> P:27
+binder 13743:13743 <> Q:28
+R13753:13756 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13752:13752 LF.ProofObjects <> P:27 var
+R13757:13757 LF.ProofObjects <> Q:28 var
+binder 13746:13748 <> HPQ:29
+R13762:13762 LF.ProofObjects <> P:27 var
+R13775:13777 LF.ProofObjects <> HPQ:29 var
+R13788:13791 Corelib.Init.Logic <> conj constr
+def 13824:13836 Props and_comm'_aux
+binder 13838:13838 <> P:31
+binder 13840:13840 <> Q:32
+R13848:13851 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13847:13847 LF.ProofObjects <> P:31 var
+R13852:13852 LF.ProofObjects <> Q:32 var
+binder 13843:13843 <> H:33
+R13858:13861 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13857:13857 LF.ProofObjects <> Q:32 var
+R13862:13862 LF.ProofObjects <> P:31 var
+R13875:13875 LF.ProofObjects <> H:33 var
+R13886:13889 Corelib.Init.Logic <> conj constr
+R13900:13903 Corelib.Init.Logic <> conj constr
+def 13930:13938 Props and_comm'
+binder 13940:13940 <> P:35
+binder 13942:13942 <> Q:36
+R13952:13956 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R13947:13950 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13946:13946 LF.ProofObjects <> P:35 var
+R13951:13951 LF.ProofObjects <> Q:36 var
+R13958:13961 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R13957:13957 LF.ProofObjects <> Q:36 var
+R13962:13962 LF.ProofObjects <> P:35 var
+R13969:13972 Corelib.Init.Logic <> conj constr
+R13995:14007 LF.ProofObjects Props and_comm'_aux def
+R14009:14009 LF.ProofObjects <> Q:36 var
+R14011:14011 LF.ProofObjects <> P:35 var
+R13975:13987 LF.ProofObjects Props and_comm'_aux def
+R13989:13989 LF.ProofObjects <> P:35 var
+R13991:13991 LF.ProofObjects <> Q:36 var
+def 14141:14149 Props conj_fact
+binder 14160:14160 <> P:37
+binder 14162:14162 <> Q:38
+binder 14164:14164 <> R:39
+R14173:14176 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14168:14171 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14167:14167 LF.ProofObjects <> P:37 var
+R14172:14172 LF.ProofObjects <> Q:38 var
+R14183:14186 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14178:14181 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14177:14177 LF.ProofObjects <> Q:38 var
+R14182:14182 LF.ProofObjects <> R:39 var
+R14188:14191 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R14187:14187 LF.ProofObjects <> P:37 var
+R14192:14192 LF.ProofObjects <> R:39 var
+binder 14203:14203 <> P:40
+binder 14205:14205 <> Q:41
+binder 14207:14207 <> R:42
+binder 14216:14218 <> HPQ:43
+binder 14227:14229 <> HQR:44
+R14234:14237 Corelib.Init.Logic <> conj constr
+R14256:14260 LF.Logic <> proj2 thm
+R14262:14262 LF.ProofObjects <> Q:41 var
+R14264:14264 LF.ProofObjects <> R:42 var
+R14266:14268 LF.ProofObjects <> HQR:44 var
+R14240:14244 LF.Logic <> proj1 thm
+R14246:14246 LF.ProofObjects <> P:40 var
+R14248:14248 LF.ProofObjects <> Q:41 var
+R14250:14252 LF.ProofObjects <> HPQ:43 var
+mod 14498:14499 <> Props.Or
+ind 14513:14514 Props.Or or
+constr 14543:14551 Props.Or or_introl
+constr 14571:14579 Props.Or or_intror
+binder 14517:14517 <> P:45
+binder 14519:14519 <> Q:46
+R14556:14559 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14555:14555 LF.ProofObjects <> P:45 var
+R14560:14561 LF.ProofObjects <> or:47 ind
+R14565:14565 LF.ProofObjects <> Q:46 var
+R14563:14563 LF.ProofObjects <> P:45 var
+R14584:14587 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14583:14583 LF.ProofObjects <> Q:46 var
+R14588:14589 LF.ProofObjects <> or:47 ind
+R14593:14593 LF.ProofObjects <> Q:46 var
+R14591:14591 LF.ProofObjects <> P:45 var
+scheme 14513:14514 Props.Or or_ind
+scheme 14513:14514 Props.Or or_sind
+R14607:14615 LF.ProofObjects Props.Or or_introl constr
+R14607:14615 LF.ProofObjects Props.Or or_introl constr
+R14636:14644 LF.ProofObjects Props.Or or_intror constr
+R14636:14644 LF.ProofObjects Props.Or or_intror constr
+R14678:14679 LF.ProofObjects Props.Or or ind
+not 14665:14665 Props.Or ::type_scope:x_'\/'_x
+def 15039:15043 Props.Or inj_l
+binder 15055:15055 <> P:49
+binder 15057:15057 <> Q:50
+R15069:15072 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15068:15068 LF.ProofObjects <> P:49 var
+R15074:15077 LF.ProofObjects Props.Or ::type_scope:x_'\/'_x not
+R15073:15073 LF.ProofObjects <> P:49 var
+R15078:15078 LF.ProofObjects <> Q:50 var
+binder 15089:15089 <> P:51
+binder 15091:15091 <> Q:52
+binder 15093:15094 <> HP:53
+R15099:15107 LF.ProofObjects Props.Or or_introl constr
+R15109:15110 LF.ProofObjects <> HP:53 var
+prf 15122:15127 Props.Or inj_l'
+binder 15139:15139 <> P:54
+binder 15141:15141 <> Q:55
+R15153:15156 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15152:15152 LF.ProofObjects <> P:54 var
+R15158:15161 LF.ProofObjects Props.Or ::type_scope:x_'\/'_x not
+R15157:15157 LF.ProofObjects <> P:54 var
+R15162:15162 LF.ProofObjects <> Q:55 var
+def 15236:15242 Props.Or or_elim
+binder 15254:15254 <> P:56
+binder 15256:15256 <> Q:57
+binder 15258:15258 <> R:58
+R15269:15269 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15276:15280 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15271:15274 LF.ProofObjects Props.Or ::type_scope:x_'\/'_x not
+R15270:15270 LF.ProofObjects <> P:56 var
+R15275:15275 LF.ProofObjects <> Q:57 var
+R15281:15281 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15288:15292 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15283:15286 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15282:15282 LF.ProofObjects <> P:56 var
+R15287:15287 LF.ProofObjects <> R:58 var
+R15293:15293 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15300:15304 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15295:15298 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15294:15294 LF.ProofObjects <> Q:57 var
+R15299:15299 LF.ProofObjects <> R:58 var
+R15305:15305 LF.ProofObjects <> R:58 var
+binder 15316:15316 <> P:59
+binder 15318:15318 <> Q:60
+binder 15320:15320 <> R:61
+binder 15322:15324 <> HPQ:62
+binder 15326:15328 <> HPR:63
+binder 15330:15332 <> HQR:64
+R15347:15349 LF.ProofObjects <> HPQ:62 var
+R15362:15370 LF.ProofObjects Props.Or or_introl constr
+R15378:15380 LF.ProofObjects <> HPR:63 var
+R15391:15399 LF.ProofObjects Props.Or or_intror constr
+R15407:15409 LF.ProofObjects <> HQR:64 var
+prf 15432:15439 Props.Or or_elim'
+binder 15451:15451 <> P:66
+binder 15453:15453 <> Q:67
+binder 15455:15455 <> R:68
+R15466:15466 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15473:15477 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15468:15471 LF.ProofObjects Props.Or ::type_scope:x_'\/'_x not
+R15467:15467 LF.ProofObjects <> P:66 var
+R15472:15472 LF.ProofObjects <> Q:67 var
+R15478:15478 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15485:15489 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15480:15483 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15479:15479 LF.ProofObjects <> P:66 var
+R15484:15484 LF.ProofObjects <> R:68 var
+R15490:15490 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15497:15501 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15492:15495 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15491:15491 LF.ProofObjects <> Q:67 var
+R15496:15496 LF.ProofObjects <> R:68 var
+R15502:15502 LF.ProofObjects <> R:68 var
+R15629:15630 LF.ProofObjects Props.Or <> mod
+def 15760:15769 Props or_commut'
+binder 15780:15780 <> P:69
+binder 15782:15782 <> Q:70
+R15791:15794 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15786:15789 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R15785:15785 LF.ProofObjects <> P:69 var
+R15790:15790 LF.ProofObjects <> Q:70 var
+R15796:15799 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R15795:15795 LF.ProofObjects <> Q:70 var
+R15800:15800 LF.ProofObjects <> P:69 var
+binder 15811:15811 <> P:71
+binder 15813:15813 <> Q:72
+binder 15822:15824 <> HPQ:73
+R15840:15842 LF.ProofObjects <> HPQ:73 var
+R15855:15863 Corelib.Init.Logic <> or_introl constr
+R15871:15879 Corelib.Init.Logic <> or_intror constr
+R15890:15898 Corelib.Init.Logic <> or_intror constr
+R15906:15914 Corelib.Init.Logic <> or_introl constr
+mod 16204:16205 <> Props.Ex
+ind 16219:16220 Props.Ex ex
+constr 16263:16270 Props.Ex ex_intro
+binder 16223:16223 <> A:75
+R16239:16242 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16238:16238 LF.ProofObjects <> A:75 var
+binder 16234:16234 <> P:76
+R16285:16285 LF.ProofObjects <> A:75 var
+binder 16281:16281 <> x:79
+R16291:16294 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16288:16288 LF.ProofObjects <> P:76 var
+R16290:16290 LF.ProofObjects <> x:79 var
+R16295:16296 LF.ProofObjects <> ex:77 ind
+R16298:16298 LF.ProofObjects <> P:76 var
+scheme 16219:16220 Props.Ex ex_ind
+scheme 16219:16220 Props.Ex ex_sind
+R16334:16335 LF.ProofObjects Props.Ex ex ind
+binder 16342:16342 <> x:80
+not 16311:16311 Props.Ex ::type_scope:'exists'_x_','_x
+R16410:16411 LF.ProofObjects Props.Ex <> mod
+R17036:17037 Corelib.Init.Logic <> ex ind
+binder 17044:17044 <> n:81
+R17049:17050 LF.ProofObjects <> ev ind
+R17052:17052 LF.ProofObjects <> n:81 var
+def 17145:17160 Props some_nat_is_even
+R17164:17170 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R17172:17173 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 17171:17171 <> n:82
+R17174:17175 LF.ProofObjects <> ev ind
+R17177:17177 LF.ProofObjects <> n:82 var
+R17184:17191 Corelib.Init.Logic <> ex_intro constr
+R17199:17203 LF.ProofObjects <> ev_SS constr
+R17208:17212 LF.ProofObjects <> ev_SS constr
+R17216:17219 LF.ProofObjects <> ev_0 constr
+R17193:17194 LF.ProofObjects <> ev ind
+def 17349:17356 Props ex_ev_Sn
+R17360:17361 Corelib.Init.Logic <> ex ind
+binder 17368:17368 <> n:83
+R17373:17374 LF.ProofObjects <> ev ind
+R17377:17377 Corelib.Init.Datatypes <> S constr
+R17379:17379 LF.ProofObjects <> n:83 var
+R17388:17395 Corelib.Init.Logic <> ex_intro constr
+R17420:17424 LF.ProofObjects <> ev_SS constr
+R17428:17431 LF.ProofObjects <> ev_0 constr
+binder 17402:17402 <> n:84
+R17407:17408 LF.ProofObjects <> ev ind
+R17411:17411 Corelib.Init.Datatypes <> S constr
+R17413:17413 LF.ProofObjects <> n:84 var
+def 17526:17544 Props dist_exists_or_term
+binder 17547:17547 <> X:85
+R17563:17566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R17562:17562 LF.ProofObjects <> X:85 var
+binder 17556:17556 <> P:86
+binder 17558:17558 <> Q:87
+R17577:17577 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R17598:17602 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R17578:17584 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R17586:17587 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 17585:17585 <> x:88
+R17591:17594 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R17588:17588 LF.ProofObjects <> P:86 var
+R17590:17590 LF.ProofObjects <> x:88 var
+R17595:17595 LF.ProofObjects <> Q:87 var
+R17597:17597 LF.ProofObjects <> x:88 var
+R17603:17603 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R17617:17622 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R17636:17636 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R17604:17610 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R17612:17613 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 17611:17611 <> x:89
+R17614:17614 LF.ProofObjects <> P:86 var
+R17616:17616 LF.ProofObjects <> x:89 var
+R17623:17629 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R17631:17632 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 17630:17630 <> x:90
+R17633:17633 LF.ProofObjects <> Q:87 var
+R17635:17635 LF.ProofObjects <> x:90 var
+binder 17647:17647 <> H:91
+R17658:17658 LF.ProofObjects <> H:91 var
+R17678:17685 Corelib.Init.Logic <> ex_intro constr
+R17743:17751 Corelib.Init.Logic <> or_introl constr
+R17760:17768 Corelib.Init.Logic <> or_introl constr
+R17771:17778 Corelib.Init.Logic <> ex_intro constr
+R17806:17814 Corelib.Init.Logic <> or_intror constr
+R17823:17831 Corelib.Init.Logic <> or_intror constr
+R17834:17841 Corelib.Init.Logic <> ex_intro constr
+def 18011:18018 Props ex_match
+binder 18030:18030 <> A:94
+R18048:18051 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18047:18047 LF.ProofObjects <> A:94 var
+binder 18041:18041 <> P:95
+binder 18043:18043 <> Q:96
+R18061:18061 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18082:18088 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 18069:18069 <> x:97
+R18075:18078 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18072:18072 LF.ProofObjects <> P:95 var
+R18074:18074 LF.ProofObjects <> x:97 var
+R18079:18079 LF.ProofObjects <> Q:96 var
+R18081:18081 LF.ProofObjects <> x:97 var
+R18089:18089 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18103:18108 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18122:18122 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18090:18096 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R18098:18099 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 18097:18097 <> x:98
+R18100:18100 LF.ProofObjects <> P:95 var
+R18102:18102 LF.ProofObjects <> x:98 var
+R18109:18115 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R18117:18118 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 18116:18116 <> x:99
+R18119:18119 LF.ProofObjects <> Q:96 var
+R18121:18121 LF.ProofObjects <> x:99 var
+ind 18384:18387 Props True
+constr 18403:18403 Props I
+R18407:18410 LF.ProofObjects <> True:100 ind
+scheme 18384:18387 Props True_rect
+scheme 18384:18387 Props True_ind
+scheme 18384:18387 Props True_rec
+scheme 18384:18387 Props True_sind
+def 18671:18684 Props p_implies_true
+binder 18695:18695 <> P:102
+R18699:18702 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R18698:18698 LF.ProofObjects <> P:102 var
+R18703:18706 LF.ProofObjects Props True ind
+ind 18904:18908 Props False
+scheme 18904:18908 Props False_rect
+scheme 18904:18908 Props False_ind
+scheme 18904:18908 Props False_rec
+scheme 18904:18908 Props False_sind
+def 19153:19158 Props contra
+R19162:19166 LF.ProofObjects Props False ind
+def 19428:19452 Props false_implies_zero_eq_one
+R19461:19464 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19456:19460 LF.ProofObjects Props False ind
+R19466:19468 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+binder 19480:19485 <> contra:105
+R19496:19501 LF.ProofObjects <> contra:105 var
+def 19951:19969 Props ex_falso_quodlibet'
+binder 19980:19980 <> P:107
+R19988:19991 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R19983:19987 LF.ProofObjects Props False ind
+R19992:19992 LF.ProofObjects <> P:107 var
+R20076:20080 LF.ProofObjects Props <> mod
+mod 20269:20286 <> EqualityPlayground
+ind 20300:20301 EqualityPlayground eq
+constr 20336:20342 EqualityPlayground eq_refl
+binder 20304:20304 <> X:108
+R20315:20318 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R20320:20323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+binder 20353:20353 <> x:111
+R20356:20357 LF.ProofObjects <> eq:109 ind
+R20361:20361 LF.ProofObjects <> x:111 var
+R20359:20359 LF.ProofObjects <> x:111 var
+scheme 20300:20301 EqualityPlayground eq_ind
+scheme 20300:20301 EqualityPlayground eq_sind
+R20387:20388 LF.ProofObjects EqualityPlayground eq ind
+not 20374:20374 EqualityPlayground ::type_scope:x_'=='_x
+prf 21581:21584 EqualityPlayground four
+R21592:21595 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R21588:21590 LF.Basics <> ::nat_scope:x_'+'_x not
+R21597:21599 LF.Basics <> ::nat_scope:x_'+'_x not
+R21618:21624 LF.ProofObjects EqualityPlayground eq_refl constr
+R21618:21624 LF.ProofObjects EqualityPlayground eq_refl constr
+def 22051:22055 EqualityPlayground four'
+R22064:22067 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R22060:22062 LF.Basics <> ::nat_scope:x_'+'_x not
+R22069:22071 LF.Basics <> ::nat_scope:x_'+'_x not
+R22079:22085 LF.ProofObjects EqualityPlayground eq_refl constr
+def 22102:22110 EqualityPlayground singleton
+binder 22122:22122 <> X:112
+R22133:22133 LF.ProofObjects <> X:112 var
+binder 22131:22131 <> x:113
+R22144:22147 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R22139:22140 LF.Poly <> :::x_'++'_x not
+R22137:22138 LF.Poly <> :::'['_']' not
+R22141:22141 LF.Poly <> :::'['_x_';'_'..'_';'_x_']' not
+R22143:22143 LF.Poly <> :::'['_x_';'_'..'_';'_x_']' not
+R22142:22142 LF.ProofObjects <> x:113 var
+R22149:22150 LF.Poly <> :::x_'::'_x not
+R22148:22148 LF.ProofObjects <> x:113 var
+R22151:22152 LF.Poly <> :::'['_']' not
+binder 22165:22165 <> X:114
+R22176:22176 LF.ProofObjects <> X:114 var
+binder 22174:22174 <> x:115
+R22182:22188 LF.ProofObjects EqualityPlayground eq_refl constr
+R22190:22190 LF.Poly <> :::'['_x_';'_'..'_';'_x_']' not
+R22192:22192 LF.Poly <> :::'['_x_';'_'..'_';'_x_']' not
+R22191:22191 LF.ProofObjects <> x:115 var
+def 22262:22267 EqualityPlayground eq_add
+R22287:22289 Corelib.Init.Datatypes <> nat ind
+binder 22279:22280 <> n1:116
+binder 22282:22283 <> n2:117
+R22301:22304 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R22295:22298 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R22293:22294 LF.ProofObjects <> n1:116 var
+R22299:22300 LF.ProofObjects <> n2:117 var
+R22305:22305 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R22310:22315 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R22320:22320 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R22306:22306 Corelib.Init.Datatypes <> S constr
+R22308:22309 LF.ProofObjects <> n1:116 var
+R22316:22316 Corelib.Init.Datatypes <> S constr
+R22318:22319 LF.ProofObjects <> n2:117 var
+binder 22331:22332 <> n1:118
+binder 22334:22335 <> n2:119
+binder 22337:22339 <> Heq:120
+R22354:22356 LF.ProofObjects <> Heq:120 var
+R22369:22375 LF.ProofObjects EqualityPlayground eq_refl constr
+R22382:22388 LF.ProofObjects EqualityPlayground eq_refl constr
+R22391:22391 Corelib.Init.Datatypes <> S constr
+prf 23044:23050 EqualityPlayground eq_add'
+R23070:23072 Corelib.Init.Datatypes <> nat ind
+binder 23062:23063 <> n1:122
+binder 23065:23066 <> n2:123
+R23084:23087 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23078:23081 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23076:23077 LF.ProofObjects <> n1:122 var
+R23082:23083 LF.ProofObjects <> n2:123 var
+R23088:23088 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23093:23098 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23103:23103 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23089:23089 Corelib.Init.Datatypes <> S constr
+R23091:23092 LF.ProofObjects <> n1:122 var
+R23099:23099 Corelib.Init.Datatypes <> S constr
+R23101:23102 LF.ProofObjects <> n2:123 var
+R23329:23335 LF.ProofObjects EqualityPlayground eq_refl constr
+R23329:23335 LF.ProofObjects EqualityPlayground eq_refl constr
+def 23518:23524 EqualityPlayground eq_cons
+binder 23536:23536 <> X:124
+R23555:23555 LF.ProofObjects <> X:124 var
+binder 23547:23548 <> h1:125
+binder 23550:23551 <> h2:126
+R23567:23570 LF.Poly <> list ind
+R23572:23572 LF.ProofObjects <> X:124 var
+binder 23559:23560 <> t1:127
+binder 23562:23563 <> t2:128
+R23588:23591 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23582:23585 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23580:23581 LF.ProofObjects <> h1:125 var
+R23586:23587 LF.ProofObjects <> h2:126 var
+R23600:23603 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R23594:23597 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23592:23593 LF.ProofObjects <> t1:127 var
+R23598:23599 LF.ProofObjects <> t2:128 var
+R23612:23615 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R23606:23609 LF.Poly <> :::x_'::'_x not
+R23604:23605 LF.ProofObjects <> h1:125 var
+R23610:23611 LF.ProofObjects <> t1:127 var
+R23618:23621 LF.Poly <> :::x_'::'_x not
+R23616:23617 LF.ProofObjects <> h2:126 var
+R23622:23623 LF.ProofObjects <> t2:128 var
+prf 23993:24018 EqualityPlayground equality__leibniz_equality
+binder 24030:24030 <> X:129
+R24046:24046 LF.ProofObjects <> X:129 var
+binder 24041:24041 <> x:130
+binder 24043:24043 <> y:131
+R24058:24061 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24053:24056 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R24052:24052 LF.ProofObjects <> x:130 var
+R24057:24057 LF.ProofObjects <> y:131 var
+R24075:24078 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24074:24074 LF.ProofObjects <> X:129 var
+binder 24070:24070 <> P:132
+R24089:24092 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24086:24086 LF.ProofObjects <> P:132 var
+R24088:24088 LF.ProofObjects <> x:130 var
+R24093:24093 LF.ProofObjects <> P:132 var
+R24095:24095 LF.ProofObjects <> y:131 var
+def 24501:24531 EqualityPlayground equality__leibniz_equality_term
+binder 24543:24543 <> X:133
+R24559:24559 LF.ProofObjects <> X:133 var
+binder 24554:24554 <> x:134
+binder 24556:24556 <> y:135
+R24573:24576 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24568:24571 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R24567:24567 LF.ProofObjects <> x:134 var
+R24572:24572 LF.ProofObjects <> y:135 var
+R24590:24593 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24589:24589 LF.ProofObjects <> X:133 var
+binder 24584:24584 <> P:136
+R24604:24607 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R24601:24601 LF.ProofObjects <> P:136 var
+R24603:24603 LF.ProofObjects <> x:134 var
+R24608:24608 LF.ProofObjects <> P:136 var
+R24610:24610 LF.ProofObjects <> y:135 var
+prf 25010:25035 EqualityPlayground leibniz_equality__equality
+binder 25047:25047 <> X:137
+R25063:25063 LF.ProofObjects <> X:137 var
+binder 25058:25058 <> x:138
+binder 25060:25060 <> y:139
+R25069:25069 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R25098:25102 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R25080:25081 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R25079:25079 LF.ProofObjects <> X:137 var
+binder 25077:25077 <> P:140
+R25091:25094 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R25088:25088 LF.ProofObjects <> P:140 var
+R25090:25090 LF.ProofObjects <> x:138 var
+R25095:25095 LF.ProofObjects <> P:140 var
+R25097:25097 LF.ProofObjects <> y:139 var
+R25104:25107 LF.ProofObjects EqualityPlayground ::type_scope:x_'=='_x not
+R25103:25103 LF.ProofObjects <> x:138 var
+R25108:25108 LF.ProofObjects <> y:139 var
+R25162:25179 LF.ProofObjects EqualityPlayground <> mod
+def 29081:29088 <> or_bogus
+binder 29099:29099 <> P:141
+binder 29101:29101 <> Q:142
+R29110:29113 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R29105:29108 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R29104:29104 LF.ProofObjects <> P:141 var
+R29109:29109 LF.ProofObjects <> Q:142 var
+R29114:29114 LF.ProofObjects <> P:141 var
+binder 29126:29126 <> P:143
+binder 29128:29128 <> Q:144
+R29144:29147 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R29143:29143 LF.ProofObjects <> P:143 var
+R29148:29148 LF.ProofObjects <> Q:144 var
+binder 29139:29139 <> A:145
+R29164:29164 LF.ProofObjects <> A:145 var
+R29177:29185 Corelib.Init.Logic <> or_introl constr
+def 29681:29693 <> infinite_loop
+binder 29696:29696 <> X:147
+R29711:29713 Corelib.Init.Datatypes <> nat ind
+binder 29707:29707 <> n:148
+R29729:29729 LF.ProofObjects <> X:147 var
+R29736:29748 LF.ProofObjects <> infinite_loop:149 def
+R29750:29750 LF.ProofObjects <> n:148 var
+def 29770:29774 <> falso
+R29778:29782 Corelib.Init.Logic <> False ind
+def 30920:30928 <> and_assoc
+binder 30939:30939 <> P:150
+binder 30941:30941 <> Q:151
+binder 30943:30943 <> R:152
+R30970:30973 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R30958:30962 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30969:30969 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30957:30957 LF.ProofObjects <> P:150 var
+R30964:30967 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30963:30963 LF.ProofObjects <> Q:151 var
+R30968:30968 LF.ProofObjects <> R:152 var
+R30974:30974 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30981:30985 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30976:30979 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R30975:30975 LF.ProofObjects <> P:150 var
+R30980:30980 LF.ProofObjects <> Q:151 var
+R30986:30986 LF.ProofObjects <> R:152 var
+def 31143:31165 <> or_distributes_over_and
+binder 31176:31176 <> P:153
+binder 31178:31178 <> Q:154
+binder 31180:31180 <> R:155
+R31207:31211 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R31195:31199 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R31206:31206 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R31194:31194 LF.ProofObjects <> P:153 var
+R31201:31204 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31200:31200 LF.ProofObjects <> Q:154 var
+R31205:31205 LF.ProofObjects <> R:155 var
+R31212:31212 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31219:31224 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31231:31231 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31214:31217 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R31213:31213 LF.ProofObjects <> P:153 var
+R31218:31218 LF.ProofObjects <> Q:154 var
+R31226:31229 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R31225:31225 LF.ProofObjects <> P:153 var
+R31230:31230 LF.ProofObjects <> R:155 var
+def 31374:31383 <> double_neg
+binder 31394:31394 <> P:156
+R31409:31412 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31408:31408 LF.ProofObjects <> P:156 var
+R31413:31413 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31414:31414 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31415:31415 LF.ProofObjects <> P:156 var
+def 31496:31525 <> contradiction_implies_anything
+binder 31536:31536 <> P:157
+binder 31538:31538 <> Q:158
+R31552:31552 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31560:31564 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31554:31557 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31553:31553 LF.ProofObjects <> P:157 var
+R31558:31558 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31559:31559 LF.ProofObjects <> P:157 var
+R31565:31565 LF.ProofObjects <> Q:158 var
+def 31646:31661 <> de_morgan_not_or
+binder 31672:31672 <> P:159
+binder 31674:31674 <> Q:160
+R31698:31701 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31688:31690 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31697:31697 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31692:31695 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R31691:31691 LF.ProofObjects <> P:159 var
+R31696:31696 LF.ProofObjects <> Q:160 var
+R31704:31707 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31702:31702 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31703:31703 LF.ProofObjects <> P:159 var
+R31708:31708 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R31709:31709 LF.ProofObjects <> Q:160 var
+def 31851:31855 <> curry
+binder 31866:31866 <> P:161
+binder 31868:31868 <> Q:162
+binder 31870:31870 <> R:163
+R31884:31884 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31898:31903 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31917:31917 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31885:31885 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31892:31896 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31887:31890 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R31886:31886 LF.ProofObjects <> P:161 var
+R31891:31891 LF.ProofObjects <> Q:162 var
+R31897:31897 LF.ProofObjects <> R:163 var
+R31905:31909 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31916:31916 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31904:31904 LF.ProofObjects <> P:161 var
+R31911:31914 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R31910:31910 LF.ProofObjects <> Q:162 var
+R31915:31915 LF.ProofObjects <> R:163 var
+def 31998:32004 <> uncurry
+binder 32015:32015 <> P:164
+binder 32017:32017 <> Q:165
+binder 32019:32019 <> R:166
+R32033:32033 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32047:32052 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32066:32066 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32035:32039 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32046:32046 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32034:32034 LF.ProofObjects <> P:164 var
+R32041:32044 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32040:32040 LF.ProofObjects <> Q:165 var
+R32045:32045 LF.ProofObjects <> R:166 var
+R32053:32053 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32060:32064 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32055:32058 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R32054:32054 LF.ProofObjects <> P:164 var
+R32059:32059 LF.ProofObjects <> Q:165 var
+R32065:32065 LF.ProofObjects <> R:166 var
+def 32449:32476 <> propositional_extensionality
+binder 32498:32498 <> P:167
+binder 32500:32500 <> Q:168
+R32511:32511 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32519:32523 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32513:32517 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R32512:32512 LF.ProofObjects <> P:167 var
+R32518:32518 LF.ProofObjects <> Q:168 var
+R32525:32527 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R32524:32524 LF.ProofObjects <> P:167 var
+R32528:32528 LF.ProofObjects <> Q:168 var
+prf 33057:33072 <> pe_implies_or_eq
+R33106:33111 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33078:33105 LF.ProofObjects <> propositional_extensionality def
+binder 33120:33120 <> P:169
+binder 33122:33122 <> Q:170
+R33133:33133 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33140:33144 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33151:33151 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33135:33138 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R33134:33134 LF.ProofObjects <> P:169 var
+R33139:33139 LF.ProofObjects <> Q:170 var
+R33146:33149 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R33145:33145 LF.ProofObjects <> Q:170 var
+R33150:33150 LF.ProofObjects <> P:169 var
+prf 33404:33421 <> pe_implies_true_eq
+R33455:33460 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33427:33454 LF.ProofObjects <> propositional_extensionality def
+binder 33469:33469 <> P:171
+R33481:33484 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33480:33480 LF.ProofObjects <> P:171 var
+R33489:33491 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R33485:33488 Corelib.Init.Logic <> True ind
+R33492:33492 LF.ProofObjects <> P:171 var
+R33512:33539 LF.ProofObjects <> propositional_extensionality def
+R33625:33625 Corelib.Init.Logic <> I constr
+R33625:33625 Corelib.Init.Logic <> I constr
+def 34100:34116 <> proof_irrelevance
+binder 34138:34138 <> P:172
+R34159:34159 LF.ProofObjects <> P:172 var
+binder 34149:34151 <> pf1:173
+binder 34153:34155 <> pf2:174
+R34166:34168 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34163:34165 LF.ProofObjects <> pf1:173 var
+R34169:34171 LF.ProofObjects <> pf2:174 var
+prf 34420:34432 <> pe_implies_pi
+R34466:34469 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34438:34465 LF.ProofObjects <> propositional_extensionality def
+R34470:34486 LF.ProofObjects <> proof_irrelevance def
+R34506:34533 LF.ProofObjects <> propositional_extensionality def
+R34545:34561 LF.ProofObjects <> proof_irrelevance def
+R34589:34592 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34597:34599 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34593:34596 Corelib.Init.Logic <> True ind
+R34589:34592 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34597:34599 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34593:34596 Corelib.Init.Logic <> True ind
+R34614:34631 LF.ProofObjects <> pe_implies_true_eq thm
+R34614:34631 LF.ProofObjects <> pe_implies_true_eq thm
+R34641:34668 LF.ProofObjects <> propositional_extensionality def
+R34701:34703 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34697:34700 Corelib.Init.Logic <> True ind
+R34701:34703 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R34697:34700 Corelib.Init.Logic <> True ind

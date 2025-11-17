@@ -1,0 +1,2114 @@
+DIGEST 6d9179b4f890c9258b0cd7e4079c957a
+FPLF.LibTactics
+R2604:2607 Stdlib.Lists.List <> <> lib
+ind 3479:3483 <> Boxer
+constr 3499:3503 <> boxer
+binder 3515:3515 <> A:3
+R3525:3528 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3524:3524 PLF.LibTactics <> A:3 var
+R3529:3533 PLF.LibTactics <> Boxer:1 ind
+scheme 3479:3483 <> Boxer_rect
+scheme 3479:3483 <> Boxer_ind
+scheme 3479:3483 <> Boxer_rec
+scheme 3479:3483 <> Boxer_sind
+ind 3974:3984 <> ltac_No_arg
+constr 3999:4009 <> ltac_no_arg
+R4013:4023 PLF.LibTactics <> ltac_No_arg:4 ind
+scheme 3974:3984 <> ltac_No_arg_rect
+scheme 3974:3984 <> ltac_No_arg_ind
+scheme 3974:3984 <> ltac_No_arg_rec
+scheme 3974:3984 <> ltac_No_arg_sind
+ind 4279:4287 <> ltac_Wild
+constr 4302:4310 <> ltac_wild
+R4314:4322 PLF.LibTactics <> ltac_Wild:6 ind
+scheme 4279:4287 <> ltac_Wild_rect
+scheme 4279:4287 <> ltac_Wild_ind
+scheme 4279:4287 <> ltac_Wild_rec
+scheme 4279:4287 <> ltac_Wild_sind
+R4345:4353 PLF.LibTactics <> ltac_wild constr
+not 4335:4335 <> ::ltac_scope:'__'
+ind 4568:4577 <> ltac_Wilds
+constr 4592:4601 <> ltac_wilds
+R4605:4614 PLF.LibTactics <> ltac_Wilds:8 ind
+scheme 4568:4577 <> ltac_Wilds_rect
+scheme 4568:4577 <> ltac_Wilds_ind
+scheme 4568:4577 <> ltac_Wilds_rec
+scheme 4568:4577 <> ltac_Wilds_sind
+R4638:4647 PLF.LibTactics <> ltac_wilds constr
+not 4627:4627 <> ::ltac_scope:'___'
+ind 4947:4955 <> ltac_Mark
+constr 4971:4979 <> ltac_mark
+R4983:4991 PLF.LibTactics <> ltac_Mark:10 ind
+scheme 4947:4955 <> ltac_Mark_rect
+scheme 4947:4955 <> ltac_Mark_ind
+scheme 4947:4955 <> ltac_Mark_rec
+scheme 4947:4955 <> ltac_Mark_sind
+R5298:5306 PLF.LibTactics <> ltac_Mark ind
+R5298:5306 PLF.LibTactics <> ltac_Mark ind
+R5681:5689 PLF.LibTactics <> ltac_Mark ind
+R5681:5689 PLF.LibTactics <> ltac_Mark ind
+R6062:6065 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6053:6061 PLF.LibTactics <> ltac_Mark ind
+R6062:6065 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6053:6061 PLF.LibTactics <> ltac_Mark ind
+R6506:6508 Corelib.Init.Datatypes <> nil constr
+R6510:6514 PLF.LibTactics <> Boxer ind
+not 6492:6492 <> ::ltac_scope:'>>'
+R6573:6573 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6582:6584 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6574:6578 PLF.LibTactics <> boxer constr
+R6585:6587 Corelib.Init.Datatypes <> nil constr
+not 6557:6557 <> ::ltac_scope:'>>'_x
+R6664:6664 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6673:6675 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6665:6669 PLF.LibTactics <> boxer constr
+R6676:6676 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6685:6687 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6677:6681 PLF.LibTactics <> boxer constr
+R6688:6690 Corelib.Init.Datatypes <> nil constr
+not 6645:6645 <> ::ltac_scope:'>>'_x_x
+R6785:6785 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6794:6796 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6786:6790 PLF.LibTactics <> boxer constr
+R6797:6797 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6806:6808 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6798:6802 PLF.LibTactics <> boxer constr
+R6809:6809 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6818:6820 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6810:6814 PLF.LibTactics <> boxer constr
+R6821:6823 Corelib.Init.Datatypes <> nil constr
+not 6763:6763 <> ::ltac_scope:'>>'_x_x_x
+R6936:6936 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6945:6947 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6937:6941 PLF.LibTactics <> boxer constr
+R6948:6948 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6957:6959 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6949:6953 PLF.LibTactics <> boxer constr
+R6960:6960 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6969:6971 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6961:6965 PLF.LibTactics <> boxer constr
+R6972:6972 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6981:6983 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6973:6977 PLF.LibTactics <> boxer constr
+R6984:6986 Corelib.Init.Datatypes <> nil constr
+not 6911:6911 <> ::ltac_scope:'>>'_x_x_x_x
+R7120:7120 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7129:7131 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7121:7125 PLF.LibTactics <> boxer constr
+R7132:7132 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7141:7143 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7133:7137 PLF.LibTactics <> boxer constr
+R7144:7144 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7153:7155 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7145:7149 PLF.LibTactics <> boxer constr
+R7156:7156 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7165:7167 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7157:7161 PLF.LibTactics <> boxer constr
+R7168:7168 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7177:7179 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7169:7173 PLF.LibTactics <> boxer constr
+R7180:7182 Corelib.Init.Datatypes <> nil constr
+not 7092:7092 <> ::ltac_scope:'>>'_x_x_x_x_x
+R7334:7334 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7343:7345 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7335:7339 PLF.LibTactics <> boxer constr
+R7346:7346 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7355:7357 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7347:7351 PLF.LibTactics <> boxer constr
+R7358:7358 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7367:7369 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7359:7363 PLF.LibTactics <> boxer constr
+R7370:7370 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7379:7381 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7371:7375 PLF.LibTactics <> boxer constr
+R7382:7382 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7391:7397 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7383:7387 PLF.LibTactics <> boxer constr
+R7398:7398 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7407:7409 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7399:7403 PLF.LibTactics <> boxer constr
+R7410:7412 Corelib.Init.Datatypes <> nil constr
+not 7303:7303 <> ::ltac_scope:'>>'_x_x_x_x_x_x
+R7582:7582 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7591:7593 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7583:7587 PLF.LibTactics <> boxer constr
+R7594:7594 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7603:7605 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7595:7599 PLF.LibTactics <> boxer constr
+R7606:7606 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7615:7617 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7607:7611 PLF.LibTactics <> boxer constr
+R7618:7618 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7627:7629 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7619:7623 PLF.LibTactics <> boxer constr
+R7630:7630 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7639:7645 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7631:7635 PLF.LibTactics <> boxer constr
+R7646:7646 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7655:7657 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7647:7651 PLF.LibTactics <> boxer constr
+R7658:7658 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7667:7669 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7659:7663 PLF.LibTactics <> boxer constr
+R7670:7672 Corelib.Init.Datatypes <> nil constr
+not 7548:7548 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x
+R7860:7860 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7869:7871 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7861:7865 PLF.LibTactics <> boxer constr
+R7872:7872 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7881:7883 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7873:7877 PLF.LibTactics <> boxer constr
+R7884:7884 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7893:7895 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7885:7889 PLF.LibTactics <> boxer constr
+R7896:7896 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7905:7907 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7897:7901 PLF.LibTactics <> boxer constr
+R7908:7908 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7917:7923 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7909:7913 PLF.LibTactics <> boxer constr
+R7924:7924 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7933:7935 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7925:7929 PLF.LibTactics <> boxer constr
+R7936:7936 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7945:7947 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7937:7941 PLF.LibTactics <> boxer constr
+R7948:7948 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7957:7959 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7949:7953 PLF.LibTactics <> boxer constr
+R7960:7962 Corelib.Init.Datatypes <> nil constr
+not 7823:7823 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x_x
+R8171:8171 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8180:8182 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8172:8176 PLF.LibTactics <> boxer constr
+R8183:8183 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8192:8194 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8184:8188 PLF.LibTactics <> boxer constr
+R8195:8195 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8204:8206 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8196:8200 PLF.LibTactics <> boxer constr
+R8207:8207 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8216:8218 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8208:8212 PLF.LibTactics <> boxer constr
+R8219:8219 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8228:8234 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8220:8224 PLF.LibTactics <> boxer constr
+R8235:8235 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8244:8246 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8236:8240 PLF.LibTactics <> boxer constr
+R8247:8247 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8256:8258 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8248:8252 PLF.LibTactics <> boxer constr
+R8259:8259 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8268:8270 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8260:8264 PLF.LibTactics <> boxer constr
+R8271:8271 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8280:8282 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8272:8276 PLF.LibTactics <> boxer constr
+R8283:8285 Corelib.Init.Datatypes <> nil constr
+not 8131:8131 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x_x_x
+R8513:8513 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8522:8524 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8514:8518 PLF.LibTactics <> boxer constr
+R8525:8525 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8534:8536 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8526:8530 PLF.LibTactics <> boxer constr
+R8537:8537 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8546:8548 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8538:8542 PLF.LibTactics <> boxer constr
+R8549:8549 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8558:8560 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8550:8554 PLF.LibTactics <> boxer constr
+R8561:8561 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8570:8576 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8562:8566 PLF.LibTactics <> boxer constr
+R8577:8577 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8586:8588 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8578:8582 PLF.LibTactics <> boxer constr
+R8589:8589 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8598:8600 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8590:8594 PLF.LibTactics <> boxer constr
+R8601:8601 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8610:8612 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8602:8606 PLF.LibTactics <> boxer constr
+R8613:8613 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8622:8624 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8614:8618 PLF.LibTactics <> boxer constr
+R8625:8625 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8635:8637 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8626:8630 PLF.LibTactics <> boxer constr
+R8638:8640 Corelib.Init.Datatypes <> nil constr
+not 8469:8469 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x_x_x_x
+R8888:8888 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8897:8899 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8889:8893 PLF.LibTactics <> boxer constr
+R8900:8900 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8909:8911 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8901:8905 PLF.LibTactics <> boxer constr
+R8912:8912 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8921:8923 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8913:8917 PLF.LibTactics <> boxer constr
+R8924:8924 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8933:8935 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8925:8929 PLF.LibTactics <> boxer constr
+R8936:8936 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8945:8951 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8937:8941 PLF.LibTactics <> boxer constr
+R8952:8952 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8961:8963 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8953:8957 PLF.LibTactics <> boxer constr
+R8964:8964 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8973:8975 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8965:8969 PLF.LibTactics <> boxer constr
+R8976:8976 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8985:8987 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8977:8981 PLF.LibTactics <> boxer constr
+R8988:8988 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8997:8999 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8989:8993 PLF.LibTactics <> boxer constr
+R9000:9000 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9010:9016 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9001:9005 PLF.LibTactics <> boxer constr
+R9017:9017 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9027:9029 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9018:9022 PLF.LibTactics <> boxer constr
+R9030:9032 Corelib.Init.Datatypes <> nil constr
+not 8840:8840 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x_x_x_x_x
+R9300:9300 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9309:9311 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9301:9305 PLF.LibTactics <> boxer constr
+R9312:9312 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9321:9323 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9313:9317 PLF.LibTactics <> boxer constr
+R9324:9324 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9333:9335 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9325:9329 PLF.LibTactics <> boxer constr
+R9336:9336 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9345:9347 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9337:9341 PLF.LibTactics <> boxer constr
+R9348:9348 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9357:9363 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9349:9353 PLF.LibTactics <> boxer constr
+R9364:9364 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9373:9375 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9365:9369 PLF.LibTactics <> boxer constr
+R9376:9376 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9385:9387 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9377:9381 PLF.LibTactics <> boxer constr
+R9388:9388 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9397:9399 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9389:9393 PLF.LibTactics <> boxer constr
+R9400:9400 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9409:9411 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9401:9405 PLF.LibTactics <> boxer constr
+R9412:9412 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9422:9428 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9413:9417 PLF.LibTactics <> boxer constr
+R9429:9429 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9439:9441 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9430:9434 PLF.LibTactics <> boxer constr
+R9442:9442 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9452:9454 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9443:9447 PLF.LibTactics <> boxer constr
+R9455:9457 Corelib.Init.Datatypes <> nil constr
+not 9248:9248 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x_x_x_x_x_x
+R9748:9748 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9757:9759 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9749:9753 PLF.LibTactics <> boxer constr
+R9760:9760 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9769:9771 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9761:9765 PLF.LibTactics <> boxer constr
+R9772:9772 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9781:9783 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9773:9777 PLF.LibTactics <> boxer constr
+R9784:9784 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9793:9795 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9785:9789 PLF.LibTactics <> boxer constr
+R9796:9796 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9805:9811 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9797:9801 PLF.LibTactics <> boxer constr
+R9812:9812 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9821:9823 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9813:9817 PLF.LibTactics <> boxer constr
+R9824:9824 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9833:9835 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9825:9829 PLF.LibTactics <> boxer constr
+R9836:9836 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9845:9847 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9837:9841 PLF.LibTactics <> boxer constr
+R9848:9848 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9857:9859 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9849:9853 PLF.LibTactics <> boxer constr
+R9860:9860 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9870:9876 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9861:9865 PLF.LibTactics <> boxer constr
+R9877:9877 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9887:9889 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9878:9882 PLF.LibTactics <> boxer constr
+R9890:9890 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9900:9902 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9891:9895 PLF.LibTactics <> boxer constr
+R9903:9903 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9913:9915 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R9904:9908 PLF.LibTactics <> boxer constr
+R9916:9918 Corelib.Init.Datatypes <> nil constr
+not 9692:9692 <> ::ltac_scope:'>>'_x_x_x_x_x_x_x_x_x_x_x_x_x
+R10465:10473 Stdlib.Lists.List <> list abbrev
+R10475:10479 PLF.LibTactics <> Boxer ind
+R10465:10473 Stdlib.Lists.List <> list abbrev
+R10475:10479 PLF.LibTactics <> Boxer ind
+R10512:10512 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10520:10522 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10513:10517 PLF.LibTactics <> boxer constr
+R10523:10525 Corelib.Init.Datatypes <> nil constr
+ind 11169:11187 <> Ltac_database_token
+constr 11199:11217 <> ltac_database_token
+scheme 11169:11187 <> Ltac_database_token_rect
+scheme 11169:11187 <> Ltac_database_token_ind
+scheme 11169:11187 <> Ltac_database_token_rec
+scheme 11169:11187 <> Ltac_database_token_sind
+def 11232:11244 <> ltac_database
+R11249:11253 PLF.LibTactics <> Boxer ind
+binder 11247:11247 <> D:14
+R11259:11263 PLF.LibTactics <> Boxer ind
+binder 11257:11257 <> T:15
+R11269:11273 PLF.LibTactics <> Boxer ind
+binder 11267:11267 <> A:16
+R11279:11297 PLF.LibTactics <> Ltac_database_token ind
+R11331:11343 PLF.LibTactics <> ltac_database def
+R11356:11360 PLF.LibTactics <> boxer constr
+R11346:11350 PLF.LibTactics <> boxer constr
+not 11310:11310 <> :::'Register'_x_x
+prf 11420:11440 <> ltac_database_provide
+R11454:11458 PLF.LibTactics <> Boxer ind
+binder 11452:11452 <> A:17
+R11464:11468 PLF.LibTactics <> Boxer ind
+binder 11462:11462 <> D:18
+R11474:11478 PLF.LibTactics <> Boxer ind
+binder 11472:11472 <> T:19
+R11484:11496 PLF.LibTactics <> ltac_database def
+R11502:11502 PLF.LibTactics <> A:17 var
+R11500:11500 PLF.LibTactics <> T:19 var
+R11498:11498 PLF.LibTactics <> D:18 var
+R11557:11577 PLF.LibTactics <> ltac_database_provide thm
+R11580:11584 PLF.LibTactics <> boxer constr
+R11657:11661 PLF.LibTactics <> Boxer ind
+R11706:11718 PLF.LibTactics <> ltac_database def
+R11731:11735 PLF.LibTactics <> boxer constr
+R11721:11725 PLF.LibTactics <> boxer constr
+R11796:11808 PLF.LibTactics <> ltac_database def
+R11815:11819 PLF.LibTactics <> boxer constr
+R11796:11808 PLF.LibTactics <> ltac_database def
+R11815:11819 PLF.LibTactics <> boxer constr
+def 12455:12456 <> rm
+binder 12459:12459 <> A:20
+R12470:12470 PLF.LibTactics <> A:20 var
+binder 12468:12468 <> X:21
+R12476:12476 PLF.LibTactics <> X:21 var
+R12812:12813 PLF.LibTactics <> rm def
+R12812:12813 PLF.LibTactics <> rm def
+R14183:14189 Stdlib.Numbers.BinNums <> <> lib
+R14191:14196 Stdlib.ZArith.BinInt <> <> lib
+def 14211:14225 <> ltac_int_to_nat
+R14230:14237 Stdlib.ZArith.BinInt <> Z abbrev
+binder 14228:14228 <> x:22
+R14242:14244 Corelib.Init.Datatypes <> nat ind
+R14257:14257 PLF.LibTactics <> x:22 var
+R14268:14276 Stdlib.ZArith.BinInt <> Z0 abbrev
+R14291:14301 Stdlib.ZArith.BinInt <> Zpos abbrev
+R14308:14322 Stdlib.PArith.BinPos <> nat_of_P abbrev
+R14330:14340 Stdlib.ZArith.BinInt <> Zneg abbrev
+R14412:14414 Corelib.Init.Datatypes <> nat ind
+R14412:14414 Corelib.Init.Datatypes <> nat ind
+R14434:14441 Stdlib.ZArith.BinInt <> Z abbrev
+R14434:14441 Stdlib.ZArith.BinInt <> Z abbrev
+R14464:14478 PLF.LibTactics <> ltac_int_to_nat def
+prf 16592:16600 <> dup_lemma
+binder 16611:16611 <> P:24
+R16615:16618 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16614:16614 PLF.LibTactics <> P:24 var
+R16620:16623 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16619:16619 PLF.LibTactics <> P:24 var
+R16624:16624 PLF.LibTactics <> P:24 var
+R16721:16721 Corelib.Init.Datatypes <> S constr
+R16721:16721 Corelib.Init.Datatypes <> S constr
+R16738:16738 Corelib.Init.Datatypes <> S constr
+R16738:16738 Corelib.Init.Datatypes <> S constr
+R16753:16761 PLF.LibTactics <> dup_lemma thm
+R17356:17359 Corelib.Init.Datatypes <> true constr
+R17373:17377 Corelib.Init.Datatypes <> false constr
+def 18919:18932 <> ltac_tag_subst
+binder 18935:18935 <> A:25
+R18946:18946 PLF.LibTactics <> A:25 var
+binder 18944:18944 <> x:26
+R18952:18952 PLF.LibTactics <> x:26 var
+def 19055:19072 <> ltac_to_generalize
+binder 19075:19075 <> A:27
+R19086:19086 PLF.LibTactics <> A:27 var
+binder 19084:19084 <> x:28
+R19092:19092 PLF.LibTactics <> x:28 var
+R19154:19171 PLF.LibTactics <> ltac_to_generalize def
+R19154:19171 PLF.LibTactics <> ltac_to_generalize def
+R19281:19298 PLF.LibTactics <> ltac_to_generalize def
+R20400:20400 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20403:20403 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20405:20405 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20367:20367 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20373:20373 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20375:20375 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20327:20327 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20336:20336 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20338:20338 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20280:20280 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20292:20292 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20294:20294 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20226:20226 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20241:20241 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20243:20243 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20165:20165 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20183:20183 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20185:20185 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20097:20097 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20118:20118 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R20120:20120 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R21651:21653 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+def 22064:22066 <> eq'
+R22072:22073 Corelib.Init.Logic <> eq ind
+R22099:22101 PLF.LibTactics <> eq' def
+R22137:22139 PLF.LibTactics <> eq' def
+not 22121:22121 <> :::x_'='''_x
+R22507:22510 Corelib.Init.Datatypes <> true constr
+R22588:22592 Corelib.Init.Datatypes <> false constr
+R22588:22592 Corelib.Init.Datatypes <> false constr
+R22607:22610 Corelib.Init.Datatypes <> true constr
+R22607:22610 Corelib.Init.Datatypes <> true constr
+R22661:22664 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R22661:22664 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R22984:22987 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R22984:22987 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23010:23012 Corelib.Init.Logic <> iff def
+R23010:23012 Corelib.Init.Logic <> iff def
+R23038:23044 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23046:23047 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 23045:23045 <> a:29
+R23038:23044 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23046:23047 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 23045:23045 <> a:30
+R23168:23174 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23176:23177 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 23175:23175 <> a:31
+R23168:23174 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23176:23177 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 23175:23175 <> a:32
+R23198:23201 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23198:23201 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R23220:23222 Corelib.Init.Logic <> iff def
+R23220:23222 Corelib.Init.Logic <> iff def
+R23324:23326 Corelib.Init.Logic <> not def
+R27823:27825 PLF.LibTactics <> eq' def
+R32941:32944 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R32941:32944 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33099:33101 Corelib.Init.Datatypes <> nil constr
+R33099:33101 Corelib.Init.Datatypes <> nil constr
+R33129:33129 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33145:33147 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33130:33134 PLF.LibTactics <> boxer constr
+R33136:33144 PLF.LibTactics <> ltac_wild constr
+R33129:33129 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33145:33147 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33130:33134 PLF.LibTactics <> boxer constr
+R33136:33144 PLF.LibTactics <> ltac_wild constr
+R33184:33184 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33201:33203 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33185:33189 PLF.LibTactics <> boxer constr
+R33191:33200 PLF.LibTactics <> ltac_wilds constr
+R33184:33184 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33201:33203 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33185:33189 PLF.LibTactics <> boxer constr
+R33191:33200 PLF.LibTactics <> ltac_wilds constr
+R33232:33232 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33244:33246 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33234:33238 PLF.LibTactics <> boxer constr
+R33232:33232 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33244:33246 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33234:33238 PLF.LibTactics <> boxer constr
+R33217:33225 PLF.LibTactics <> ltac_wild constr
+R33114:33122 PLF.LibTactics <> ltac_wild constr
+R33526:33528 Corelib.Init.Datatypes <> nil constr
+R33526:33528 Corelib.Init.Datatypes <> nil constr
+R33566:33566 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33583:33585 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33567:33571 PLF.LibTactics <> boxer constr
+R33573:33582 PLF.LibTactics <> ltac_wilds constr
+R33566:33566 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33583:33585 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33567:33571 PLF.LibTactics <> boxer constr
+R33573:33582 PLF.LibTactics <> ltac_wilds constr
+R33639:33639 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33648:33650 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33640:33644 PLF.LibTactics <> boxer constr
+R33639:33639 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33648:33650 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R33640:33644 PLF.LibTactics <> boxer constr
+R33814:33822 PLF.LibTactics <> ltac_wild constr
+R33814:33822 PLF.LibTactics <> ltac_wild constr
+R34567:34570 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34567:34570 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33917:33925 PLF.LibTactics <> ltac_wild constr
+R33917:33925 PLF.LibTactics <> ltac_wild constr
+R34209:34212 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34209:34212 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34346:34349 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R34346:34349 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33973:33976 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R33973:33976 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R35587:35590 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R35587:35590 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R35850:35852 Corelib.Init.Datatypes <> nil constr
+R35850:35852 Corelib.Init.Datatypes <> nil constr
+R35890:35890 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35907:35909 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35891:35895 PLF.LibTactics <> boxer constr
+R35897:35906 PLF.LibTactics <> ltac_wilds constr
+R35890:35890 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35907:35909 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35891:35895 PLF.LibTactics <> boxer constr
+R35897:35906 PLF.LibTactics <> ltac_wilds constr
+R35963:35963 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35972:35974 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35964:35968 PLF.LibTactics <> boxer constr
+R35963:35963 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35972:35974 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R35964:35968 PLF.LibTactics <> boxer constr
+R36138:36146 PLF.LibTactics <> ltac_wild constr
+R36138:36146 PLF.LibTactics <> ltac_wild constr
+R37142:37145 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R37142:37145 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R36241:36249 PLF.LibTactics <> ltac_wild constr
+R36241:36249 PLF.LibTactics <> ltac_wild constr
+R36635:36638 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R36635:36638 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R36847:36850 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R36847:36850 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R36297:36300 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R36297:36300 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R38173:38173 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38186:38188 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38175:38179 PLF.LibTactics <> boxer constr
+R38173:38173 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38186:38188 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38175:38179 PLF.LibTactics <> boxer constr
+R38457:38457 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38470:38472 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38459:38463 PLF.LibTactics <> boxer constr
+R38457:38457 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38470:38472 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38459:38463 PLF.LibTactics <> boxer constr
+R38537:38537 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38549:38551 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38539:38543 PLF.LibTactics <> boxer constr
+R38642:38642 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38651:38653 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38643:38647 PLF.LibTactics <> boxer constr
+R38654:38654 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38663:38665 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38655:38659 PLF.LibTactics <> boxer constr
+R38642:38642 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38651:38653 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38643:38647 PLF.LibTactics <> boxer constr
+R38654:38654 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38663:38665 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R38655:38659 PLF.LibTactics <> boxer constr
+R39619:39621 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R39624:39624 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R39703:39705 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R39708:39708 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R39711:39711 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R39801:39803 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R39806:39806 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R39809:39809 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R39812:39812 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R39913:39915 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R39918:39918 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R39921:39921 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R39924:39924 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R39927:39927 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R40039:40041 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R40044:40044 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R40047:40047 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R40050:40050 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R40053:40053 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R40056:40056 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R40795:40797 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R40800:40800 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R40904:40906 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R40909:40909 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R40912:40912 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R41027:41029 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R41032:41032 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R41035:41035 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R41038:41038 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R41164:41166 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R41169:41169 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R41172:41172 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R41175:41175 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R41178:41178 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R41315:41317 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R41320:41320 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R41323:41323 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R41326:41326 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R41329:41329 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R41332:41332 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R42503:42507 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R42524:42524 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R42508:42508 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R42518:42520 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R42509:42513 PLF.LibTactics <> boxer constr
+R42515:42517 PLF.LibTactics <> ::ltac_scope:'___' not
+R42521:42523 Corelib.Init.Datatypes <> nil constr
+R43033:43035 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R43038:43038 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R43125:43127 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R43130:43130 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R43133:43133 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R43231:43233 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R43236:43236 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R43239:43239 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R43242:43242 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R43351:43353 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R43356:43356 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R43359:43359 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R43362:43362 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R43365:43365 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R43485:43487 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R43490:43490 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R43493:43493 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R43496:43496 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R43499:43499 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R43502:43502 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R44270:44272 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R44275:44275 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R44387:44389 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R44392:44392 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R44395:44395 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R44518:44520 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R44523:44523 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R44526:44526 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R44529:44529 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R44663:44665 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R44668:44668 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R44671:44671 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R44674:44674 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R44677:44677 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R44822:44824 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R44827:44827 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R44830:44830 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R44833:44833 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R44836:44836 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R44839:44839 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R45203:45207 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R45224:45224 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R45208:45208 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R45218:45220 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R45209:45213 PLF.LibTactics <> boxer constr
+R45215:45217 PLF.LibTactics <> ::ltac_scope:'___' not
+R45221:45223 Corelib.Init.Datatypes <> nil constr
+R45545:45549 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R45566:45566 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R45550:45550 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R45560:45562 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R45551:45555 PLF.LibTactics <> boxer constr
+R45557:45559 PLF.LibTactics <> ::ltac_scope:'___' not
+R45563:45565 Corelib.Init.Datatypes <> nil constr
+R46113:46116 Corelib.Init.Datatypes <> list ind
+R46118:46122 PLF.LibTactics <> Boxer ind
+R46113:46116 Corelib.Init.Datatypes <> list ind
+R46118:46122 PLF.LibTactics <> Boxer ind
+R46328:46330 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R46333:46333 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R46410:46412 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R46415:46415 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R46418:46418 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R46506:46508 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R46511:46511 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R46514:46514 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R46517:46517 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R46616:46618 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R46621:46621 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R46624:46624 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R46627:46627 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R46630:46630 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R46740:46742 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R46745:46745 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R46748:46748 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R46751:46751 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R46754:46754 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R46757:46757 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R47132:47136 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R47153:47153 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R47137:47137 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R47147:47149 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R47138:47142 PLF.LibTactics <> boxer constr
+R47144:47146 PLF.LibTactics <> ::ltac_scope:'___' not
+R47150:47152 Corelib.Init.Datatypes <> nil constr
+R47336:47339 Corelib.Init.Datatypes <> list ind
+R47341:47345 PLF.LibTactics <> Boxer ind
+R47336:47339 Corelib.Init.Datatypes <> list ind
+R47341:47345 PLF.LibTactics <> Boxer ind
+R47391:47393 PLF.LibTactics <> ::ltac_scope:'>>'_x not
+R47467:47469 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R47472:47472 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R47551:47553 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R47556:47556 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R47559:47559 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R47649:47651 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R47654:47654 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R47657:47657 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R47660:47660 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R47761:47763 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R47766:47766 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R47769:47769 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R47772:47772 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R47775:47775 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R47887:47889 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R47892:47892 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R47895:47895 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R47898:47898 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R47901:47901 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R47904:47904 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x_x not
+R48282:48282 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R48291:48293 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R48283:48287 PLF.LibTactics <> boxer constr
+R48552:48554 PLF.LibTactics <> ::ltac_scope:'___' not
+R48711:48713 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R48716:48716 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R48812:48814 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R48817:48817 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R48820:48820 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R48927:48929 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R48932:48932 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R48935:48935 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R48938:48938 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R49056:49058 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R49061:49061 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R49064:49064 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R49067:49067 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R49070:49070 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R49547:49550 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R49547:49550 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R49599:49600 PLF.LibTactics <> ::ltac_scope:'__' not
+sec 52799:52810 <> equatesLemma
+var 52824:52825 equatesLemma A0
+var 52827:52828 equatesLemma A1
+var 52850:52851 equatesLemma A2
+R52868:52869 PLF.LibTactics <> equatesLemma.A1 var
+binder 52863:52864 <> x1:37
+var 52891:52892 equatesLemma A3
+R52909:52910 PLF.LibTactics <> equatesLemma.A1 var
+binder 52904:52905 <> x1:40
+R52919:52920 PLF.LibTactics <> equatesLemma.A2 var
+R52922:52923 PLF.LibTactics <> x1:40 var
+binder 52914:52915 <> x2:41
+var 52945:52946 equatesLemma A4
+R52963:52964 PLF.LibTactics <> equatesLemma.A1 var
+binder 52958:52959 <> x1:44
+R52973:52974 PLF.LibTactics <> equatesLemma.A2 var
+R52976:52977 PLF.LibTactics <> x1:44 var
+binder 52968:52969 <> x2:45
+R52986:52987 PLF.LibTactics <> equatesLemma.A3 var
+R52989:52990 PLF.LibTactics <> x2:45 var
+binder 52981:52982 <> x3:46
+var 53012:53013 equatesLemma A5
+R53030:53031 PLF.LibTactics <> equatesLemma.A1 var
+binder 53025:53026 <> x1:49
+R53040:53041 PLF.LibTactics <> equatesLemma.A2 var
+R53043:53044 PLF.LibTactics <> x1:49 var
+binder 53035:53036 <> x2:50
+R53053:53054 PLF.LibTactics <> equatesLemma.A3 var
+R53056:53057 PLF.LibTactics <> x2:50 var
+binder 53048:53049 <> x3:51
+R53066:53067 PLF.LibTactics <> equatesLemma.A4 var
+R53069:53070 PLF.LibTactics <> x3:51 var
+binder 53061:53062 <> x4:52
+var 53092:53093 equatesLemma A6
+R53110:53111 PLF.LibTactics <> equatesLemma.A1 var
+binder 53105:53106 <> x1:55
+R53120:53121 PLF.LibTactics <> equatesLemma.A2 var
+R53123:53124 PLF.LibTactics <> x1:55 var
+binder 53115:53116 <> x2:56
+R53133:53134 PLF.LibTactics <> equatesLemma.A3 var
+R53136:53137 PLF.LibTactics <> x2:56 var
+binder 53128:53129 <> x3:57
+R53146:53147 PLF.LibTactics <> equatesLemma.A4 var
+R53149:53150 PLF.LibTactics <> x3:57 var
+binder 53141:53142 <> x4:58
+R53159:53160 PLF.LibTactics <> equatesLemma.A5 var
+R53162:53163 PLF.LibTactics <> x4:58 var
+binder 53154:53155 <> x5:59
+prf 53181:53189 <> equates_0
+binder 53201:53201 <> P:62
+binder 53203:53203 <> Q:63
+R53215:53218 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53214:53214 PLF.LibTactics <> P:62 var
+R53224:53227 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53220:53222 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R53219:53219 PLF.LibTactics <> P:62 var
+R53223:53223 PLF.LibTactics <> Q:63 var
+R53228:53228 PLF.LibTactics <> Q:63 var
+prf 53277:53285 <> equates_1
+R53303:53304 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53301:53302 PLF.LibTactics <> equatesLemma.A0 var
+binder 53299:53299 <> P:64
+binder 53311:53312 <> x1:65
+binder 53314:53315 <> y1:66
+R53324:53327 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53320:53320 PLF.LibTactics <> P:64 var
+R53322:53323 PLF.LibTactics <> y1:66 var
+R53335:53338 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53330:53332 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R53328:53329 PLF.LibTactics <> x1:65 var
+R53333:53334 PLF.LibTactics <> y1:66 var
+R53339:53339 PLF.LibTactics <> P:64 var
+R53341:53342 PLF.LibTactics <> x1:65 var
+prf 53391:53399 <> equates_2
+binder 53412:53413 <> y1:67
+R53420:53421 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53418:53419 PLF.LibTactics <> equatesLemma.A0 var
+R53432:53433 PLF.LibTactics <> equatesLemma.A1 var
+binder 53429:53430 <> x1:68
+binder 53416:53416 <> P:69
+binder 53442:53443 <> x1:70
+binder 53445:53446 <> x2:71
+R53458:53461 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53451:53451 PLF.LibTactics <> P:69 var
+R53456:53457 PLF.LibTactics <> x2:71 var
+R53453:53454 PLF.LibTactics <> y1:67 var
+R53469:53472 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53464:53466 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R53462:53463 PLF.LibTactics <> x1:70 var
+R53467:53468 PLF.LibTactics <> y1:67 var
+R53473:53473 PLF.LibTactics <> P:69 var
+R53478:53479 PLF.LibTactics <> x2:71 var
+R53475:53476 PLF.LibTactics <> x1:70 var
+prf 53528:53536 <> equates_3
+binder 53549:53550 <> y1:72
+R53557:53558 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53555:53556 PLF.LibTactics <> equatesLemma.A0 var
+R53569:53570 PLF.LibTactics <> equatesLemma.A1 var
+binder 53566:53567 <> x1:73
+R53576:53577 PLF.LibTactics <> equatesLemma.A2 var
+R53579:53580 PLF.LibTactics <> x1:73 var
+binder 53573:53574 <> x2:74
+binder 53553:53553 <> P:75
+binder 53589:53590 <> x1:76
+binder 53592:53593 <> x2:77
+binder 53595:53596 <> x3:78
+R53611:53614 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53601:53601 PLF.LibTactics <> P:75 var
+R53609:53610 PLF.LibTactics <> x3:78 var
+R53606:53607 PLF.LibTactics <> x2:77 var
+R53603:53604 PLF.LibTactics <> y1:72 var
+R53622:53625 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53617:53619 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R53615:53616 PLF.LibTactics <> x1:76 var
+R53620:53621 PLF.LibTactics <> y1:72 var
+R53626:53626 PLF.LibTactics <> P:75 var
+R53634:53635 PLF.LibTactics <> x3:78 var
+R53631:53632 PLF.LibTactics <> x2:77 var
+R53628:53629 PLF.LibTactics <> x1:76 var
+prf 53684:53692 <> equates_4
+binder 53705:53706 <> y1:79
+R53713:53714 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53711:53712 PLF.LibTactics <> equatesLemma.A0 var
+R53725:53726 PLF.LibTactics <> equatesLemma.A1 var
+binder 53722:53723 <> x1:80
+R53732:53733 PLF.LibTactics <> equatesLemma.A2 var
+R53735:53736 PLF.LibTactics <> x1:80 var
+binder 53729:53730 <> x2:81
+R53742:53743 PLF.LibTactics <> equatesLemma.A3 var
+R53745:53746 PLF.LibTactics <> x2:81 var
+binder 53739:53740 <> x3:82
+binder 53709:53709 <> P:83
+binder 53755:53756 <> x1:84
+binder 53758:53759 <> x2:85
+binder 53761:53762 <> x3:86
+binder 53764:53765 <> x4:87
+R53783:53786 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53770:53770 PLF.LibTactics <> P:83 var
+R53781:53782 PLF.LibTactics <> x4:87 var
+R53778:53779 PLF.LibTactics <> x3:86 var
+R53775:53776 PLF.LibTactics <> x2:85 var
+R53772:53773 PLF.LibTactics <> y1:79 var
+R53794:53797 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53789:53791 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R53787:53788 PLF.LibTactics <> x1:84 var
+R53792:53793 PLF.LibTactics <> y1:79 var
+R53798:53798 PLF.LibTactics <> P:83 var
+R53809:53810 PLF.LibTactics <> x4:87 var
+R53806:53807 PLF.LibTactics <> x3:86 var
+R53803:53804 PLF.LibTactics <> x2:85 var
+R53800:53801 PLF.LibTactics <> x1:84 var
+prf 53859:53867 <> equates_5
+binder 53880:53881 <> y1:88
+R53888:53889 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53886:53887 PLF.LibTactics <> equatesLemma.A0 var
+R53900:53901 PLF.LibTactics <> equatesLemma.A1 var
+binder 53897:53898 <> x1:89
+R53907:53908 PLF.LibTactics <> equatesLemma.A2 var
+R53910:53911 PLF.LibTactics <> x1:89 var
+binder 53904:53905 <> x2:90
+R53917:53918 PLF.LibTactics <> equatesLemma.A3 var
+R53920:53921 PLF.LibTactics <> x2:90 var
+binder 53914:53915 <> x3:91
+R53927:53928 PLF.LibTactics <> equatesLemma.A4 var
+R53930:53931 PLF.LibTactics <> x3:91 var
+binder 53924:53925 <> x4:92
+binder 53884:53884 <> P:93
+binder 53940:53941 <> x1:94
+binder 53943:53944 <> x2:95
+binder 53946:53947 <> x3:96
+binder 53949:53950 <> x4:97
+binder 53952:53953 <> x5:98
+R53974:53977 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53958:53958 PLF.LibTactics <> P:93 var
+R53972:53973 PLF.LibTactics <> x5:98 var
+R53969:53970 PLF.LibTactics <> x4:97 var
+R53966:53967 PLF.LibTactics <> x3:96 var
+R53963:53964 PLF.LibTactics <> x2:95 var
+R53960:53961 PLF.LibTactics <> y1:88 var
+R53985:53988 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R53980:53982 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R53978:53979 PLF.LibTactics <> x1:94 var
+R53983:53984 PLF.LibTactics <> y1:88 var
+R53989:53989 PLF.LibTactics <> P:93 var
+R54003:54004 PLF.LibTactics <> x5:98 var
+R54000:54001 PLF.LibTactics <> x4:97 var
+R53997:53998 PLF.LibTactics <> x3:96 var
+R53994:53995 PLF.LibTactics <> x2:95 var
+R53991:53992 PLF.LibTactics <> x1:94 var
+prf 54053:54061 <> equates_6
+binder 54074:54075 <> y1:99
+R54082:54083 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R54080:54081 PLF.LibTactics <> equatesLemma.A0 var
+R54094:54095 PLF.LibTactics <> equatesLemma.A1 var
+binder 54091:54092 <> x1:100
+R54101:54102 PLF.LibTactics <> equatesLemma.A2 var
+R54104:54105 PLF.LibTactics <> x1:100 var
+binder 54098:54099 <> x2:101
+R54111:54112 PLF.LibTactics <> equatesLemma.A3 var
+R54114:54115 PLF.LibTactics <> x2:101 var
+binder 54108:54109 <> x3:102
+R54121:54122 PLF.LibTactics <> equatesLemma.A4 var
+R54124:54125 PLF.LibTactics <> x3:102 var
+binder 54118:54119 <> x4:103
+R54131:54132 PLF.LibTactics <> equatesLemma.A5 var
+R54134:54135 PLF.LibTactics <> x4:103 var
+binder 54128:54129 <> x5:104
+binder 54078:54078 <> P:105
+binder 54146:54147 <> x1:106
+binder 54149:54150 <> x2:107
+binder 54152:54153 <> x3:108
+binder 54155:54156 <> x4:109
+binder 54158:54159 <> x5:110
+binder 54161:54162 <> x6:111
+R54186:54189 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R54167:54167 PLF.LibTactics <> P:105 var
+R54184:54185 PLF.LibTactics <> x6:111 var
+R54181:54182 PLF.LibTactics <> x5:110 var
+R54178:54179 PLF.LibTactics <> x4:109 var
+R54175:54176 PLF.LibTactics <> x3:108 var
+R54172:54173 PLF.LibTactics <> x2:107 var
+R54169:54170 PLF.LibTactics <> y1:99 var
+R54197:54200 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R54192:54194 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R54190:54191 PLF.LibTactics <> x1:106 var
+R54195:54196 PLF.LibTactics <> y1:99 var
+R54201:54201 PLF.LibTactics <> P:105 var
+R54218:54219 PLF.LibTactics <> x6:111 var
+R54215:54216 PLF.LibTactics <> x5:110 var
+R54212:54213 PLF.LibTactics <> x4:109 var
+R54209:54210 PLF.LibTactics <> x3:108 var
+R54206:54207 PLF.LibTactics <> x2:107 var
+R54203:54204 PLF.LibTactics <> x1:106 var
+R54266:54277 PLF.LibTactics equatesLemma <> sec
+R54519:54527 PLF.LibTactics <> equates_6 thm
+R54491:54499 PLF.LibTactics <> equates_5 thm
+R54463:54471 PLF.LibTactics <> equates_4 thm
+R54435:54443 PLF.LibTactics <> equates_3 thm
+R54407:54415 PLF.LibTactics <> equates_2 thm
+R54379:54387 PLF.LibTactics <> equates_1 thm
+R54351:54359 PLF.LibTactics <> equates_0 thm
+R54740:54748 Stdlib.Lists.List <> list abbrev
+R54750:54754 PLF.LibTactics <> Boxer ind
+R54740:54748 Stdlib.Lists.List <> list abbrev
+R54750:54754 PLF.LibTactics <> Boxer ind
+R54789:54789 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R54797:54799 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R54790:54794 PLF.LibTactics <> boxer constr
+R54800:54802 Corelib.Init.Datatypes <> nil constr
+R54863:54865 Corelib.Init.Datatypes <> nil constr
+R54863:54865 Corelib.Init.Datatypes <> nil constr
+R54885:54885 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R54894:54896 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R54886:54890 PLF.LibTactics <> boxer constr
+R54885:54885 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R54894:54896 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R54886:54890 PLF.LibTactics <> boxer constr
+R55106:55108 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R55111:55111 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R55190:55192 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R55195:55195 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R55198:55198 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R55288:55290 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55293:55293 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55296:55296 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55299:55299 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55643:55645 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R55648:55648 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R55743:55745 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R55748:55748 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R55751:55751 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R55857:55859 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55862:55862 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55865:55865 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R55868:55868 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+prf 56268:56281 <> applys_eq_init
+binder 56293:56293 <> P:112
+binder 56295:56295 <> Q:113
+R56311:56316 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56307:56309 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R56306:56306 PLF.LibTactics <> P:112 var
+R56310:56310 PLF.LibTactics <> Q:113 var
+R56318:56323 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56317:56317 PLF.LibTactics <> Q:113 var
+R56324:56324 PLF.LibTactics <> P:112 var
+prf 56373:56390 <> applys_eq_step_dep
+binder 56401:56401 <> B:114
+binder 56417:56417 <> A:115
+R56421:56422 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56420:56420 PLF.LibTactics <> A:115 var
+R56423:56423 PLF.LibTactics <> B:114 var
+binder 56404:56404 <> P:116
+binder 56406:56406 <> Q:117
+binder 56428:56428 <> T:118
+R56444:56449 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56440:56442 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R56439:56439 PLF.LibTactics <> P:116 var
+R56443:56443 PLF.LibTactics <> Q:117 var
+R56453:56455 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R56450:56450 PLF.LibTactics <> P:116 var
+R56452:56452 PLF.LibTactics <> T:118 var
+R56456:56456 PLF.LibTactics <> Q:117 var
+R56458:56458 PLF.LibTactics <> T:118 var
+prf 56507:56520 <> applys_eq_step
+binder 56531:56531 <> A:119
+binder 56533:56533 <> B:120
+R56541:56542 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56540:56540 PLF.LibTactics <> A:119 var
+R56543:56543 PLF.LibTactics <> B:120 var
+binder 56536:56536 <> P:121
+binder 56538:56538 <> Q:122
+binder 56546:56546 <> x:123
+binder 56548:56548 <> y:124
+R56558:56563 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56554:56556 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R56553:56553 PLF.LibTactics <> P:121 var
+R56557:56557 PLF.LibTactics <> Q:122 var
+R56569:56574 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R56565:56567 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R56564:56564 PLF.LibTactics <> x:123 var
+R56568:56568 PLF.LibTactics <> y:124 var
+R56578:56580 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R56575:56575 PLF.LibTactics <> P:121 var
+R56577:56577 PLF.LibTactics <> x:123 var
+R56581:56581 PLF.LibTactics <> Q:122 var
+R56583:56583 PLF.LibTactics <> y:124 var
+R56707:56720 PLF.LibTactics <> applys_eq_step thm
+R56768:56785 PLF.LibTactics <> applys_eq_step_dep thm
+R56871:56884 PLF.LibTactics <> applys_eq_init thm
+R58619:58621 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R58623:58623 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R58697:58699 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R58701:58701 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R58704:58704 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R58789:58791 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R58793:58793 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R58796:58796 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R58799:58799 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R58895:58897 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R58899:58899 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R58902:58902 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R58905:58905 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R58908:58908 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R60190:60193 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R60190:60193 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R61216:61219 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R61216:61219 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R61596:61599 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R61596:61599 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R61696:61699 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R61696:61699 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R62291:62294 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R62291:62294 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R67492:67495 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R67492:67495 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R67518:67521 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R67518:67521 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R67716:67719 Corelib.Init.Datatypes <> true constr
+R67716:67719 Corelib.Init.Datatypes <> true constr
+R67737:67741 Corelib.Init.Datatypes <> false constr
+R67737:67741 Corelib.Init.Datatypes <> false constr
+R72640:72642 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R72720:72722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R78255:78263 Stdlib.Lists.List <> list abbrev
+R78265:78269 PLF.LibTactics <> Boxer ind
+R78255:78263 Stdlib.Lists.List <> list abbrev
+R78265:78269 PLF.LibTactics <> Boxer ind
+R83080:83082 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83080:83082 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83224:83226 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83224:83226 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83378:83380 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83378:83380 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83544:83546 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R83544:83546 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R84092:84094 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R84241:84243 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R84562:84564 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R84725:84727 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R85190:85192 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R85302:85304 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R85418:85420 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R87371:87373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R87371:87373 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R91591:91592 Corelib.Init.Datatypes <> tt constr
+R91599:91600 Corelib.Init.Datatypes <> tt constr
+not 91567:91567 <> :::'nosimpl'_x
+R92042:92044 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R92042:92044 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R92358:92360 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R92358:92360 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93568:93570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93557:93557 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93559:93559 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93561:93561 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93563:93563 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93565:93565 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93567:93567 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93571:93571 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93573:93573 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93575:93575 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93577:93577 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93579:93579 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93581:93581 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93568:93570 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93557:93557 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93559:93559 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93561:93561 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93563:93563 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93565:93565 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93567:93567 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93571:93571 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93573:93573 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93575:93575 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93577:93577 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93579:93579 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93581:93581 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93642:93644 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93633:93633 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93635:93635 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93637:93637 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93639:93639 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93641:93641 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93645:93645 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93647:93647 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93649:93649 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93651:93651 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93653:93653 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93642:93644 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93633:93633 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93635:93635 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93637:93637 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93639:93639 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93641:93641 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93645:93645 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93647:93647 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93649:93649 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93651:93651 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93653:93653 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93712:93714 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93705:93705 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93707:93707 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93709:93709 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93711:93711 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93715:93715 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93717:93717 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93719:93719 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93721:93721 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93712:93714 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93705:93705 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93707:93707 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93709:93709 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93711:93711 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93715:93715 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93717:93717 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93719:93719 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93721:93721 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93778:93780 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93773:93773 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93775:93775 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93777:93777 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93781:93781 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93783:93783 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93785:93785 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93778:93780 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93773:93773 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93775:93775 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93777:93777 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93781:93781 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93783:93783 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93785:93785 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R93839:93841 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93839:93841 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93862:93864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R93862:93864 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R94801:94816 Stdlib.Logic.ProofIrrelevance <> <> lib
+R95211:95227 Stdlib.Logic.ProofIrrelevance <> proof_irrelevance prfax
+sec 96233:96238 <> FuncEq
+var 96252:96253 FuncEq A1
+var 96255:96256 FuncEq A2
+var 96258:96259 FuncEq A3
+var 96261:96262 FuncEq A4
+var 96264:96265 FuncEq A5
+var 96267:96268 FuncEq A6
+var 96270:96271 FuncEq A7
+var 96273:96273 FuncEq B
+prf 96291:96299 <> args_eq_1
+R96315:96316 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96313:96314 PLF.LibTactics <> FuncEq.A1 var
+R96317:96317 PLF.LibTactics <> FuncEq.B var
+binder 96311:96311 <> f:141
+binder 96320:96321 <> x1:142
+binder 96323:96324 <> y1:143
+R96336:96341 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96331:96333 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96329:96330 PLF.LibTactics <> x1:142 var
+R96334:96335 PLF.LibTactics <> y1:143 var
+R96346:96348 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96342:96342 PLF.LibTactics <> f:141 var
+R96344:96345 PLF.LibTactics <> x1:142 var
+R96349:96349 PLF.LibTactics <> f:141 var
+R96351:96352 PLF.LibTactics <> y1:143 var
+prf 96401:96409 <> args_eq_2
+R96425:96426 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96423:96424 PLF.LibTactics <> FuncEq.A1 var
+R96429:96430 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96427:96428 PLF.LibTactics <> FuncEq.A2 var
+R96431:96431 PLF.LibTactics <> FuncEq.B var
+binder 96421:96421 <> f:144
+binder 96434:96435 <> x1:145
+binder 96437:96438 <> y1:146
+binder 96440:96441 <> x2:147
+binder 96443:96444 <> y2:148
+R96456:96459 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96451:96453 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96449:96450 PLF.LibTactics <> x1:145 var
+R96454:96455 PLF.LibTactics <> y1:146 var
+R96467:96472 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96462:96464 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96460:96461 PLF.LibTactics <> x2:147 var
+R96465:96466 PLF.LibTactics <> y2:148 var
+R96480:96482 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96473:96473 PLF.LibTactics <> f:144 var
+R96478:96479 PLF.LibTactics <> x2:147 var
+R96475:96476 PLF.LibTactics <> x1:145 var
+R96483:96483 PLF.LibTactics <> f:144 var
+R96488:96489 PLF.LibTactics <> y2:148 var
+R96485:96486 PLF.LibTactics <> y1:146 var
+prf 96538:96546 <> args_eq_3
+R96562:96563 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96560:96561 PLF.LibTactics <> FuncEq.A1 var
+R96566:96567 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96564:96565 PLF.LibTactics <> FuncEq.A2 var
+R96570:96571 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96568:96569 PLF.LibTactics <> FuncEq.A3 var
+R96572:96572 PLF.LibTactics <> FuncEq.B var
+binder 96558:96558 <> f:149
+binder 96575:96576 <> x1:150
+binder 96578:96579 <> y1:151
+binder 96581:96582 <> x2:152
+binder 96584:96585 <> y2:153
+binder 96587:96588 <> x3:154
+binder 96590:96591 <> y3:155
+R96603:96606 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96598:96600 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96596:96597 PLF.LibTactics <> x1:150 var
+R96601:96602 PLF.LibTactics <> y1:151 var
+R96614:96617 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96609:96611 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96607:96608 PLF.LibTactics <> x2:152 var
+R96612:96613 PLF.LibTactics <> y2:153 var
+R96625:96630 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96620:96622 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96618:96619 PLF.LibTactics <> x3:154 var
+R96623:96624 PLF.LibTactics <> y3:155 var
+R96641:96643 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96631:96631 PLF.LibTactics <> f:149 var
+R96639:96640 PLF.LibTactics <> x3:154 var
+R96636:96637 PLF.LibTactics <> x2:152 var
+R96633:96634 PLF.LibTactics <> x1:150 var
+R96644:96644 PLF.LibTactics <> f:149 var
+R96652:96653 PLF.LibTactics <> y3:155 var
+R96649:96650 PLF.LibTactics <> y2:153 var
+R96646:96647 PLF.LibTactics <> y1:151 var
+prf 96702:96710 <> args_eq_4
+R96726:96727 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96724:96725 PLF.LibTactics <> FuncEq.A1 var
+R96730:96731 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96728:96729 PLF.LibTactics <> FuncEq.A2 var
+R96734:96735 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96732:96733 PLF.LibTactics <> FuncEq.A3 var
+R96738:96739 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96736:96737 PLF.LibTactics <> FuncEq.A4 var
+R96740:96740 PLF.LibTactics <> FuncEq.B var
+binder 96722:96722 <> f:156
+binder 96743:96744 <> x1:157
+binder 96746:96747 <> y1:158
+binder 96749:96750 <> x2:159
+binder 96752:96753 <> y2:160
+binder 96755:96756 <> x3:161
+binder 96758:96759 <> y3:162
+binder 96761:96762 <> x4:163
+binder 96764:96765 <> y4:164
+R96777:96780 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96772:96774 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96770:96771 PLF.LibTactics <> x1:157 var
+R96775:96776 PLF.LibTactics <> y1:158 var
+R96788:96791 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96783:96785 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96781:96782 PLF.LibTactics <> x2:159 var
+R96786:96787 PLF.LibTactics <> y2:160 var
+R96799:96802 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96794:96796 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96792:96793 PLF.LibTactics <> x3:161 var
+R96797:96798 PLF.LibTactics <> y3:162 var
+R96810:96815 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96805:96807 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96803:96804 PLF.LibTactics <> x4:163 var
+R96808:96809 PLF.LibTactics <> y4:164 var
+R96829:96831 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96816:96816 PLF.LibTactics <> f:156 var
+R96827:96828 PLF.LibTactics <> x4:163 var
+R96824:96825 PLF.LibTactics <> x3:161 var
+R96821:96822 PLF.LibTactics <> x2:159 var
+R96818:96819 PLF.LibTactics <> x1:157 var
+R96832:96832 PLF.LibTactics <> f:156 var
+R96843:96844 PLF.LibTactics <> y4:164 var
+R96840:96841 PLF.LibTactics <> y3:162 var
+R96837:96838 PLF.LibTactics <> y2:160 var
+R96834:96835 PLF.LibTactics <> y1:158 var
+prf 96893:96901 <> args_eq_5
+R96917:96918 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96915:96916 PLF.LibTactics <> FuncEq.A1 var
+R96921:96922 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96919:96920 PLF.LibTactics <> FuncEq.A2 var
+R96925:96926 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96923:96924 PLF.LibTactics <> FuncEq.A3 var
+R96929:96930 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96927:96928 PLF.LibTactics <> FuncEq.A4 var
+R96933:96934 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96931:96932 PLF.LibTactics <> FuncEq.A5 var
+R96935:96935 PLF.LibTactics <> FuncEq.B var
+binder 96913:96913 <> f:165
+binder 96938:96939 <> x1:166
+binder 96941:96942 <> y1:167
+binder 96944:96945 <> x2:168
+binder 96947:96948 <> y2:169
+binder 96950:96951 <> x3:170
+binder 96953:96954 <> y3:171
+binder 96956:96957 <> x4:172
+binder 96959:96960 <> y4:173
+binder 96962:96963 <> x5:174
+binder 96965:96966 <> y5:175
+R96978:96981 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96973:96975 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96971:96972 PLF.LibTactics <> x1:166 var
+R96976:96977 PLF.LibTactics <> y1:167 var
+R96989:96992 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96984:96986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96982:96983 PLF.LibTactics <> x2:168 var
+R96987:96988 PLF.LibTactics <> y2:169 var
+R97000:97003 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R96995:96997 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R96993:96994 PLF.LibTactics <> x3:170 var
+R96998:96999 PLF.LibTactics <> y3:171 var
+R97011:97014 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97006:97008 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97004:97005 PLF.LibTactics <> x4:172 var
+R97009:97010 PLF.LibTactics <> y4:173 var
+R97022:97027 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97017:97019 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97015:97016 PLF.LibTactics <> x5:174 var
+R97020:97021 PLF.LibTactics <> y5:175 var
+R97044:97046 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97028:97028 PLF.LibTactics <> f:165 var
+R97042:97043 PLF.LibTactics <> x5:174 var
+R97039:97040 PLF.LibTactics <> x4:172 var
+R97036:97037 PLF.LibTactics <> x3:170 var
+R97033:97034 PLF.LibTactics <> x2:168 var
+R97030:97031 PLF.LibTactics <> x1:166 var
+R97047:97047 PLF.LibTactics <> f:165 var
+R97061:97062 PLF.LibTactics <> y5:175 var
+R97058:97059 PLF.LibTactics <> y4:173 var
+R97055:97056 PLF.LibTactics <> y3:171 var
+R97052:97053 PLF.LibTactics <> y2:169 var
+R97049:97050 PLF.LibTactics <> y1:167 var
+prf 97111:97119 <> args_eq_6
+R97135:97136 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97133:97134 PLF.LibTactics <> FuncEq.A1 var
+R97139:97140 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97137:97138 PLF.LibTactics <> FuncEq.A2 var
+R97143:97144 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97141:97142 PLF.LibTactics <> FuncEq.A3 var
+R97147:97148 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97145:97146 PLF.LibTactics <> FuncEq.A4 var
+R97151:97152 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97149:97150 PLF.LibTactics <> FuncEq.A5 var
+R97155:97156 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97153:97154 PLF.LibTactics <> FuncEq.A6 var
+R97157:97157 PLF.LibTactics <> FuncEq.B var
+binder 97131:97131 <> f:176
+binder 97160:97161 <> x1:177
+binder 97163:97164 <> y1:178
+binder 97166:97167 <> x2:179
+binder 97169:97170 <> y2:180
+binder 97172:97173 <> x3:181
+binder 97175:97176 <> y3:182
+binder 97178:97179 <> x4:183
+binder 97181:97182 <> y4:184
+binder 97184:97185 <> x5:185
+binder 97187:97188 <> y5:186
+binder 97190:97191 <> x6:187
+binder 97193:97194 <> y6:188
+R97206:97209 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97201:97203 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97199:97200 PLF.LibTactics <> x1:177 var
+R97204:97205 PLF.LibTactics <> y1:178 var
+R97217:97220 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97212:97214 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97210:97211 PLF.LibTactics <> x2:179 var
+R97215:97216 PLF.LibTactics <> y2:180 var
+R97228:97231 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97223:97225 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97221:97222 PLF.LibTactics <> x3:181 var
+R97226:97227 PLF.LibTactics <> y3:182 var
+R97239:97242 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97234:97236 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97232:97233 PLF.LibTactics <> x4:183 var
+R97237:97238 PLF.LibTactics <> y4:184 var
+R97250:97253 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97245:97247 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97243:97244 PLF.LibTactics <> x5:185 var
+R97248:97249 PLF.LibTactics <> y5:186 var
+R97261:97266 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97256:97258 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97254:97255 PLF.LibTactics <> x6:187 var
+R97259:97260 PLF.LibTactics <> y6:188 var
+R97286:97288 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97267:97267 PLF.LibTactics <> f:176 var
+R97284:97285 PLF.LibTactics <> x6:187 var
+R97281:97282 PLF.LibTactics <> x5:185 var
+R97278:97279 PLF.LibTactics <> x4:183 var
+R97275:97276 PLF.LibTactics <> x3:181 var
+R97272:97273 PLF.LibTactics <> x2:179 var
+R97269:97270 PLF.LibTactics <> x1:177 var
+R97289:97289 PLF.LibTactics <> f:176 var
+R97306:97307 PLF.LibTactics <> y6:188 var
+R97303:97304 PLF.LibTactics <> y5:186 var
+R97300:97301 PLF.LibTactics <> y4:184 var
+R97297:97298 PLF.LibTactics <> y3:182 var
+R97294:97295 PLF.LibTactics <> y2:180 var
+R97291:97292 PLF.LibTactics <> y1:178 var
+prf 97356:97364 <> args_eq_7
+R97380:97381 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97378:97379 PLF.LibTactics <> FuncEq.A1 var
+R97384:97385 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97382:97383 PLF.LibTactics <> FuncEq.A2 var
+R97388:97389 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97386:97387 PLF.LibTactics <> FuncEq.A3 var
+R97392:97393 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97390:97391 PLF.LibTactics <> FuncEq.A4 var
+R97396:97397 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97394:97395 PLF.LibTactics <> FuncEq.A5 var
+R97400:97401 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97398:97399 PLF.LibTactics <> FuncEq.A6 var
+R97404:97405 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97402:97403 PLF.LibTactics <> FuncEq.A7 var
+R97406:97406 PLF.LibTactics <> FuncEq.B var
+binder 97376:97376 <> f:189
+binder 97409:97410 <> x1:190
+binder 97412:97413 <> y1:191
+binder 97415:97416 <> x2:192
+binder 97418:97419 <> y2:193
+binder 97421:97422 <> x3:194
+binder 97424:97425 <> y3:195
+binder 97427:97428 <> x4:196
+binder 97430:97431 <> y4:197
+binder 97433:97434 <> x5:198
+binder 97436:97437 <> y5:199
+binder 97439:97440 <> x6:200
+binder 97442:97443 <> y6:201
+binder 97445:97446 <> x7:202
+binder 97448:97449 <> y7:203
+R97461:97464 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97456:97458 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97454:97455 PLF.LibTactics <> x1:190 var
+R97459:97460 PLF.LibTactics <> y1:191 var
+R97472:97475 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97467:97469 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97465:97466 PLF.LibTactics <> x2:192 var
+R97470:97471 PLF.LibTactics <> y2:193 var
+R97483:97486 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97478:97480 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97476:97477 PLF.LibTactics <> x3:194 var
+R97481:97482 PLF.LibTactics <> y3:195 var
+R97494:97497 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97489:97491 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97487:97488 PLF.LibTactics <> x4:196 var
+R97492:97493 PLF.LibTactics <> y4:197 var
+R97505:97508 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97500:97502 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97498:97499 PLF.LibTactics <> x5:198 var
+R97503:97504 PLF.LibTactics <> y5:199 var
+R97516:97519 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97511:97513 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97509:97510 PLF.LibTactics <> x6:200 var
+R97514:97515 PLF.LibTactics <> y6:201 var
+R97527:97532 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R97522:97524 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97520:97521 PLF.LibTactics <> x7:202 var
+R97525:97526 PLF.LibTactics <> y7:203 var
+R97555:97557 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R97533:97533 PLF.LibTactics <> f:189 var
+R97553:97554 PLF.LibTactics <> x7:202 var
+R97550:97551 PLF.LibTactics <> x6:200 var
+R97547:97548 PLF.LibTactics <> x5:198 var
+R97544:97545 PLF.LibTactics <> x4:196 var
+R97541:97542 PLF.LibTactics <> x3:194 var
+R97538:97539 PLF.LibTactics <> x2:192 var
+R97535:97536 PLF.LibTactics <> x1:190 var
+R97558:97558 PLF.LibTactics <> f:189 var
+R97578:97579 PLF.LibTactics <> y7:203 var
+R97575:97576 PLF.LibTactics <> y6:201 var
+R97572:97573 PLF.LibTactics <> y5:199 var
+R97569:97570 PLF.LibTactics <> y4:197 var
+R97566:97567 PLF.LibTactics <> y3:195 var
+R97563:97564 PLF.LibTactics <> y2:193 var
+R97560:97561 PLF.LibTactics <> y1:191 var
+R97626:97631 PLF.LibTactics FuncEq <> sec
+R98123:98125 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R98116:98116 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98118:98118 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98120:98120 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98122:98122 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98126:98126 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98128:98128 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98130:98130 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98132:98132 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98123:98125 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R98116:98116 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98118:98118 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98120:98120 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98122:98122 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98126:98126 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98128:98128 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98130:98130 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98132:98132 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R98253:98261 PLF.LibTactics <> args_eq_1 thm
+R98283:98291 PLF.LibTactics <> args_eq_2 thm
+R98313:98321 PLF.LibTactics <> args_eq_3 thm
+R98343:98351 PLF.LibTactics <> args_eq_4 thm
+R98373:98381 PLF.LibTactics <> args_eq_5 thm
+R98403:98411 PLF.LibTactics <> args_eq_6 thm
+R98433:98441 PLF.LibTactics <> args_eq_7 thm
+R98144:98152 PLF.LibTactics <> args_eq_2 thm
+R98942:98958 Stdlib.Logic.ProofIrrelevance <> proof_irrelevance prfax
+R99611:99619 PLF.LibTactics <> ltac_mark constr
+ax 101536:101544 <> inj_pair2
+binder 101616:101616 <> U:204
+R101632:101635 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R101631:101631 PLF.LibTactics <> U:204 var
+binder 101627:101627 <> P:205
+R101647:101647 PLF.LibTactics <> U:204 var
+binder 101643:101643 <> p:206
+R101657:101657 PLF.LibTactics <> P:205 var
+R101659:101659 PLF.LibTactics <> p:206 var
+binder 101651:101651 <> x:207
+binder 101653:101653 <> y:208
+R101692:101695 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R101677:101679 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R101665:101670 Corelib.Init.Specif <> existT constr
+R101676:101676 PLF.LibTactics <> x:207 var
+R101674:101674 PLF.LibTactics <> p:206 var
+R101672:101672 PLF.LibTactics <> P:205 var
+R101680:101685 Corelib.Init.Specif <> existT constr
+R101691:101691 PLF.LibTactics <> y:208 var
+R101689:101689 PLF.LibTactics <> p:206 var
+R101687:101687 PLF.LibTactics <> P:205 var
+R101697:101699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R101696:101696 PLF.LibTactics <> x:207 var
+R101700:101700 PLF.LibTactics <> y:208 var
+R101879:101882 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R101870:101878 PLF.LibTactics <> ltac_Mark ind
+R101879:101882 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R101870:101878 PLF.LibTactics <> ltac_Mark ind
+R101915:101918 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R101910:101912 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R101915:101918 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R101910:101912 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R102106:102109 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R102088:102090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R102073:102078 Corelib.Init.Specif <> existT constr
+R102091:102096 Corelib.Init.Specif <> existT constr
+R102106:102109 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R102088:102090 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R102073:102078 Corelib.Init.Specif <> existT constr
+R102091:102096 Corelib.Init.Specif <> existT constr
+R102256:102259 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R102256:102259 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R102181:102189 PLF.LibTactics <> inj_pair2 prfax
+R102380:102388 PLF.LibTactics <> ltac_mark constr
+R102437:102439 PLF.LibTactics <> eq' def
+R106324:106327 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R106315:106323 PLF.LibTactics <> ltac_Mark ind
+R106324:106327 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R106315:106323 PLF.LibTactics <> ltac_Mark ind
+R106360:106363 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R106355:106357 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R106360:106363 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R106355:106357 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R106536:106539 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R106518:106520 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R106503:106508 Corelib.Init.Specif <> existT constr
+R106521:106526 Corelib.Init.Specif <> existT constr
+R106536:106539 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R106518:106520 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R106503:106508 Corelib.Init.Specif <> existT constr
+R106521:106526 Corelib.Init.Specif <> existT constr
+R106611:106619 PLF.LibTactics <> inj_pair2 prfax
+R106773:106781 PLF.LibTactics <> ltac_mark constr
+R106810:106818 PLF.LibTactics <> ltac_mark constr
+R106873:106890 PLF.LibTactics <> ltac_to_generalize def
+R106902:106904 PLF.LibTactics <> eq' def
+R108880:108883 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R108871:108879 PLF.LibTactics <> ltac_Mark ind
+R108880:108883 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R108871:108879 PLF.LibTactics <> ltac_Mark ind
+R108916:108919 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R108911:108913 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R108916:108919 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R108911:108913 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R109081:109089 PLF.LibTactics <> ltac_mark constr
+R113366:113366 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R113368:113370 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R113372:113372 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R113366:113366 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R113368:113370 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R113372:113372 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R114413:114413 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R114415:114417 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R114419:114419 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R114413:114413 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R114415:114417 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R114419:114419 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117186:117186 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117188:117190 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117192:117192 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117186:117186 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117188:117190 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117192:117192 Corelib.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R117919:117926 Stdlib.Program.Equality <> <> lib
+R117963:117965 PLF.LibTactics <> eq' def
+R120378:120393 Corelib.Init.Wf <> well_founded_ind thm
+R120419:120434 Corelib.Init.Wf <> well_founded_ind thm
+R120464:120479 Corelib.Init.Wf <> well_founded_ind thm
+R120511:120526 Corelib.Init.Wf <> well_founded_ind thm
+R120599:120614 Corelib.Init.Wf <> well_founded_ind thm
+R121155:121165 Stdlib.Arith.Compare_dec <> <> lib
+R121195:121197 Stdlib.micromega.Lia <> <> lib
+prf 121207:121224 <> induct_height_max2
+R121243:121245 Corelib.Init.Datatypes <> nat ind
+binder 121235:121236 <> n1:211
+binder 121238:121239 <> n2:212
+R121250:121256 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R121258:121259 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 121257:121257 <> n:213
+R121266:121269 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R121262:121264 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R121260:121261 PLF.LibTactics <> n1:211 var
+R121265:121265 PLF.LibTactics <> n:213 var
+R121272:121274 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R121270:121271 PLF.LibTactics <> n2:212 var
+R121275:121275 PLF.LibTactics <> n:213 var
+R121311:121316 Stdlib.Arith.Compare_dec <> lt_dec thm
+R121311:121316 Stdlib.Arith.Compare_dec <> lt_dec thm
+R121336:121336 Corelib.Init.Datatypes <> S constr
+R121336:121336 Corelib.Init.Datatypes <> S constr
+R121358:121358 Corelib.Init.Datatypes <> S constr
+R121358:121358 Corelib.Init.Datatypes <> S constr
+R121430:121436 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R121438:121439 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R121430:121436 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R121438:121439 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R121615:121615 Corelib.Init.Datatypes <> S constr
+R121548:121565 PLF.LibTactics <> induct_height_max2 thm
+def 122029:122033 <> COIND
+binder 122036:122036 <> P:214
+R122047:122047 PLF.LibTactics <> P:214 var
+R122146:122150 PLF.LibTactics <> COIND def
+R122323:122327 PLF.LibTactics <> COIND def
+R122323:122327 PLF.LibTactics <> COIND def
+prf 123515:123528 <> iff_intro_swap
+binder 123540:123540 <> P:215
+binder 123542:123542 <> Q:216
+R123555:123555 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123562:123566 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123557:123560 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123556:123556 PLF.LibTactics <> Q:216 var
+R123561:123561 PLF.LibTactics <> P:215 var
+R123567:123567 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123574:123579 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123587:123587 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123569:123572 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R123568:123568 PLF.LibTactics <> P:215 var
+R123573:123573 PLF.LibTactics <> Q:216 var
+R123581:123585 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R123580:123580 PLF.LibTactics <> P:215 var
+R123586:123586 PLF.LibTactics <> Q:216 var
+R123931:123944 PLF.LibTactics <> iff_intro_swap thm
+R124360:124360 Corelib.Init.Datatypes <> O constr
+R124360:124360 Corelib.Init.Datatypes <> O constr
+R124374:124374 Corelib.Init.Datatypes <> S constr
+R124376:124376 Corelib.Init.Datatypes <> O constr
+R124374:124374 Corelib.Init.Datatypes <> S constr
+R124376:124376 Corelib.Init.Datatypes <> O constr
+R124391:124391 Corelib.Init.Datatypes <> S constr
+R124391:124391 Corelib.Init.Datatypes <> S constr
+R124500:124503 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124500:124503 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124638:124641 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124643:124646 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124648:124651 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124653:124656 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124658:124661 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124663:124666 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124668:124671 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124638:124641 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124643:124646 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124648:124651 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124653:124656 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124658:124661 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124663:124666 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124668:124671 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124693:124696 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124698:124701 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124703:124706 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124708:124711 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124713:124716 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124718:124721 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124693:124696 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124698:124701 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124703:124706 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124708:124711 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124713:124716 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124718:124721 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124743:124746 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124748:124751 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124753:124756 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124758:124761 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124763:124766 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124743:124746 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124748:124751 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124753:124756 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124758:124761 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124763:124766 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124788:124791 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124793:124796 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124798:124801 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124803:124806 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124788:124791 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124793:124796 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124798:124801 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124803:124806 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124828:124831 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124833:124836 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124838:124841 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124828:124831 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124833:124836 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124838:124841 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124863:124866 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124868:124871 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124863:124866 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124868:124871 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124893:124896 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124893:124896 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R124918:124921 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R124918:124921 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R127061:127061 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127063:127063 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127065:127065 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127061:127061 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127063:127063 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127065:127065 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127081:127081 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127083:127083 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127085:127085 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127081:127081 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127083:127083 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127085:127085 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127101:127101 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127103:127103 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127105:127105 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127101:127101 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127103:127103 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127105:127105 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127120:127120 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127122:127122 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127124:127124 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127120:127120 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127122:127122 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127124:127124 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127138:127138 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127144:127145 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127151:127151 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127139:127139 Corelib.Init.Datatypes <> S constr
+R127146:127146 Corelib.Init.Datatypes <> S constr
+R127138:127138 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127144:127145 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127151:127151 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127139:127139 Corelib.Init.Datatypes <> S constr
+R127146:127146 Corelib.Init.Datatypes <> S constr
+R127045:127045 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127047:127047 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127049:127049 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R127255:127258 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127255:127258 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127393:127396 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127398:127401 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127403:127406 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127408:127411 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127413:127416 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127418:127421 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127423:127426 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127393:127396 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127398:127401 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127403:127406 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127408:127411 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127413:127416 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127418:127421 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127423:127426 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127448:127451 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127453:127456 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127458:127461 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127463:127466 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127468:127471 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127473:127476 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127448:127451 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127453:127456 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127458:127461 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127463:127466 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127468:127471 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127473:127476 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127498:127501 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127503:127506 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127508:127511 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127513:127516 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127518:127521 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127498:127501 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127503:127506 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127508:127511 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127513:127516 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127518:127521 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127543:127546 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127548:127551 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127553:127556 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127558:127561 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127543:127546 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127548:127551 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127553:127556 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127558:127561 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127583:127586 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127588:127591 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127593:127596 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127583:127586 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127588:127591 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127593:127596 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127618:127621 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127623:127626 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127618:127621 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127623:127626 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127648:127651 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127648:127651 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R127673:127676 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R127673:127676 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R129947:129950 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R129947:129950 Corelib.Init.Logic <> ::type_scope:x_'\/'_x not
+R130457:130465 PLF.LibTactics <> ltac_wild constr
+R130457:130465 PLF.LibTactics <> ltac_wild constr
+R130481:130490 PLF.LibTactics <> ltac_wilds constr
+R130481:130490 PLF.LibTactics <> ltac_wilds constr
+R132243:132249 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132251:132252 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132243:132249 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132251:132252 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132352:132358 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132360:132361 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132352:132358 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132360:132361 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+def 132498:132512 <> def_with_exists
+R132517:132519 Corelib.Init.Datatypes <> nat ind
+binder 132515:132515 <> n:217
+R132534:132540 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R132542:132543 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 132541:132541 <> x:218
+R132545:132547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R132544:132544 PLF.LibTactics <> x:218 var
+R132548:132548 PLF.LibTactics <> n:217 var
+R133052:133055 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R133052:133055 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R133084:133091 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R133102:133104 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 133092:133098 <> varname:219
+R133084:133091 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R133102:133104 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 133092:133098 <> varname:220
+R133314:133317 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R133314:133317 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R133477:133484 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R133495:133497 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 133485:133491 <> varname:221
+R133477:133484 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R133495:133497 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 133485:133491 <> varname:222
+R139860:139864 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R139860:139864 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R142666:142668 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R142671:142671 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R142751:142753 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R142756:142756 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R142759:142759 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R142850:142852 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R142855:142855 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R142858:142858 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R142861:142861 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R142963:142965 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R142968:142968 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R142971:142971 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R142974:142974 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R142977:142977 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R157329:157331 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R157334:157334 PLF.LibTactics <> ::ltac_scope:'>>'_x_x not
+R157414:157416 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R157419:157419 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R157422:157422 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x not
+R157513:157515 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R157518:157518 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R157521:157521 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R157524:157524 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x not
+R157626:157628 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R157631:157631 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R157634:157634 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R157637:157637 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+R157640:157640 PLF.LibTactics <> ::ltac_scope:'>>'_x_x_x_x_x not
+def 169790:169803 <> ltac_something
+binder 169806:169806 <> P:223
+R169817:169817 PLF.LibTactics <> P:223 var
+binder 169815:169815 <> e:224
+R169823:169823 PLF.LibTactics <> e:224 var
+R169857:169870 PLF.LibTactics <> ltac_something def
+not 169836:169836 <> :::'Something'
+prf 169885:169901 <> ltac_something_eq
+binder 169913:169913 <> e:225
+R169925:169928 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R169948:169948 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R169924:169924 PLF.LibTactics <> e:225 var
+R169930:169943 PLF.LibTactics <> ltac_something def
+R169947:169947 PLF.LibTactics <> e:225 var
+prf 169982:170000 <> ltac_something_hide
+binder 170012:170012 <> e:226
+R170024:170028 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R170048:170048 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R170023:170023 PLF.LibTactics <> e:226 var
+R170030:170043 PLF.LibTactics <> ltac_something def
+R170047:170047 PLF.LibTactics <> e:226 var
+prf 170082:170100 <> ltac_something_show
+binder 170112:170112 <> e:227
+R170123:170123 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R170143:170147 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R170125:170138 PLF.LibTactics <> ltac_something def
+R170142:170142 PLF.LibTactics <> e:227 var
+R170148:170148 PLF.LibTactics <> e:227 var
+R170390:170403 PLF.LibTactics <> ltac_something def
+R170530:170543 PLF.LibTactics <> ltac_something def
+R170530:170543 PLF.LibTactics <> ltac_something def
+R170674:170687 PLF.LibTactics <> ltac_something def
+R170741:170754 PLF.LibTactics <> ltac_something def
+R170810:170823 PLF.LibTactics <> ltac_something def
+R170991:171004 PLF.LibTactics <> ltac_something def
+R170991:171004 PLF.LibTactics <> ltac_something def
+R171047:171060 PLF.LibTactics <> ltac_something def
+R171151:171164 PLF.LibTactics <> ltac_something def
+R171151:171164 PLF.LibTactics <> ltac_something def
+R171193:171206 PLF.LibTactics <> ltac_something def
+R171193:171206 PLF.LibTactics <> ltac_something def
+R171488:171506 PLF.LibTactics <> ltac_something_show thm
+R171560:171578 PLF.LibTactics <> ltac_something_hide thm
+R171747:171760 PLF.LibTactics <> ltac_something def
+R171747:171760 PLF.LibTactics <> ltac_something def
+R171928:171941 PLF.LibTactics <> ltac_something def
+R171928:171941 PLF.LibTactics <> ltac_something def
+R172430:172443 PLF.LibTactics <> ltac_something def
+R172695:172708 PLF.LibTactics <> ltac_something def
+R172768:172781 PLF.LibTactics <> ltac_something def
+R172768:172781 PLF.LibTactics <> ltac_something def
+R172836:172849 PLF.LibTactics <> ltac_something def
+R172924:172937 PLF.LibTactics <> ltac_something def
+R173014:173027 PLF.LibTactics <> ltac_something def
+R173014:173027 PLF.LibTactics <> ltac_something def
+R173099:173112 PLF.LibTactics <> ltac_something def
+R175821:175829 PLF.LibTactics <> ltac_mark constr
+R176056:176064 PLF.LibTactics <> ltac_mark constr
+prf 176763:176792 <> demo_clears_all_and_clears_but
+R176809:176811 Corelib.Init.Datatypes <> nat ind
+binder 176805:176805 <> x:228
+binder 176807:176807 <> y:229
+R176819:176822 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R176815:176817 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R176814:176814 PLF.LibTactics <> y:229 var
+R176828:176831 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R176824:176826 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R176823:176823 PLF.LibTactics <> x:228 var
+R176827:176827 PLF.LibTactics <> x:228 var
+R176838:176841 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R176833:176836 Corelib.Init.Peano <> ::nat_scope:x_'>='_x not
+R176832:176832 PLF.LibTactics <> x:228 var
+R176847:176850 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R176843:176845 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R176842:176842 PLF.LibTactics <> x:228 var
+R176851:176854 Corelib.Init.Logic <> True ind
+R177411:177411 Corelib.Init.Datatypes <> S constr
+R177411:177411 Corelib.Init.Datatypes <> S constr
+ax 178477:178486 <> skip_axiom
+R178490:178494 Corelib.Init.Logic <> False ind
+R178539:178548 PLF.LibTactics <> skip_axiom prfax
+ind 180960:180979 <> ltac_goal_to_discard
+constr 180984:181009 <> ltac_goal_to_discard_intro
+scheme 180960:180979 <> ltac_goal_to_discard_rect
+scheme 180960:180979 <> ltac_goal_to_discard_ind
+scheme 180960:180979 <> ltac_goal_to_discard_rec
+scheme 180960:180979 <> ltac_goal_to_discard_sind
+R181106:181131 PLF.LibTactics <> ltac_goal_to_discard_intro constr
+R181247:181266 PLF.LibTactics <> ltac_goal_to_discard ind
+R181247:181266 PLF.LibTactics <> ltac_goal_to_discard ind
+mod 181744:181766 <> LibTacticsCompatibility
+R181896:181918 PLF.LibTactics LibTacticsCompatibility <> mod
