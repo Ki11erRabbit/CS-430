@@ -167,6 +167,18 @@ Proof.
     rewrite add_1_r.
     reflexivity.
 Qed.
+
+Lemma dance_ring_eq : forall (inner1 inner2 outer1 outer2 : partner_ring)
+  (H1 : length inner1 = length outer1)
+  (H2 : length inner2 = length outer2),
+  inner1 = inner2 -> outer1 = outer2 ->
+  make_dance_ring_internal inner1 outer1 H1 = make_dance_ring_internal inner2 outer2 H2.
+Proof.
+  intros inner1 inner2 outer1 outer2 H1 H2 Hinner Houter.
+  subst.
+  f_equal.
+  apply proof_irrelevance.
+Qed.
   
 
 Definition dance_ring_move (movement : movement) (ring: dance_ring) : dance_ring.
@@ -197,7 +209,7 @@ Theorem dance_ring_inner_move_forward_one : forall (p_inner : partner) (ring_inn
 (Hinner_eq: length (p_inner :: ring_inner) = length (ring_inner ++ [p_inner])),
   dance_ring_move InnerMoveForwardOne (make_dance_ring_internal (p_inner :: ring_inner) ring_outer Hin) = (make_dance_ring_internal (ring_inner ++ [p_inner]) ring_outer Hout).
 Proof.
-  intros p_inner ring_inner Hin Hout Hinner_eq Heq.
+  intros p_inner ring_inner ring_outer Hin Hout Hinner_eq.
   unfold dance_ring_move.
   simpl.
   f_equal.
@@ -212,41 +224,49 @@ Theorem dance_ring_inner_move_backward_one : forall (p_inner : partner) (ring_in
   (make_dance_ring_internal (p_inner :: ring_inner) ring_outer Hout).
 Proof.
   intros p_inner ring_inner ring_outer Hin Hout Hinner_eq.
+  unfold dance_ring_move; simpl.
+  apply dance_ring_eq.
+  - apply partner_ring_backward_one_moves_to_front.
+  - reflexivity.
 Qed.
 
-Theorem inner_move_backward_one : forall (p_inner : partner) (ring_inner ring_outer : partner_ring),
-  move_dance_ring InnerMoveBackwardOne ((ring_inner ++ [p_inner]), ring_outer) = ((p_inner :: ring_inner), ring_outer).
+
+Theorem dance_ring_outer_move_forward_one : forall (p_outer : partner) (ring_inner ring_outer : partner_ring) 
+(Hin: length ring_inner = length (p_outer :: ring_outer)) 
+(Hout: length ring_inner = length (ring_outer ++ [p_outer])) 
+(Hinner_eq: length (p_outer :: ring_outer) = length (ring_outer ++ [p_outer])),
+  dance_ring_move OuterMoveForwardOne (make_dance_ring_internal ring_inner (p_outer :: ring_outer) Hin) = (make_dance_ring_internal ring_inner (ring_outer ++ [p_outer]) Hout).
 Proof.
-  intros p_inner ring_inner ring_outer.
+  intros p_outer ring_inner ring_outer Hin Hout Hinner_eq.
+  unfold dance_ring_move.
   simpl.
-  rewrite partner_ring_backward_one_moves_to_front.
-  reflexivity.
+  f_equal.
+  apply proof_irrelevance.
 Qed.
 
-
-Theorem outer_move_forward_one : forall (p_outer : partner) (ring_inner ring_outer : partner_ring),
-  move_dance_ring OuterMoveForwardOne (ring_inner, (p_outer :: ring_outer)) = (ring_inner, (ring_outer ++ [p_outer])).
+Theorem dance_ring_outer_move_backward_one : forall (p_outer : partner) (ring_inner ring_outer : partner_ring) 
+(Hin: length ring_inner = length (ring_outer ++ [p_outer])) 
+(Hout: length ring_inner = length (p_outer :: ring_outer)) 
+(Hinner_eq: length (ring_outer ++ [p_outer]) = length (p_outer :: ring_outer)),
+  dance_ring_move OuterMoveBackwardOne (make_dance_ring_internal ring_inner (ring_outer ++ [p_outer]) Hin) = 
+  (make_dance_ring_internal ring_inner (p_outer :: ring_outer) Hout).
 Proof.
-  intros p_outer ring_inner.
-  destruct ring_inner.
-  - simpl. reflexivity.
-  - simpl. reflexivity.
+  intros p_inner ring_inner ring_outer Hin Hout Hinner_eq.
+  unfold dance_ring_move; simpl.
+  apply dance_ring_eq.
+  - reflexivity.
+  - apply partner_ring_backward_one_moves_to_front.
 Qed.
 
-Theorem outer_move_backward_one : forall (p_outer : partner) (ring_inner ring_outer : partner_ring),
-  move_dance_ring OuterMoveBackwardOne (ring_inner, (ring_outer ++ [p_outer])) = (ring_inner, (p_outer :: ring_outer)).
+Theorem outer_inner_swap : forall (ring_inner ring_outer : partner_ring)
+  (Hin : length ring_inner = length ring_outer)
+  (Hout : length ring_outer = length ring_inner),
+  dance_ring_move SwapInnerOuter (make_dance_ring_internal ring_inner ring_outer Hin) = (make_dance_ring_internal ring_outer ring_inner Hout).
 Proof.
-  intros p_outer ring_inner ring_outer.
+  intros ring_inner ring_outer Hin Hout.
   simpl.
-  rewrite partner_ring_backward_one_moves_to_front.
-  reflexivity.
-Qed.
-
-Theorem outer_inner_swap : forall (ring_inner ring_outer : partner_ring),
-  move_dance_ring SwapInnerOuter (ring_inner, ring_outer) = (ring_outer, ring_inner).
-Proof.
-  intros ring_inner ring_outer.
-  simpl. reflexivity.
+  f_equal.
+  apply proof_irrelevance.
 Qed.
 
 Theorem movement_preserves_length : forall (ring : dance_ring) (movement: movement),
