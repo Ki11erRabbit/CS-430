@@ -309,6 +309,17 @@ Fixpoint apply_dance_n (ring : dance_ring) (n : nat) (dance : dance_ring -> danc
   | S n' => apply_dance_n (dance ring) n' dance
   end.
 
+Fixpoint apply_dance_moves (dance : list movement) (ring : dance_ring) : dance_ring :=
+  match dance with
+  | [] => ring
+  | movement :: rest => apply_dance_moves rest (dance_ring_move movement ring)
+  end.
+
+Fixpoint apply_dance_moves_n (n : nat) (dance : list movement) (ring : dance_ring) : dance_ring :=
+  match n with
+  | 0 => ring
+  | S n' => apply_dance_moves_n n' dance (apply_dance_moves dance ring)
+  end.
 
 (* This is missing two line movements but since they undo each other I think it is fine to ignore them. *)
 Definition korobushka_one (ring: dance_ring) : dance_ring :=
@@ -316,6 +327,10 @@ Definition korobushka_one (ring: dance_ring) : dance_ring :=
     (dance_ring_move InnerMoveBackwardOne 
       (dance_ring_move OuterMoveForwardOne 
         (dance_ring_move SwapInnerOuter ring)))).
+
+Definition korobushka : list movement := [SwapInnerOuter; OuterMoveForwardOne; InnerMoveBackwardOne; SwapInnerOuter].
+
+
 
 (*
 Theorem korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) (ring_inner ring_outer : partner_ring),
@@ -340,7 +355,7 @@ Proof.
 Qed.
 *)
 
-Lemma korobushka__shift_one_2_dancers : forall (p_inner p_outer : partner)
+(*Lemma korobushka__shift_one_2_dancers : forall (p_inner p_outer : partner)
   (H: length [p_inner] = length [p_outer]),
   (korobushka_one (make_dance_ring_internal [p_inner] [p_outer] H)) = (make_dance_ring_internal [p_inner] [p_outer] H).
 Proof.
@@ -352,7 +367,7 @@ Proof.
   - unfold partner_ring_backward_one.
     destruct (rev [p_outer]).
     + discriminate.
-
+*)
 Lemma korobushka_shifts_one : forall (p_inner p_outer : partner) 
 (ring_inner ring_outer : partner_ring) 
 (Hin: length (p_inner :: ring_inner) = length (ring_outer ++ [p_outer])) 
@@ -369,7 +384,7 @@ Proof.
   - rewrite partner_ring_backward_one_moves_to_front.
     reflexivity.
 Qed.
-
+(*
 Lemma korobushka_parts_n_rotation : forall (n : nat) (p_inner p_outer : partner) 
 (ring_inner ring_outer : partner_ring) 
 (H: length (p_inner :: ring_inner) = length (ring_outer ++ [p_outer]))  
@@ -387,7 +402,7 @@ Proof.
     rewrite korobushka_shifts_one.
   - simpl. reflexivity.
   - simpl. induction
-
+*)
 Lemma korobushka_n_rotation: forall (inner outer: partner_ring) (n: nat) (H: length inner = length outer),
   n = length inner -> n = length outer ->
   apply_dance_n (make_dance_ring_internal inner outer H) n korobushka_one = 
