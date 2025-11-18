@@ -381,7 +381,12 @@ Theorem hoare_post_true : forall (P Q : Assertion) c,
   (forall st, Q st) ->
   {{P}} c {{Q}}.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros P Q c.
+  intros H st st'.
+  intros eval.
+  intros Pst.
+  apply H.
+Qed.
 (** [] *)
 
 (** **** Exercise: 1 star, standard (hoare_pre_false) *)
@@ -393,7 +398,13 @@ Theorem hoare_pre_false : forall (P Q : Assertion) c,
   (forall st, ~ (P st)) ->
   {{P}} c {{Q}}.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros P Q c.
+  unfold not.
+  intros H st st'.
+  intros eval HPst.
+  apply H in HPst.
+  tauto.
+Qed.
 (** [] *)
 
 (* ################################################################# *)
