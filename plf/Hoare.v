@@ -407,6 +407,22 @@ Proof.
 Qed.
 (** [] *)
 
+Theorem valid_or_invalid : {{ True }} loop {{ False }}.
+Proof.
+  unfold valid_hoare_triple.
+  intros.
+  Print loop_never_stops.
+  apply (loop_never_stops st st').
+  apply H.
+Qed.
+
+Theorem valid_or_invalid2 : {{ False }} skip {{ True }}.
+Proof.
+  unfold valid_hoare_triple.
+  intros.
+  tauto. (* or (apply I) *)
+Qed.
+
 (* ################################################################# *)
 (** * Proof Rules *)
 

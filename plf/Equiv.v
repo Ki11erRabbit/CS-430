@@ -1637,7 +1637,8 @@ Inductive ceval : com -> state -> state -> Prop :=
       st  =[ c ]=> st' ->
       st' =[ while b do c end ]=> st'' ->
       st  =[ while b do c end ]=> st''
-(* FILL IN HERE *)
+  | E_Havoc : forall st n var,
+      st =[ havoc var ]=> (var !-> n ; st)
 
   where "st =[ c ]=> st'" := (ceval c st st').
 
@@ -1886,7 +1887,11 @@ Proof. (* FILL IN HERE *) Admitted.
 
 (** Finally, find a non-trivial property which is preserved by
     program approximation (when going from left to right). *)
-
+(* 
+  halting in any given states, 
+  halting in all states, 
+  being equivalent to skip 
+*)
 Definition zprop (c : com) : Prop
   (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
 
