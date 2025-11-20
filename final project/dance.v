@@ -331,6 +331,21 @@ Definition korobushka_one (ring: dance_ring) : dance_ring :=
 Definition korobushka : list movement := [SwapInnerOuter; OuterMoveForwardOne; InnerMoveBackwardOne; SwapInnerOuter].
 
 
+Theorem korobushka_shifts_one : forall (p_inner p_outer : partner)
+  (inner outer : partner_ring)
+  (Hin: length (p_inner :: inner) = length (outer ++ [p_outer]))
+  (Hout: length (inner ++ [p_inner]) = length (p_outer :: outer)),
+  apply_dance_moves korobushka (make_dance_ring_internal (p_inner :: inner) (outer ++ [p_outer]) Hin) = make_dance_ring_internal (inner ++ [p_inner]) (p_outer :: outer) Hout.
+  intros p_inner p_outer inner outer.
+  intros Hin Hout.
+  simpl.
+  apply dance_ring_eq.
+  - reflexivity.
+  - rewrite partner_ring_backward_one_moves_to_front.
+    reflexivity.
+Qed.
+
+
 
 (*
 Theorem korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) (ring_inner ring_outer : partner_ring),
