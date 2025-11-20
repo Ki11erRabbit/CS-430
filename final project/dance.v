@@ -141,10 +141,7 @@ Theorem partner_ring_of_one_backward_one_doesnt_move : forall (p: partner),
 Proof.
   intros p.
   unfold partner_ring_backward_one.
-<<<<<<< HEAD
 Admitted.
-=======
->>>>>>> 68887c3ff1a7a3cc931fdd16efe3f34878ef7d51
 
 Theorem partner_ring_backward_one_moves_to_front_cons : forall (p_back p_front: partner) (ring: partner_ring),
   partner_ring_backward_one (p_front :: ring ++ [p_back]) = p_back :: p_front :: ring.
@@ -358,11 +355,7 @@ Proof.
 Qed.
 *)
 
-<<<<<<< HEAD
 (*Lemma korobushka__shift_one_2_dancers : forall (p_inner p_outer : partner)
-=======
-Lemma korobushka__shift_one_2_dancers : forall (p_inner p_outer : partner)
->>>>>>> 68887c3ff1a7a3cc931fdd16efe3f34878ef7d51
   (H: length [p_inner] = length [p_outer]),
   (korobushka_one (make_dance_ring_internal [p_inner] [p_outer] H)) = (make_dance_ring_internal [p_inner] [p_outer] H).
 Proof.
@@ -374,11 +367,7 @@ Proof.
   - unfold partner_ring_backward_one.
     destruct (rev [p_outer]).
     + discriminate.
-<<<<<<< HEAD
 *)
-=======
-
->>>>>>> 68887c3ff1a7a3cc931fdd16efe3f34878ef7d51
 Lemma korobushka_shifts_one : forall (p_inner p_outer : partner) 
 (ring_inner ring_outer : partner_ring) 
 (Hin: length (p_inner :: ring_inner) = length (ring_outer ++ [p_outer])) 
