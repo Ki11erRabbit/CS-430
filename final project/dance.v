@@ -141,7 +141,10 @@ Theorem partner_ring_of_one_backward_one_doesnt_move : forall (p: partner),
 Proof.
   intros p.
   unfold partner_ring_backward_one.
-Admitted.
+  simpl.
+  reflexivity.
+Qed.
+
 
 Theorem partner_ring_backward_one_moves_to_front_cons : forall (p_back p_front: partner) (ring: partner_ring),
   partner_ring_backward_one (p_front :: ring ++ [p_back]) = p_back :: p_front :: ring.
@@ -345,8 +348,32 @@ Theorem korobushka_shifts_one : forall (p_inner p_outer : partner)
     reflexivity.
 Qed.
 
+Theorem korobushka_n_rotation : forall (n : nat) (p_inner p_outer : partner)
+  (inner outer : partner_ring)
+  (H: length (p_inner :: inner) = length (outer ++ [p_outer])),
+  n = length (p_inner :: inner) -> n = length (outer ++ [p_outer]) ->
+  apply_dance_moves_n n korobushka (make_dance_ring_internal (p_inner :: inner) (outer ++ [p_outer]) H) = (make_dance_ring_internal (p_inner :: inner) (outer ++ [p_outer]) H).
+  intros n p_inner p_outer.
+  intros inner outer H.
+  intros Hneq1 Hneq2.
+  induction n.
+  - reflexivity.
+  - unfold apply_dance_moves_n.
+    rewrite korobushka_shifts_one with (Hout := H).
 
-
+  induction inner as [| p_inner2 inner IHinner]; induction outer as [| p_outer2 outer IHouter].
+  - simpl in H, Hneq2. simpl. subst.
+    simpl. apply dance_ring_eq.
+    + reflexivity.
+    + rewrite partner_ring_of_one_backward_one_doesnt_move.
+      reflexivity.
+  - simpl.
+    simpl in H, Hneq2.
+    subst.
+    simpl.
+    apply dance_ring_eq.
+    + reflexivity.
+    + .
 (*
 Theorem korobushka_shifts_one : forall (p_inner p_outer_start p_outer_end : partner) (ring_inner ring_outer : partner_ring),
   (korobushka_one ((p_inner :: ring_inner), (p_outer_start :: (ring_outer ++ [p_outer_end])))) = ((ring_inner ++ [p_inner]),(p_outer_end :: p_outer_start :: ring_outer)).
