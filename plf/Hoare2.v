@@ -1019,15 +1019,15 @@ Definition if_minus_plus_dec :=
   <{
   {{True}}
   if (X <= Y) then
-              {{ FILL_IN_HERE }} ->>
-              {{ FILL_IN_HERE }}
+              {{ True /\ X <= Y }} ->>
+              {{ (Y - X) + X = Y \/ (Y - X) + Y = X }}
     Z := Y - X
-              {{ FILL_IN_HERE }}
+              {{ Y = X + Z }}
   else
-              {{ FILL_IN_HERE }} ->>
-              {{ FILL_IN_HERE }}
+              {{ True /\ ~(X <= Y) }} ->>
+              {{ True }}
     Y := X + Z
-              {{ FILL_IN_HERE }}
+              {{ Y = X + Z }}
   end
   {{ Y = X + Z}} }>.
 
