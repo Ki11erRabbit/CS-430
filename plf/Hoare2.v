@@ -15,6 +15,162 @@ Set Default Goal Selector "!".
 
 Definition FILL_IN_HERE := <{True}>.
 
+
+(*
+  side effects
+
+  exceptions/errors
+  state
+  partiality
+  concurrency
+  I/O
+  nondeterminism
+  reading/logging
+
+  pure computation type
+  A
+
+  id
+
+  exceptional computation type
+  option A
+
+  option
+
+  state computation type
+  S -> A * S
+
+  fun (A : Type) => S -> A * S
+
+  nondetreministic computation type
+  list A
+
+  list
+
+
+*)
+
+Class Monad (M : Type -> Type) := {
+  ret : forall (A : Type), A -> M A;
+  bind : forall (A B : Type), M A -> (A -> M B) -> M B
+}.
+
+
+Instance MonadOption : Monad option := {
+  ret := fun _ x => Some x;
+  bind := fun _ _ c f => match c with
+                     | Some x => f x
+                     | None => None
+                     end
+}.
+
+Parameter S : Type.
+
+Definition state (A : Type) := S -> A * S.
+
+Instance MonadState : Monad state := {
+  ret := fun _ x => fun s => (x, s);
+  bind := fun _ _ c f => fun s =>
+                          let (x, s') := c s in f x s'
+}.
+
+Notation "x <- c1 ; c2" := (bind c1 (fun x => c2)) (x name).
+(*
+Definition safe_div (n m : nat) : option nat :=
+  m' <- not_zero m
+  ret (div n m')
+*)
+(*
+bind (ret x) f    \equiv f x
+bind c ret        \equiv c
+bind (bind c f) g \equiv bind c (fun x => bind (f x) g) # safe to preserve sequence
+
+bind fail c \equiv fail
+
+
+
+# example programs
+
+fun x => f x
+f
+
+if b then true else false
+b
+
+*)
+
+(*
+
+addition
+
+M := m
+N := n
+
+while (N > 0) do
+  { M + N = m + n /\ N > 0 } ->>
+  { M + 1 + N - N = M + n }
+  M := M + 1
+  { M + N - 1 = m + n  }
+  N := N - 1
+  { M + N = m + n }
+done
+
+{ M = m + n /\ N = 0 }
+
+
+factoral
+
+
+fun fact(n):
+  if n == 0:
+    1
+    n * fact(n - 1)
+
+N := n
+A := 1
+
+I = A * fact(N) = fact(n)
+
+while (N > 0) do
+  { }
+  { I /\ N > 0 }
+  { I[.../N], ../A }
+  A := A * N
+  { I[.../N] }
+  N := N - 1
+  { I }
+done
+
+{ A = fact(n) /\ N = 0 }
+
+
+
+
+collatz
+
+I[<n + 1>/X]
+X := n + 1
+
+I 
+while ( x <> 1 ) do
+  { X <> 1 /\ I } =>
+  { even(X) /\ I[<X / 2>X] => I /\ ! even(X) /\ I[<3 * X + 1>/X]}
+  if even(X)
+    { even(X) /\ I[<X / 2/>X]}
+    X := X / 2
+    I
+  else
+    { ! even(X) /\ I[<3 * X + 1>/X] }
+    X := 3 * X + 1
+    I
+  I
+done
+{ X == 1 /\ I }
+
+{ True }
+
+*)
+
 (* ################################################################# *)
 (** * Decorated Programs *)
 
