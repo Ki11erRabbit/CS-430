@@ -348,18 +348,20 @@ Theorem korobushka_shifts_one : forall (p_inner p_outer : partner)
     reflexivity.
 Qed.
 
-Theorem korobushka_n_rotation : forall (n : nat) (p_inner p_outer : partner)
+Theorem korobushka_n_rotation : forall (n : nat)
   (inner outer : partner_ring)
-  (H: length (p_inner :: inner) = length (outer ++ [p_outer])),
-  n = length (p_inner :: inner) -> n = length (outer ++ [p_outer]) ->
-  apply_dance_moves_n n korobushka (make_dance_ring_internal (p_inner :: inner) (outer ++ [p_outer]) H) = (make_dance_ring_internal (p_inner :: inner) (outer ++ [p_outer]) H).
-  intros n p_inner p_outer.
+  (H: length inner = length outer),
+  n = length inner -> n = length outer ->
+  apply_dance_moves_n n korobushka (make_dance_ring_internal inner outer H) = (make_dance_ring_internal inner outer H).
+  intros n.
   intros inner outer H.
-  intros Hneq1 Hneq2.
+  (*intros Hneq1 Hneq2.*)
   induction n.
-  - reflexivity.
-  - unfold apply_dance_moves_n.
-    rewrite korobushka_shifts_one with (Hout := H).
+  - simpl. intros H1 H2. reflexivity.
+  -
+    apply korobushka_shifts_one.
+
+    
 
   induction inner as [| p_inner2 inner IHinner]; induction outer as [| p_outer2 outer IHouter].
   - simpl in H, Hneq2. simpl. subst.
