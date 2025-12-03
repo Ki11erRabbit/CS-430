@@ -465,7 +465,13 @@ Inductive step : tm -> tm -> Prop :=
 Theorem step_deterministic :
   deterministic step.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold deterministic. intros x y1 y2 Hy1 Hy2.
+  generalize dependent y2.
+  induction Hy1; intros y2 Hy2.
+  - (* ST_PlusConstConst *) inversion Hy2; subst.
+    + (* ST_PlusConstConst *) reflexivity.
+    + (* ST_Plus1 *) inversion H2.
++ Admitted.
 (** [] *)
 
 (* ================================================================= *)
@@ -1104,7 +1110,10 @@ Lemma multistep_congr_2 : forall v1 t2 t2',
      t2 -->* t2' ->
      P v1 t2 -->* P v1 t2'.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros v1 t2 t2' value H. induction H.
+  - apply multi_refl.
+  - apply multi_step with (P y v1).
++ Admitted.
 (** [] *)
 
 (** With these lemmas in hand, the main proof is a straightforward
