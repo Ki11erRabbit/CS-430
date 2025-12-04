@@ -49,7 +49,7 @@ Definition FILL_IN_HERE := <{True}>.
 
 
 *)
-
+(*
 Class Monad (M : Type -> Type) := {
   ret : forall (A : Type), A -> M A;
   bind : forall (A B : Type), M A -> (A -> M B) -> M B
@@ -75,6 +75,7 @@ Instance MonadState : Monad state := {
 }.
 
 Notation "x <- c1 ; c2" := (bind c1 (fun x => c2)) (x name).
+*)
 (*
 Definition safe_div (n m : nat) : option nat :=
   m' <- not_zero m

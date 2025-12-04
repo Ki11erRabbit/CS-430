@@ -94,3 +94,5 @@ UseTacticsTest.vo UseTacticsTest.glob UseTacticsTest.v.beautified UseTacticsTest
 UseTacticsTest.vos UseTacticsTest.vok UseTacticsTest.required_vos: UseTacticsTest.v UseTactics.vos /home/cis5000/.opam/4.14.0/lib/rocq-runtime/rocqworker
 UseAutoTest.vo UseAutoTest.glob UseAutoTest.v.beautified UseAutoTest.required_vo: UseAutoTest.v UseAuto.vo /home/cis5000/.opam/4.14.0/lib/rocq-runtime/rocqworker
 UseAutoTest.vos UseAutoTest.vok UseAutoTest.required_vos: UseAutoTest.v UseAuto.vos /home/cis5000/.opam/4.14.0/lib/rocq-runtime/rocqworker
+Rel.vo Rel.glob Rel.v.beautified Rel.required_vo: Rel.v /home/cis5000/.opam/4.14.0/lib/rocq-runtime/rocqworker
+Rel.vos Rel.vok Rel.required_vos: Rel.v /home/cis5000/.opam/4.14.0/lib/rocq-runtime/rocqworker

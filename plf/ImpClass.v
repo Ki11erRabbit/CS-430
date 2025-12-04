@@ -1560,7 +1560,55 @@ Inductive ceval_small : cfg -> cfg -> Prop :=
   | ES_WhileFalse : forall b cb c st,
     beval st b = false ->
     ceval_small (<{while b do cb end; c}>, st) (c, st).
-   
+
+From PLF Require Import Rel.
+
+Lemma skip_correctness : forall (st st': state),
+  st =[ skip ]=> st' <->
+  ceval_small (<{skip; skip}>, st) (<{skip}>, st').
+Proof.
+  intros.
+  split; intros.
+  - inversion H; subst. apply ES_Skip.
+  - inversion H; subst. apply E_Skip.
+Qed.
+
+Lemma if_correctness : forall b (c0 c1 : com) (st st' : state),
+  st =[ if b then c0 else c1 end ]=> st' <-> 
+  clos_refl_trans ceval_small (<{if b then c0 else c1 end; skip}>, st)
+      (<{skip}>, st).
+Proof.
+  intros.
+  split; intros.
+  - inversion H; subst.
+    + eapply rt_trans.
+      * apply rt_step. apply ES_IfTrue. apply H5.
+* Abort.
+
+Theorem ceval_equiv : forall (c stk : com) (st0 st1 : state),
+  st0 =[ c ]=> st1 <-> clos_refl_trans ceval_small (<{c; stk}>, st0) (stk, st1).
+Proof.
+  induction c; intros; split; intros.
+  - inversion H; subst. apply rt_step. apply ES_Skip.
+  - admit.
+  -admit.
+  -admit.
+  -admit.
+  - admit.
+  - inversion H; subst.
+    + eapply rt_trans.
+      * apply rt_step. apply ES_IfTrue. apply H5.
+      * apply IHc1. apply H6.
+    + admit.
+  - admit.
+  - remember <{while b do c end}> as c1. 
+    induction H; try discriminate Heqc1; clear Heqc1.
+    + eapply rt_trans.
+      * apply rt_step.
+        apply ES_WhileFalse. apply H.
+      * apply rt_refl.
+    + 
+
 
 
 (** The cost of defining evaluation as a relation instead of a
